@@ -1,0 +1,7 @@
+[    2254ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://store.development.qawafel.dev/_next/image?url=https%3A%2F%2Fqawafel-backend-assets-development.s3.eu-central-1.amazonaws.com%2Fmedia%2F13025%2Fconversions%2Fcake-gallery-solapur-1bwckirwtx-(1)-medium.jpg&w=384&q=75:0
+[  374427ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://store.development.qawafel.dev/_next/image?url=https%3A%2F%2Fqawafel-backend-assets-development.s3.eu-central-1.amazonaws.com%2Fmedia%2F13025%2Fconversions%2Fcake-gallery-solapur-1bwckirwtx-(1)-medium.jpg&w=384&q=75:0
+[  376304ms] UserflowError: userflow.init() was called but missing Userflow.js Token
+    at al.init (https://js.userflow.com/es2020/userflow.js:4:8135)
+    at Object.init (https://js.userflow.com/es2020/userflow.js:17:25588)
+    at ll (https://js.userflow.com/es2020/userflow.js:17:28788)
+    at https://js.userflow.com/es2020/userflow.js:17:25525

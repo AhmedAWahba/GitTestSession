@@ -1,0 +1,293 @@
+- generic [active] [ref=e1]:
+  - main [ref=e3]:
+    - generic [ref=e7]:
+      - link "الواهب 2 الحلويات الشرقية الواهب 2 الحلويات الشرقية" [ref=e282] [cursor=pointer]:
+        - /url: /hint
+        - img "الواهب 2 الحلويات الشرقية" [ref=e283]
+        - generic [ref=e284]: الواهب 2 الحلويات الشرقية
+      - generic [ref=e10]:
+        - link "المنتجات" [ref=e11] [cursor=pointer]:
+          - /url: /hint
+        - link "من نحن" [ref=e12] [cursor=pointer]:
+          - /url: /hint/about-us
+      - generic [ref=e13]:
+        - generic [ref=e357] [cursor=pointer]:
+          - img "User's addresses" [ref=e358]
+          - generic [ref=e359]: Home
+          - img "arrow icon" [ref=e360]
+        - generic [ref=e363] [cursor=pointer]:
+          - img "avatar icon" [ref=e364]
+          - generic [ref=e365]: Ahmed
+          - img "arrow icon" [ref=e366]
+        - link "Open cart" [ref=e368] [cursor=pointer]:
+          - /url: /hint/cart
+          - img "Open cart" [ref=e369]
+    - generic [ref=e20]:
+      - generic [ref=e371]:
+        - img "warning"
+        - paragraph [ref=e372]: لبدء الطلب من قوافل، يرجى استكمال البيانات القانونية (السجل التجاري، الرقم الضريبي، العنوان)
+        - generic [ref=e373] [cursor=pointer]: تأكيد الحساب
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - img "Banner 1" [ref=e24]
+          - img "Banner 2" [ref=e26]
+          - img "Banner 3" [ref=e28]
+          - img "Banner 4" [ref=e30]
+        - button "Previous slide" [ref=e31] [cursor=pointer]:
+          - img [ref=e32]
+        - button "Next slide" [ref=e34] [cursor=pointer]:
+          - img [ref=e35]
+        - generic [ref=e37]:
+          - button "Go to slide 1" [ref=e38] [cursor=pointer]
+          - button "Go to slide 2" [ref=e39] [cursor=pointer]
+          - button "Go to slide 3" [ref=e40] [cursor=pointer]
+          - button "Go to slide 4" [ref=e41] [cursor=pointer]
+      - generic [ref=e43]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: ترتيب حسب
+          - generic [ref=e48]:
+            - log [ref=e50]
+            - generic [ref=e51]:
+              - generic [ref=e52]:
+                - generic [ref=e53]: الرجاء الاختيار
+                - combobox [ref=e55]
+              - img [ref=e59]
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - generic [ref=e65]:
+              - img "Special product" [ref=e66]
+              - generic [ref=e67]: منتج مميز
+            - link "لوليبوب الفراولة" [ref=e68] [cursor=pointer]:
+              - /url: /hint/products/80112
+              - img "لوليبوب الفراولة" [ref=e69]
+            - generic [ref=e70]:
+              - link "لوليبوب الفراولة" [ref=e71] [cursor=pointer]:
+                - /url: /hint/products/80112
+                - heading "لوليبوب الفراولة" [level=3] [ref=e72]
+              - generic [ref=e73] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e74]:
+            - link "كيك فارس القمر" [ref=e75] [cursor=pointer]:
+              - /url: /hint/products/80155
+              - img "كيك فارس القمر" [ref=e76]
+            - generic [ref=e77]:
+              - link "كيك فارس القمر" [ref=e78] [cursor=pointer]:
+                - /url: /hint/products/80155
+                - heading "كيك فارس القمر" [level=3] [ref=e79]
+              - generic [ref=e80] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e81]:
+            - generic [ref=e85]: شامل عينة
+            - link "كوكيز الواهب" [ref=e86] [cursor=pointer]:
+              - /url: /hint/products/80225
+              - img "كوكيز الواهب" [ref=e87]
+            - generic [ref=e88]:
+              - link "كوكيز الواهب" [ref=e89] [cursor=pointer]:
+                - /url: /hint/products/80225
+                - heading "كوكيز الواهب" [level=3] [ref=e90]
+              - generic [ref=e91] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e92]:
+            - generic [ref=e96]: شامل عينة
+            - link "مشروب الهوت شيكوليت" [ref=e97] [cursor=pointer]:
+              - /url: /hint/products/80235
+              - img "مشروب الهوت شيكوليت" [ref=e98]
+            - generic [ref=e99]:
+              - link "مشروب الهوت شيكوليت" [ref=e100] [cursor=pointer]:
+                - /url: /hint/products/80235
+                - heading "مشروب الهوت شيكوليت" [level=3] [ref=e101]
+              - generic [ref=e102] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e103]:
+            - generic [ref=e107]: شامل عينة
+            - link "حمص الشام" [ref=e108] [cursor=pointer]:
+              - /url: /hint/products/80689
+              - img "حمص الشام" [ref=e109]
+            - generic [ref=e110]:
+              - link "حمص الشام" [ref=e111] [cursor=pointer]:
+                - /url: /hint/products/80689
+                - heading "حمص الشام" [level=3] [ref=e112]
+              - generic [ref=e113] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e114]:
+            - link "منتج بالعربي" [ref=e115] [cursor=pointer]:
+              - /url: /hint/products/80690
+              - img "منتج بالعربي" [ref=e116]
+            - generic [ref=e117]:
+              - link "منتج بالعربي" [ref=e118] [cursor=pointer]:
+                - /url: /hint/products/80690
+                - heading "منتج بالعربي" [level=3] [ref=e119]
+              - generic [ref=e120] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e121]:
+            - generic [ref=e125]: شامل عينة
+            - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e126] [cursor=pointer]:
+              - /url: /hint/products/80705
+              - img "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e127]
+            - generic [ref=e128]:
+              - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e129] [cursor=pointer]:
+                - /url: /hint/products/80705
+                - heading "منتج مكرر كذا مرة علشان نجرب الاسم" [level=3] [ref=e130]
+              - generic [ref=e131] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e132]:
+            - link "لافاندر سويتس" [ref=e133] [cursor=pointer]:
+              - /url: /hint/products/80698
+              - img "لافاندر سويتس" [ref=e134]
+            - generic [ref=e135]:
+              - link "لافاندر سويتس" [ref=e136] [cursor=pointer]:
+                - /url: /hint/products/80698
+                - heading "لافاندر سويتس" [level=3] [ref=e137]
+              - generic [ref=e138] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e139]:
+            - link "منتج مرحلة الدفع 2" [ref=e140] [cursor=pointer]:
+              - /url: /hint/products/80738
+              - img "منتج مرحلة الدفع 2" [ref=e141]
+            - generic [ref=e142]:
+              - link "منتج مرحلة الدفع 2" [ref=e143] [cursor=pointer]:
+                - /url: /hint/products/80738
+                - heading "منتج مرحلة الدفع 2" [level=3] [ref=e144]
+              - generic [ref=e145] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e146]:
+            - generic [ref=e150]: عدة خيارات
+            - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e151] [cursor=pointer]:
+              - /url: /hint/products/80706?variant=80780
+              - img "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e152]
+            - generic [ref=e153]:
+              - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e154] [cursor=pointer]:
+                - /url: /hint/products/80706?variant=80780
+                - heading "منتج مكرر كذا مرة علشان نجرب الاسم" [level=3] [ref=e155]
+              - generic [ref=e156] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e157]:
+            - generic [ref=e161]: شامل عينة
+            - link "تمر سكري ميفاتيل بريميوم من جانوبا (500 جرام) - جنوبة تمر سكرى مفتل ممتاز" [ref=e162] [cursor=pointer]:
+              - /url: /hint/products/80702
+              - img "تمر سكري ميفاتيل بريميوم من جانوبا (500 جرام) - جنوبة تمر سكرى مفتل ممتاز" [ref=e163]
+            - generic [ref=e164]:
+              - link "تمر سكري ميفاتيل بريميوم من جانوبا (500 جرام) - جنوبة تمر سكرى مفتل ممتاز" [ref=e165] [cursor=pointer]:
+                - /url: /hint/products/80702
+                - heading "تمر سكري ميفاتيل بريميوم من جانوبا (500 جرام) - جنوبة تمر سكرى مفتل ممتاز" [level=3] [ref=e166]
+              - generic [ref=e167] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e168]:
+            - generic [ref=e172]: عدة خيارات
+            - link "عصير كوكتيل فواكه" [ref=e173] [cursor=pointer]:
+              - /url: /hint/products/80795?variant=80841
+              - img "عصير كوكتيل فواكه" [ref=e174]
+            - generic [ref=e175]:
+              - link "عصير كوكتيل فواكه" [ref=e176] [cursor=pointer]:
+                - /url: /hint/products/80795?variant=80841
+                - heading "عصير كوكتيل فواكه" [level=3] [ref=e177]
+              - generic [ref=e178] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e179]:
+            - link "منتج مرحلة الدفع3" [ref=e180] [cursor=pointer]:
+              - /url: /hint/products/80737
+              - img "منتج مرحلة الدفع3" [ref=e181]
+            - generic [ref=e182]:
+              - link "منتج مرحلة الدفع3" [ref=e183] [cursor=pointer]:
+                - /url: /hint/products/80737
+                - heading "منتج مرحلة الدفع3" [level=3] [ref=e184]
+              - generic [ref=e185] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e186]:
+            - generic [ref=e190]: شامل عينة
+            - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e191] [cursor=pointer]:
+              - /url: /hint/products/80732
+              - img "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e192]
+            - generic [ref=e193]:
+              - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e194] [cursor=pointer]:
+                - /url: /hint/products/80732
+                - heading "منتج مكرر كذا مرة علشان نجرب الاسم" [level=3] [ref=e195]
+              - generic [ref=e196] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e197]:
+            - generic [ref=e201]: شامل عينة
+            - link "منتج ريجرو" [ref=e202] [cursor=pointer]:
+              - /url: /hint/products/80733
+              - img "منتج ريجرو" [ref=e203]
+            - generic [ref=e204]:
+              - link "منتج ريجرو" [ref=e205] [cursor=pointer]:
+                - /url: /hint/products/80733
+                - heading "منتج ريجرو" [level=3] [ref=e206]
+              - generic [ref=e207] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e285]:
+            - generic [ref=e289]: شامل عينة
+            - link "منتج مكرر" [ref=e290] [cursor=pointer]:
+              - /url: /hint/products/80731
+              - img "منتج مكرر" [ref=e291]
+            - generic [ref=e292]:
+              - link "منتج مكرر" [ref=e293] [cursor=pointer]:
+                - /url: /hint/products/80731
+                - heading "منتج مكرر" [level=3] [ref=e294]
+              - generic [ref=e295] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+        - navigation "Pagination" [ref=e209]:
+          - listitem [ref=e210]:
+            - button "Previous page" [disabled] [ref=e211]: السابق
+          - listitem [ref=e212]:
+            - button "Page 1 is your current page" [ref=e296] [cursor=pointer]: "1"
+          - listitem [ref=e214]:
+            - button "Page 2" [ref=e297] [cursor=pointer]: "2"
+          - listitem [ref=e216]:
+            - button "Next page" [ref=e217] [cursor=pointer]: التالي
+    - generic [ref=e218]:
+      - generic [ref=e220]:
+        - heading "تواصل معنا بسهولة عبر:" [level=2] [ref=e221]
+        - generic [ref=e222]:
+          - link "Contact us via email البريد الإلكتروني Sales@ufuq.co" [ref=e298] [cursor=pointer]:
+            - /url: mailto:Sales@ufuq.co
+            - img "Contact us via email" [ref=e225]
+            - generic [ref=e226]:
+              - heading "البريد الإلكتروني" [level=4] [ref=e227]
+              - paragraph [ref=e299]: Sales@ufuq.co
+          - link "Call us رقم التواصل 538989802" [ref=e300] [cursor=pointer]:
+            - /url: tell:538989802
+            - img "Call us" [ref=e230]
+            - generic [ref=e231]:
+              - heading "رقم التواصل" [level=4] [ref=e232]
+              - paragraph [ref=e301]: "538989802"
+      - generic [ref=e234]:
+        - generic [ref=e235]:
+          - generic [ref=e236]:
+            - img "الواهب 2 الحلويات الشرقية" [ref=e302]
+            - paragraph [ref=e238]:
+              - generic [ref=e239]: جميع الحقوق محفوظة
+              - generic [ref=e303]: الواهب 2 الحلويات الشرقية
+              - generic [ref=e240]: 2026 ©
+          - generic [ref=e241]:
+            - generic [ref=e242]: العنوان
+            - paragraph [ref=e304]: NSSB3596، 3596 ابو بكر الصديق، 6916، سلطانة، شرورة 68372، السعودية
+        - generic [ref=e243]:
+          - generic [ref=e305]:
+            - generic [ref=e306]:
+              - img [ref=e375]
+              - img [ref=e378]
+              - img [ref=e385]
+              - img [ref=e392]
+            - generic [ref=e327]:
+              - link [ref=e394] [cursor=pointer]:
+                - /url: https://www.instagram.com/hint__sa?igsh=N3N5d3hnNzRzcTFh
+                - img [ref=e395]
+              - link [ref=e397] [cursor=pointer]:
+                - /url: https://wa.me/message/4QQNE4EFXXTID1
+                - img [ref=e398]
+              - link [ref=e400] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@hint_sa?_t=ZS-8wGjOJmywzd&_r=1
+                - img [ref=e401]
+          - generic [ref=e244]:
+            - list [ref=e245]:
+              - listitem [ref=e403]:
+                - generic [ref=e404]:
+                  - generic [ref=e405]: "الرقم الضريبي:"
+                  - generic [ref=e406]: "987654329876543"
+              - listitem [ref=e246]:
+                - generic [ref=e247]:
+                  - generic [ref=e248]: "السجل التجاري:"
+                  - generic [ref=e341]: "1521109956"
+              - listitem [ref=e249]:
+                - generic [ref=e250]:
+                  - generic [ref=e251]: شركة
+                  - generic [ref=e342]: الواهب 2 الحلويات الشرقية
+            - generic [ref=e252]:
+              - paragraph [ref=e253]: جميع الأسعار في الموقع شاملة ضريبة القيمة المضافة
+              - img [ref=e254]
+        - generic [ref=e256]: صنع بواسطة قوافل للتسويق الإلكتروني
+    - region "Notifications alt+T"
+    - button
+    - generic [ref=e408]:
+      - alert [ref=e409]:
+        - img [ref=e411]
+        - generic [ref=e413]: تم تسجيل الدخول بنجاح
+      - button "close" [ref=e414] [cursor=pointer]:
+        - img [ref=e415]
+      - progressbar "notification timer" [ref=e419]
+  - alert [ref=e281]: هنت

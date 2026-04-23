@@ -1,0 +1,150 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - main [ref=e5]:
+        - generic [ref=e91]:
+          - button "9" [ref=e92] [cursor=pointer]:
+            - generic [ref=e93]:
+              - img [ref=e94]
+              - superscript [ref=e96]:
+                - generic [ref=e97]: "9"
+          - button [ref=e98] [cursor=pointer]:
+            - img [ref=e100]
+          - link "جديد" [ref=e102] [cursor=pointer]:
+            - /url: /release-notes
+            - generic [ref=e103]: جديد
+            - img [ref=e104]
+          - button "EN" [ref=e128] [cursor=pointer]
+          - button "شيكووورلد" [ref=e130] [cursor=pointer]:
+            - generic [ref=e131]:
+              - generic [ref=e135]: شيكووورلد
+              - img [ref=e137]
+        - generic [ref=e544]:
+          - heading "الإدارة" [level=1] [ref=e547]
+          - generic [ref=e550]:
+            - generic [ref=e551] [cursor=pointer]:
+              - img [ref=e552]
+              - paragraph [ref=e554]: الملف الشخصي
+            - generic [ref=e555] [cursor=pointer]:
+              - img [ref=e556]
+              - paragraph [ref=e558]: البيانات البنكية
+            - generic [ref=e559] [cursor=pointer]:
+              - img [ref=e560]
+              - paragraph [ref=e562]: العناوين
+            - generic [ref=e563] [cursor=pointer]:
+              - img [ref=e564]
+              - paragraph [ref=e566]: اتفاقية مستوى الخدمة
+            - generic [ref=e567] [cursor=pointer]:
+              - img [ref=e568]
+              - paragraph [ref=e571]: التفضيلات
+            - generic [ref=e572] [cursor=pointer]:
+              - img [ref=e573]
+              - paragraph [ref=e575]: إدارة فريق العمل
+            - generic [ref=e576] [cursor=pointer]:
+              - img [ref=e577]
+              - paragraph [ref=e579]: تهيئة الطلبات المباشرة
+            - generic [ref=e580] [cursor=pointer]:
+              - img [ref=e582]
+              - paragraph [ref=e584]: تهيئة البيع/ الدفع الآجل
+            - generic [ref=e585] [cursor=pointer]:
+              - img [ref=e587]
+              - paragraph [ref=e589]: الشروط والأحكام
+            - generic [ref=e590] [cursor=pointer]:
+              - img [ref=e592]
+              - paragraph [ref=e594]: سياسة الخصوصية
+            - generic [ref=e595] [cursor=pointer]:
+              - img [ref=e597]
+              - paragraph [ref=e599]: الإشعارات
+            - generic [ref=e600] [cursor=pointer]:
+              - img [ref=e602]
+              - paragraph [ref=e604]: تهيئة المتجر الالكتروني للشركة
+      - generic [ref=e382]:
+        - generic [ref=e383]:
+          - button "Collapse sidebar" [ref=e384] [cursor=pointer]:
+            - img [ref=e385]
+          - link [ref=e388] [cursor=pointer]:
+            - /url: /
+            - img [ref=e389]
+        - navigation [ref=e392]:
+          - link "الرئيسية" [ref=e394] [cursor=pointer]:
+            - /url: /home
+            - img [ref=e395]
+            - generic [ref=e397]: الرئيسية
+          - generic [ref=e398]:
+            - generic [ref=e399] [cursor=pointer]:
+              - img [ref=e400]
+              - generic [ref=e402]: البيع
+              - img [ref=e403]
+            - generic [ref=e405]:
+              - link "الطلبات" [ref=e408] [cursor=pointer]:
+                - /url: /orders/marketplace/all
+                - generic [ref=e409]: الطلبات
+              - link "عروض الأسعار" [ref=e412] [cursor=pointer]:
+                - /url: /procurement/quotations
+                - generic [ref=e413]: عروض الأسعار
+              - link "الفواتير" [ref=e416] [cursor=pointer]:
+                - /url: /invoices
+                - generic [ref=e417]: الفواتير
+              - link "إشعارات الدائن" [ref=e420] [cursor=pointer]:
+                - /url: /procurement/credit-notes
+                - generic [ref=e421]: إشعارات الدائن
+              - link "المشترين" [ref=e424] [cursor=pointer]:
+                - /url: /customers
+                - generic [ref=e425]: المشترين
+              - link "المنتجات" [ref=e428] [cursor=pointer]:
+                - /url: /products
+                - generic [ref=e429]: المنتجات
+              - link "الخصومات" [ref=e432] [cursor=pointer]:
+                - /url: /discounts
+                - generic [ref=e433]: الخصومات
+          - generic [ref=e434]:
+            - generic [ref=e435] [cursor=pointer]:
+              - img [ref=e436]
+              - generic [ref=e438]: الشراء
+              - img [ref=e439]
+            - generic [ref=e441]:
+              - link "الموردين" [ref=e444] [cursor=pointer]:
+                - /url: /suppliers
+                - generic [ref=e445]: الموردين
+              - link "عناصر الموردين" [ref=e448] [cursor=pointer]:
+                - /url: /items
+                - generic [ref=e449]: عناصر الموردين
+              - link "أوامر الشراء" [ref=e452] [cursor=pointer]:
+                - /url: /procurement/purchase-orders
+                - generic [ref=e453]: أوامر الشراء
+              - link "إشعارات الاستلام" [ref=e456] [cursor=pointer]:
+                - /url: /procurement/received-notes
+                - generic [ref=e457]: إشعارات الاستلام
+          - generic [ref=e458]:
+            - generic [ref=e459] [cursor=pointer]:
+              - img [ref=e460]
+              - generic [ref=e462]: المالية
+              - img [ref=e463]
+            - generic [ref=e465]:
+              - link "تمويل الفواتير قريباً" [ref=e468] [cursor=pointer]:
+                - /url: /invoice-financing
+                - generic [ref=e469]: تمويل الفواتير
+                - generic [ref=e470]: قريباً
+              - link "تمويل أوامر الشراء قريباً" [ref=e473] [cursor=pointer]:
+                - /url: /purchase-order-financing
+                - generic [ref=e474]: تمويل أوامر الشراء
+                - generic [ref=e475]: قريباً
+              - link "التحصيلات" [ref=e478] [cursor=pointer]:
+                - /url: /collections
+                - generic [ref=e479]: التحصيلات
+              - link "روابط الدفع" [ref=e482] [cursor=pointer]:
+                - /url: /payments
+                - generic [ref=e483]: روابط الدفع
+          - link "سوق التطبيقات" [ref=e485] [cursor=pointer]:
+            - /url: /apps
+            - img [ref=e486]
+            - generic [ref=e489]: سوق التطبيقات
+          - link "الإدارة" [active] [ref=e491] [cursor=pointer]:
+            - /url: /settings
+            - img [ref=e492]
+            - generic [ref=e495]: الإدارة
+      - region "Notifications alt+T"
+    - generic [ref=e71] [cursor=pointer]:
+      - img [ref=e72]
+      - text: مساعدة
+  - region "Notifications Alt+T"

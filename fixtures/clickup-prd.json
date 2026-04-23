@@ -1,0 +1,574 @@
+﻿{
+    "id":  "86c8vmeyc",
+    "custom_id":  null,
+    "custom_item_id":  1002,
+    "name":  "B2B online store registration enhancement",
+    "text_content":  "Overview\nThe current registration flow is old and related to the MP (Which is closed now). Hence, we need to revamp the registration flow to be updated without touching the login flow at all.\n\nProblem statement\nSince the flow is old and designed for the MP to check all merchants, now the new B2B online store is dedicated for ONE merchant only, hence the buyer will buy from this merchant immediately without browsing other merchants. Asking the buyer for his legal info such as CR, VAT, Address ... etc. after registration will confuse him and make him unable to complete the order placement.\n\nGoal\nThe goal here is to make the flow simple as possible, and requiring all needed info before completing the registration.\n\nUser Story\nAs a buyer, I want to:\nRegister using my phone number.\nFill the needed info without too much questions and steps.\nVerify my registration request within 1 working day.\nReceive notification of verification and place orders.\nThe flow of Registration\nIf user clicks on login button and enters a non registered phone number, system will ask him to enter OTP, then next labels of registration flow will appear as following (3 boxes):\nSystem will ask him for the following questions in the 1st step (Personal \u0026 Business Info):\nFirst Name (String with at least 3 chars)\nLast Name (String with at least 3 chars)\nEmail (String with email format verification)\nStore Name in AR (String with at least 3 chars)\nStore Name in EN (String with at least 3 chars)\nType of the store (Dropdown)\nThen Next Button or Back\nSystem will ask him for the following questions in the 2nd step (Address Info):\nAddress Name (String)\nCountry (Saudi Arabia - dropdown)\nCity (Dropdown)\nStreet (String with at least 3 chars)\n\nBuilding number (String with 4 digits exactly)\nLong Address (String)\nAdditional Number (String, OPTIONAL)\nZIP code (String with 5 digits exactly)\nShort Address (String with long 8, first 4 are letters and second 4 are digits)\nThen Next Button or Back\nSystem will ask him for the following questions in the 3rd step (Legal Info \u0026\u0026 to be reviewed by Admin):\nBusiness Legal Name in AR (String with at least 3 chars)\nCR or UNN number (string with 10 digits exactly)\nCR certificate (Upload PDF or PNG or JPG or JPEG with 2 MB max)\nAre you registered in VAT?\nIf Yes, then we should ask him for VAT number (String) and VAT certificate (Upload same as CR conditions)\nIf No, then he will be Untaxable merchant with HIDING the VAT number and certificate labels.\nThen SUBMIT BUTTON or Back\n\nThe next step after submission, we need to show a POP-UP indicates Qawafel team will review his info before verification and it will take 1 working day. \"تم رفع البيانات بنجاح، يرجى الانتظار لمدة يوم عمل حتى يتم مراجعة وقبول طلب التوثيق قبل الشراء\". \nThen, CX team will receive the request in Admin panel and a notification via SLACK to check this request and approve or deny the request.\n\nThen, the merchant should receive SMS notification that this account is approved and he can place orders.\nIn case of Deny, a notification to be sent and he should update his info again since he won\u0027t be able to place orders until get verified. He can login and update needed info, then resubmit the change request again to the admin.\n\nFor Updating the data and request is mandatory:\nCR or UNN (with uploading the new certificate)\nLegal store name\nVAT number (If taxable \u0026\u0026 with uploading the new certificate)\n\nFor Updating the data and request is NOT mandatory:\nAddress\nPersonal name\nBusiness store name\n\nIMPORTANT!!!\nIf the customer is an existed user and his info is not completed in our database, then we should show him a POP-UP asking him to fill his info after he logins immediately. System will redirect him to edit profile page. Then user will be able to update his missing info then we need to show a POP-UP indicates Qawafel team will review his info before verification and it will take 1 working day. \"تم رفع البيانات بنجاح، يرجى الانتظار لمدة يوم عمل حتى يتم مراجعة وقبول طلب التوثيق قبل الشراء\"\n\nExisting users can login even if his data is not completed, but he cannot place orders, the following data should be available and verified as (Update) before placing an order:\nCR or UNN (with certificate)\nVAT number (with certificate) if taxable\nAddress (with short address entered)\nLegal store name in AR\n________________________________\n\nPlease indicate the source of registration of the user in Admin panel and database, whether from \"Marketplace\" or \"Online Store\".\nNote that all labels are mandatory to be filled except the underlined labels.\nMoreover, CR, UNN, VAT numbers are unique so it must not be duplicated.\nOne more point, contact receiver name and number should be edited in account settings after registration in settings page.\nPrototype\n\nDesign File\n \n\nThe test cases sheet",
+    "description":  "Overview\nThe current registration flow is old and related to the MP (Which is closed now). Hence, we need to revamp the registration flow to be updated without touching the login flow at all.\n\nProblem statement\nSince the flow is old and designed for the MP to check all merchants, now the new B2B online store is dedicated for ONE merchant only, hence the buyer will buy from this merchant immediately without browsing other merchants. Asking the buyer for his legal info such as CR, VAT, Address ... etc. after registration will confuse him and make him unable to complete the order placement.\n\nGoal\nThe goal here is to make the flow simple as possible, and requiring all needed info before completing the registration.\n\nUser Story\nAs a buyer, I want to:\nRegister using my phone number.\nFill the needed info without too much questions and steps.\nVerify my registration request within 1 working day.\nReceive notification of verification and place orders.\nThe flow of Registration\nIf user clicks on login button and enters a non registered phone number, system will ask him to enter OTP, then next labels of registration flow will appear as following (3 boxes):\nSystem will ask him for the following questions in the 1st step (Personal \u0026 Business Info):\nFirst Name (String with at least 3 chars)\nLast Name (String with at least 3 chars)\nEmail (String with email format verification)\nStore Name in AR (String with at least 3 chars)\nStore Name in EN (String with at least 3 chars)\nType of the store (Dropdown)\nThen Next Button or Back\nSystem will ask him for the following questions in the 2nd step (Address Info):\nAddress Name (String)\nCountry (Saudi Arabia - dropdown)\nCity (Dropdown)\nStreet (String with at least 3 chars)\n\nBuilding number (String with 4 digits exactly)\nLong Address (String)\nAdditional Number (String, OPTIONAL)\nZIP code (String with 5 digits exactly)\nShort Address (String with long 8, first 4 are letters and second 4 are digits)\nThen Next Button or Back\nSystem will ask him for the following questions in the 3rd step (Legal Info \u0026\u0026 to be reviewed by Admin):\nBusiness Legal Name in AR (String with at least 3 chars)\nCR or UNN number (string with 10 digits exactly)\nCR certificate (Upload PDF or PNG or JPG or JPEG with 2 MB max)\nAre you registered in VAT?\nIf Yes, then we should ask him for VAT number (String) and VAT certificate (Upload same as CR conditions)\nIf No, then he will be Untaxable merchant with HIDING the VAT number and certificate labels.\nThen SUBMIT BUTTON or Back\n\nThe next step after submission, we need to show a POP-UP indicates Qawafel team will review his info before verification and it will take 1 working day. \"تم رفع البيانات بنجاح، يرجى الانتظار لمدة يوم عمل حتى يتم مراجعة وقبول طلب التوثيق قبل الشراء\". \nThen, CX team will receive the request in Admin panel and a notification via SLACK to check this request and approve or deny the request.\n\nThen, the merchant should receive SMS notification that this account is approved and he can place orders.\nIn case of Deny, a notification to be sent and he should update his info again since he won\u0027t be able to place orders until get verified. He can login and update needed info, then resubmit the change request again to the admin.\n\nFor Updating the data and request is mandatory:\nCR or UNN (with uploading the new certificate)\nLegal store name\nVAT number (If taxable \u0026\u0026 with uploading the new certificate)\n\nFor Updating the data and request is NOT mandatory:\nAddress\nPersonal name\nBusiness store name\n\nIMPORTANT!!!\nIf the customer is an existed user and his info is not completed in our database, then we should show him a POP-UP asking him to fill his info after he logins immediately. System will redirect him to edit profile page. Then user will be able to update his missing info then we need to show a POP-UP indicates Qawafel team will review his info before verification and it will take 1 working day. \"تم رفع البيانات بنجاح، يرجى الانتظار لمدة يوم عمل حتى يتم مراجعة وقبول طلب التوثيق قبل الشراء\"\n\nExisting users can login even if his data is not completed, but he cannot place orders, the following data should be available and verified as (Update) before placing an order:\nCR or UNN (with certificate)\nVAT number (with certificate) if taxable\nAddress (with short address entered)\nLegal store name in AR\n________________________________\n\nPlease indicate the source of registration of the user in Admin panel and database, whether from \"Marketplace\" or \"Online Store\".\nNote that all labels are mandatory to be filled except the underlined labels.\nMoreover, CR, UNN, VAT numbers are unique so it must not be duplicated.\nOne more point, contact receiver name and number should be edited in account settings after registration in settings page.\nPrototype\n\nDesign File\n \n\nThe test cases sheet",
+    "status":  {
+                   "id":  "sc901518248831_Y1xMbkOe",
+                   "status":  "under qa",
+                   "color":  "#48b4d6",
+                   "orderindex":  8,
+                   "type":  "custom"
+               },
+    "orderindex":  "121052132.00000000000000000000000000000000",
+    "date_created":  "1773686040909",
+    "date_updated":  "1776766122949",
+    "date_closed":  null,
+    "date_done":  null,
+    "archived":  false,
+    "creator":  {
+                    "id":  67352312,
+                    "username":  "Khaled Araj",
+                    "color":  "",
+                    "email":  "araj@qawafel.sa",
+                    "profilePicture":  "https://attachments.clickup.com/profilePictures/67352312_G90.jpg"
+                },
+    "assignees":  [
+                      {
+                          "id":  67352312,
+                          "username":  "Khaled Araj",
+                          "color":  "",
+                          "initials":  "KA",
+                          "email":  "araj@qawafel.sa",
+                          "profilePicture":  "https://attachments.clickup.com/profilePictures/67352312_G90.jpg"
+                      }
+                  ],
+    "group_assignees":  [
+
+                        ],
+    "watchers":  [
+                     {
+                         "id":  5915232,
+                         "username":  "Ahmed Ali",
+                         "color":  "#f57c01",
+                         "initials":  "AA",
+                         "email":  "ahmed.ali@qawafel.sa",
+                         "profilePicture":  null
+                     },
+                     {
+                         "id":  37518193,
+                         "username":  "Mohamed Sabry Hegazy",
+                         "color":  "#d60800",
+                         "initials":  "MH",
+                         "email":  "hegazy@qawafel.sa",
+                         "profilePicture":  null
+                     },
+                     {
+                         "id":  37634915,
+                         "username":  "Mohammed Omar",
+                         "color":  "#d60800",
+                         "initials":  "MO",
+                         "email":  "mohammedomar@qawafel.sa",
+                         "profilePicture":  "https://attachments.clickup.com/profilePictures/37634915_SML.jpg"
+                     },
+                     {
+                         "id":  48912379,
+                         "username":  "Gorav Bhootra",
+                         "color":  "#0388d1",
+                         "initials":  "GB",
+                         "email":  "gorav@qawafel.sa",
+                         "profilePicture":  null
+                     },
+                     {
+                         "id":  49240273,
+                         "username":  "Marwan Lotfy",
+                         "color":  "#b388ff",
+                         "initials":  "ML",
+                         "email":  "marwanlotfy@qawafel.sa",
+                         "profilePicture":  null
+                     },
+                     {
+                         "id":  49423448,
+                         "username":  "AhmedWahba",
+                         "color":  "#7c4dff",
+                         "initials":  "A",
+                         "email":  "ahmedwahba@qawafel.sa",
+                         "profilePicture":  "https://attachments.clickup.com/profilePictures/49423448_JPk.jpg"
+                     },
+                     {
+                         "id":  49423450,
+                         "username":  "Mohammed Hamed",
+                         "color":  "#0918EC",
+                         "initials":  "MH",
+                         "email":  "mohammedhamed@qawafel.sa",
+                         "profilePicture":  "https://attachments.clickup.com/profilePictures/49423450_GM6.jpg"
+                     },
+                     {
+                         "id":  54085165,
+                         "username":  "Ali Abdullah",
+                         "color":  "#1b5e20",
+                         "initials":  "AA",
+                         "email":  "ali.abdullah@qawafel.sa",
+                         "profilePicture":  null
+                     },
+                     {
+                         "id":  54977628,
+                         "username":  "Mohamed Bin Othman",
+                         "color":  "#81b1ff",
+                         "initials":  "MO",
+                         "email":  "mohamed.othman@qawafel.sa",
+                         "profilePicture":  null
+                     },
+                     {
+                         "id":  61032851,
+                         "username":  "Ahmed Elshenawy",
+                         "color":  null,
+                         "initials":  "AE",
+                         "email":  "ahmed.elshenawy@qawafel.sa",
+                         "profilePicture":  null
+                     },
+                     {
+                         "id":  67352312,
+                         "username":  "Khaled Araj",
+                         "color":  "",
+                         "initials":  "KA",
+                         "email":  "araj@qawafel.sa",
+                         "profilePicture":  "https://attachments.clickup.com/profilePictures/67352312_G90.jpg"
+                     },
+                     {
+                         "id":  94768983,
+                         "username":  "Ahmad Alkhawaja",
+                         "color":  "#5d4037",
+                         "initials":  "AA",
+                         "email":  "khawaja@qawafel.sa",
+                         "profilePicture":  "https://attachments.clickup.com/profilePictures/94768983_D4J.jpg"
+                     },
+                     {
+                         "id":  100602274,
+                         "username":  "shimaa fayz",
+                         "color":  "#d60800",
+                         "initials":  "SF",
+                         "email":  "shimaa@qawafel.sa",
+                         "profilePicture":  null
+                     },
+                     {
+                         "id":  100633209,
+                         "username":  "Fatma",
+                         "color":  "#f57c01",
+                         "initials":  "F",
+                         "email":  "fatma.elsayed@qawafel.sa",
+                         "profilePicture":  null
+                     }
+                 ],
+    "checklists":  [
+
+                   ],
+    "tags":  [
+
+             ],
+    "parent":  null,
+    "top_level_parent":  null,
+    "priority":  {
+                     "color":  "#f8ae00",
+                     "id":  "2",
+                     "orderindex":  "2",
+                     "priority":  "high"
+                 },
+    "due_date":  null,
+    "start_date":  null,
+    "points":  null,
+    "time_estimate":  null,
+    "time_spent":  0,
+    "custom_fields":  [
+                          {
+                              "id":  "1be2c001-9620-476c-ba02-1201f231e063",
+                              "name":  "Summary",
+                              "type":  "text",
+                              "type_config":  {
+                                                  "ai":  {
+                                                             "format":  "bullet",
+                                                             "source":  "summary"
+                                                         }
+                                              },
+                              "date_created":  "1762442964863",
+                              "hide_from_guests":  false,
+                              "required":  false
+                          },
+                          {
+                              "id":  "fef5b3e4-0377-49a3-be29-f99a6cf77069",
+                              "name":  "Progress (Auto)",
+                              "type":  "automatic_progress",
+                              "type_config":  {
+                                                  "tracking":  {
+                                                                   "subtasks":  true,
+                                                                   "assigned_comments":  true
+                                                               },
+                                                  "complete_on":  3,
+                                                  "subtask_rollup":  false
+                                              },
+                              "date_created":  "1632897935231",
+                              "hide_from_guests":  true,
+                              "value":  {
+                                            "percent_complete":  20
+                                        },
+                              "required":  false
+                          },
+                          {
+                              "id":  "a4b4ad95-0e25-491f-9f87-7b362fe25431",
+                              "name":  "Checklist Progress",
+                              "type":  "automatic_progress",
+                              "type_config":  {
+                                                  "tracking":  {
+                                                                   "checklists":  true
+                                                               },
+                                                  "complete_on":  3,
+                                                  "subtask_rollup":  false
+                                              },
+                              "date_created":  "1765712394946",
+                              "hide_from_guests":  false,
+                              "value":  {
+                                            "percent_complete":  0
+                                        },
+                              "required":  false
+                          },
+                          {
+                              "id":  "207c359e-9eb9-44d8-8e3a-673414ba4a47",
+                              "name":  "Product Type",
+                              "type":  "drop_down",
+                              "type_config":  {
+                                                  "sorting":  "manual",
+                                                  "new_drop_down":  true,
+                                                  "options":  [
+                                                                  {
+                                                                      "id":  "3f27bd2e-38ed-4441-a5b8-c9e63d74ae91",
+                                                                      "name":  "Qawafel One",
+                                                                      "color":  "#FF7FAB",
+                                                                      "orderindex":  0
+                                                                  },
+                                                                  {
+                                                                      "id":  "1999d15e-2f22-4c53-9a7e-a8fa4588fc28",
+                                                                      "name":  "Retailer",
+                                                                      "color":  "#81B1FF",
+                                                                      "orderindex":  1
+                                                                  },
+                                                                  {
+                                                                      "id":  "6e09a1c8-e176-4089-b7b6-028f6417b757",
+                                                                      "name":  "Admin",
+                                                                      "color":  "#f9d900",
+                                                                      "orderindex":  2
+                                                                  },
+                                                                  {
+                                                                      "id":  "06507aa9-585e-441d-9fd7-67c6ea47dae8",
+                                                                      "name":  "Qawafel Logistics",
+                                                                      "color":  "#ff7800",
+                                                                      "orderindex":  3
+                                                                  },
+                                                                  {
+                                                                      "id":  "bb92ca6c-632b-49eb-aaf7-6ab49bdafd08",
+                                                                      "name":  "Dal",
+                                                                      "color":  "#2ecd6f",
+                                                                      "orderindex":  4
+                                                                  },
+                                                                  {
+                                                                      "id":  "d9daf914-1e17-4895-88c1-398cbb51d3b1",
+                                                                      "name":  "ALL",
+                                                                      "color":  "#AAD28F",
+                                                                      "orderindex":  5
+                                                                  },
+                                                                  {
+                                                                      "id":  "4ac75723-8a67-4c60-acdf-d41d6d0bc054",
+                                                                      "name":  "Other",
+                                                                      "color":  "#667684",
+                                                                      "orderindex":  6
+                                                                  },
+                                                                  {
+                                                                      "id":  "c18f8a57-5f6d-43f6-b8af-fa05e5983487",
+                                                                      "name":  "Direct Store",
+                                                                      "color":  null,
+                                                                      "orderindex":  7
+                                                                  }
+                                                              ]
+                                              },
+                              "date_created":  "1646829510081",
+                              "hide_from_guests":  false,
+                              "value":  7,
+                              "value_richtext":  "",
+                              "required":  false
+                          },
+                          {
+                              "id":  "9fbc7198-ebb0-4f7d-b328-77787c5f3c68",
+                              "name":  "MoSCoW",
+                              "type":  "drop_down",
+                              "type_config":  {
+                                                  "default":  0,
+                                                  "placeholder":  null,
+                                                  "new_drop_down":  true,
+                                                  "options":  [
+                                                                  {
+                                                                      "id":  "379eb424-eb48-402c-a788-251a0d04b230",
+                                                                      "name":  "Must-have",
+                                                                      "color":  "#e50000",
+                                                                      "orderindex":  0
+                                                                  },
+                                                                  {
+                                                                      "id":  "7ea496fa-7fe4-4a3c-ba4f-53d0a36e8239",
+                                                                      "name":  "Should-have",
+                                                                      "color":  "#1bbc9c",
+                                                                      "orderindex":  1
+                                                                  },
+                                                                  {
+                                                                      "id":  "2b295d73-ee69-4aa0-8e53-0af2f0fdcb91",
+                                                                      "name":  "Nice-to-have",
+                                                                      "color":  "#81B1FF",
+                                                                      "orderindex":  2
+                                                                  }
+                                                              ]
+                                              },
+                              "date_created":  "1647941537849",
+                              "hide_from_guests":  false,
+                              "value":  1,
+                              "value_richtext":  "",
+                              "required":  false
+                          },
+                          {
+                              "id":  "7035d53e-8bd7-40e8-beac-38d8b796380d",
+                              "name":  "Design status",
+                              "type":  "drop_down",
+                              "type_config":  {
+                                                  "default":  0,
+                                                  "placeholder":  null,
+                                                  "new_drop_down":  true,
+                                                  "options":  [
+                                                                  {
+                                                                      "id":  "068642c6-3199-411a-b900-05b358253e12",
+                                                                      "name":  "To do",
+                                                                      "color":  "#b5bcc2",
+                                                                      "orderindex":  0
+                                                                  },
+                                                                  {
+                                                                      "id":  "7ddf8fe7-d5dc-4884-928d-aa3b5b829f10",
+                                                                      "name":  "Designing",
+                                                                      "color":  "#04A9F4",
+                                                                      "orderindex":  1
+                                                                  },
+                                                                  {
+                                                                      "id":  "6c69858b-c1c4-4b2c-80d5-3f52ad8d2d37",
+                                                                      "name":  "PM Review ",
+                                                                      "color":  "#AF7E2E",
+                                                                      "orderindex":  2
+                                                                  },
+                                                                  {
+                                                                      "id":  "9047cf80-11c1-4091-bf2a-5531cc223788",
+                                                                      "name":  "Design critique",
+                                                                      "color":  "#ff7800",
+                                                                      "orderindex":  3
+                                                                  },
+                                                                  {
+                                                                      "id":  "ebadb336-cb24-4c79-8142-527d68a76edf",
+                                                                      "name":  "Require update",
+                                                                      "color":  "#e50000",
+                                                                      "orderindex":  4
+                                                                  },
+                                                                  {
+                                                                      "id":  "23d1f714-c16b-4a99-ba06-442cee3ef736",
+                                                                      "name":  "PL/TN Review",
+                                                                      "color":  "#AF7E2E",
+                                                                      "orderindex":  5
+                                                                  },
+                                                                  {
+                                                                      "id":  "7ff8fd0e-18e3-425e-95b9-3e1bde3ad0a2",
+                                                                      "name":  "Ready for Dev",
+                                                                      "color":  "#2ecd6f",
+                                                                      "orderindex":  6
+                                                                  },
+                                                                  {
+                                                                      "id":  "75699074-68d2-4f45-b5e6-9c86bc39d989",
+                                                                      "name":  "Design not needed",
+                                                                      "color":  "#2ecd6f",
+                                                                      "orderindex":  7
+                                                                  }
+                                                              ]
+                                              },
+                              "date_created":  "1666390398986",
+                              "hide_from_guests":  false,
+                              "value":  6,
+                              "value_richtext":  "",
+                              "required":  false
+                          },
+                          {
+                              "id":  "d6cab328-bead-4187-af43-8e28b31dd7df",
+                              "name":  "Item Type",
+                              "type":  "drop_down",
+                              "type_config":  {
+                                                  "sorting":  "manual",
+                                                  "new_drop_down":  true,
+                                                  "options":  [
+                                                                  {
+                                                                      "id":  "b4439159-eaeb-490a-bc14-33d1cef9bef0",
+                                                                      "name":  "Epic",
+                                                                      "color":  "#9b59b6",
+                                                                      "orderindex":  0
+                                                                  },
+                                                                  {
+                                                                      "id":  "12531c5c-f1bc-4da0-9223-dfe0d842f518",
+                                                                      "name":  "Feature / User Story",
+                                                                      "color":  "#2ecd6f",
+                                                                      "orderindex":  1
+                                                                  },
+                                                                  {
+                                                                      "id":  "117336ee-4299-4153-915f-75a263a6a795",
+                                                                      "name":  "Quick Wins / Enhancements",
+                                                                      "color":  "#1bbc9c",
+                                                                      "orderindex":  2
+                                                                  },
+                                                                  {
+                                                                      "id":  "c5bf92ef-2404-4283-9c40-a7601e5a2242",
+                                                                      "name":  "Bug / Defect",
+                                                                      "color":  "#e50000",
+                                                                      "orderindex":  3
+                                                                  },
+                                                                  {
+                                                                      "id":  "320fa9d3-9ec6-497a-9bc0-79bf45f6ad17",
+                                                                      "name":  "Research /Spike ",
+                                                                      "color":  "#04A9F4",
+                                                                      "orderindex":  4
+                                                                  },
+                                                                  {
+                                                                      "id":  "3280d53a-cedc-4a26-80c4-d527f8544c56",
+                                                                      "name":  "Tech Task",
+                                                                      "color":  "#667684",
+                                                                      "orderindex":  5
+                                                                  },
+                                                                  {
+                                                                      "id":  "af0e8c99-1432-43ea-981c-06a98ee564f2",
+                                                                      "name":  "Objective",
+                                                                      "color":  "#ff7800",
+                                                                      "orderindex":  6
+                                                                  },
+                                                                  {
+                                                                      "id":  "65a96bf8-6f0e-4c9d-9c46-9154c2e3b6bb",
+                                                                      "name":  "Key Result",
+                                                                      "color":  "#2ecd6f",
+                                                                      "orderindex":  7
+                                                                  },
+                                                                  {
+                                                                      "id":  "695257a2-96ad-4182-bfb2-acb87fb3e474",
+                                                                      "name":  "On ground task",
+                                                                      "color":  "#667684",
+                                                                      "orderindex":  8
+                                                                  },
+                                                                  {
+                                                                      "id":  "280d6180-f64c-46ae-ad94-8518685c98a1",
+                                                                      "name":  "Testing Task",
+                                                                      "color":  "#4668E1",
+                                                                      "orderindex":  9
+                                                                  }
+                                                              ]
+                                              },
+                              "date_created":  "1620120377885",
+                              "hide_from_guests":  false,
+                              "value":  2,
+                              "value_richtext":  "",
+                              "required":  false
+                          },
+                          {
+                              "id":  "ef1928b6-b758-4337-b757-2757c1c0bf64",
+                              "name":  "🗺️ Roadmap status",
+                              "type":  "drop_down",
+                              "type_config":  {
+                                                  "default":  0,
+                                                  "sorting":  "manual",
+                                                  "placeholder":  null,
+                                                  "new_drop_down":  true,
+                                                  "options":  [
+                                                                  {
+                                                                      "id":  "61477b01-c5bc-433d-ae8c-91c0693f7d20",
+                                                                      "name":  "Idea",
+                                                                      "color":  "#b5bcc2",
+                                                                      "orderindex":  0
+                                                                  },
+                                                                  {
+                                                                      "id":  "a4e9a6b6-85da-4dbe-b045-63d169d7a30e",
+                                                                      "name":  "Discovery",
+                                                                      "color":  "#667684",
+                                                                      "orderindex":  1
+                                                                  },
+                                                                  {
+                                                                      "id":  "3fe29814-a062-40d6-afe0-1bc6f973ac8d",
+                                                                      "name":  "Design",
+                                                                      "color":  "#ff7800",
+                                                                      "orderindex":  2
+                                                                  },
+                                                                  {
+                                                                      "id":  "a0d48fce-c22f-4830-bbbf-b605dbda2dc5",
+                                                                      "name":  "Build",
+                                                                      "color":  "#04A9F4",
+                                                                      "orderindex":  3
+                                                                  },
+                                                                  {
+                                                                      "id":  "b1b43983-a73c-4b48-9a05-9f50bad8b2d9",
+                                                                      "name":  "Release",
+                                                                      "color":  "#2ecd6f",
+                                                                      "orderindex":  4
+                                                                  }
+                                                              ]
+                                              },
+                              "date_created":  "1647492254942",
+                              "hide_from_guests":  false,
+                              "required":  false
+                          }
+                      ],
+    "dependencies":  [
+
+                     ],
+    "linked_tasks":  [
+
+                     ],
+    "locations":  [
+                      {
+                          "id":  "901522162965",
+                          "name":  "Sprint 8 (12/4 - 26/4)"
+                      },
+                      {
+                          "id":  "901518489811",
+                          "name":  " Backlog"
+                      }
+                  ],
+    "team_id":  "3810377",
+    "url":  "https://app.clickup.com/t/86c8vmeyc",
+    "sharing":  {
+                    "public":  false,
+                    "public_share_expires_on":  null,
+                    "public_fields":  [
+                                          "assignees",
+                                          "priority",
+                                          "due_date",
+                                          "content",
+                                          "comments",
+                                          "attachments",
+                                          "customFields",
+                                          "subtasks",
+                                          "tags",
+                                          "checklists",
+                                          "coverimage"
+                                      ],
+                    "token":  null,
+                    "seo_optimized":  false
+                },
+    "permission_level":  "create",
+    "list":  {
+                 "id":  "901518248831",
+                 "name":  "Features",
+                 "access":  true
+             },
+    "project":  {
+                    "id":  "901512093687",
+                    "name":  "Product",
+                    "hidden":  false,
+                    "access":  true
+                },
+    "folder":  {
+                   "id":  "901512093687",
+                   "name":  "Product",
+                   "hidden":  false,
+                   "access":  true
+               },
+    "space":  {
+                  "id":  "90158514892"
+              },
+    "attachments":  [
+
+                    ]
+}

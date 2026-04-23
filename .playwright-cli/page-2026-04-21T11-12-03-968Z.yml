@@ -1,0 +1,42 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - main [ref=e5]:
+        - generic [ref=e6]:
+          - generic [ref=e8]:
+            - generic [ref=e9]:
+              - img "logo" [ref=e10]
+              - button "English" [ref=e11] [cursor=pointer]:
+                - img
+                - text: English
+            - generic [ref=e12]:
+              - heading "حيّاك الله من جديد في منصة قوافل!" [level=1] [ref=e13]
+              - generic [ref=e14]: كل ما تحتاجه لأدارة تجارتك في نظام واحد، سجّل دخولك وانطلق.
+            - generic [ref=e15]:
+              - generic [ref=e16]:
+                - generic [ref=e18]: رقم الجوال *
+                - generic [ref=e19]:
+                  - generic [ref=e21]:
+                    - img [ref=e23]
+                    - generic [ref=e57]: "+966"
+                  - textbox "رقم الجوال *" [active] [ref=e58]:
+                    - /placeholder: 5xxxxxxxxx
+              - button "تسجيل الدخول" [ref=e59] [cursor=pointer]
+            - generic [ref=e60]:
+              - generic [ref=e61]:
+                - generic [ref=e62]: عند استخدامك منصة قوافل فأنت توافق على
+                - link "الشروط والأحكام" [ref=e63] [cursor=pointer]:
+                  - /url: https://qawafel.sa/ar/terms-conditions
+                - generic [ref=e64]: و
+                - link "سياسة الخصوصية" [ref=e65] [cursor=pointer]:
+                  - /url: https://qawafel.sa/ar/privacy-policy
+              - generic [ref=e66]:
+                - generic [ref=e67]: ليس لديك حساب؟
+                - link "إنشاء حساب جديد" [ref=e68] [cursor=pointer]:
+                  - /url: https://qawafel.sa/create-account/
+          - img "leftSideImage" [ref=e70]
+      - region "Notifications alt+T"
+    - generic [ref=e71] [cursor=pointer]:
+      - img [ref=e72]
+      - text: مساعدة
+  - region "Notifications Alt+T"

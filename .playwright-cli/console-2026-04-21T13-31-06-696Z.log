@@ -1,0 +1,13 @@
+[    1874ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://store.development.qawafel.dev/_next/image?url=https%3A%2F%2Fqawafel-backend-assets-development.s3.eu-central-1.amazonaws.com%2Fmedia%2F13025%2Fconversions%2Fcake-gallery-solapur-1bwckirwtx-(1)-medium.jpg&w=384&q=75:0
+[    3189ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://store.development.qawafel.dev/_next/image?url=https%3A%2F%2Fqawafel-backend-assets-development.s3.eu-central-1.amazonaws.com%2Fmedia%2F13025%2Fconversions%2Fcake-gallery-solapur-1bwckirwtx-(1)-medium.jpg&w=384&q=75:0
+[    4713ms] UserflowError: userflow.init() was called but missing Userflow.js Token
+    at al.init (https://js.userflow.com/es2020/userflow.js:4:8135)
+    at Object.init (https://js.userflow.com/es2020/userflow.js:17:25588)
+    at ll (https://js.userflow.com/es2020/userflow.js:17:28788)
+    at https://js.userflow.com/es2020/userflow.js:17:25525
+[  270953ms] [ERROR] `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
+
+If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
+
+For more information, see https://radix-ui.com/primitives/docs/components/dialog @ https://store.development.qawafel.dev/_next/static/chunks/5602-964a2f83074840aa.js?dpl=dpl_GUe5rz7GLbqssZgvDP8Tdtt7YQzS:4
+[  270954ms] [WARNING] Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}. @ https://store.development.qawafel.dev/_next/static/chunks/5602-964a2f83074840aa.js?dpl=dpl_GUe5rz7GLbqssZgvDP8Tdtt7YQzS:4

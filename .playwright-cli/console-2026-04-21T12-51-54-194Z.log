@@ -1,0 +1,23 @@
+[    3000ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://store.development.qawafel.dev/_next/image?url=https%3A%2F%2Fqawafel-backend-assets-development.s3.eu-central-1.amazonaws.com%2Fmedia%2F13025%2Fconversions%2Fcake-gallery-solapur-1bwckirwtx-(1)-medium.jpg&w=384&q=75:0
+[    3982ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://api.development.qawafel.dev/storefront/v1/customers/me:0
+[    4050ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://api.development.qawafel.dev/vendor-stores-app/v1/stores/hint/orders/pending-change-requests:0
+[    4078ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://api.development.qawafel.dev/vendor-stores-app/v1/stores/hint/cart:0
+[    4118ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://api.development.qawafel.dev/storefront/v1/customers/addresses:0
+[    4554ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://api.development.qawafel.dev/vendor-stores-app/v1/stores/hint/cart:0
+[    8624ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://api.development.qawafel.dev/storefront/v2/customers/verifications/current:0
+[    8635ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://api.development.qawafel.dev/storefront/v1/customers/business-info/static-data:0
+[    8666ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://api.development.qawafel.dev/storefront/v1/customers/business-info:0
+[  148240ms] [ERROR] `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
+
+If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
+
+For more information, see https://radix-ui.com/primitives/docs/components/dialog @ https://store.development.qawafel.dev/_next/static/chunks/5602-964a2f83074840aa.js?dpl=dpl_21gALW5eD4pb1dxzL6MeCmBxQ2cL:4
+[  148241ms] [WARNING] Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}. @ https://store.development.qawafel.dev/_next/static/chunks/5602-964a2f83074840aa.js?dpl=dpl_21gALW5eD4pb1dxzL6MeCmBxQ2cL:4
+[  710396ms] [ERROR] Failed to load resource: the server responded with a status of 422 () @ https://api.development.qawafel.dev/storefront/v1/customers/register:0
+[  710428ms] Object
+[  810402ms] [ERROR] Failed to load resource: the server responded with a status of 422 () @ https://api.development.qawafel.dev/storefront/v1/customers/addresses:0
+[  810430ms] Object
+[  891787ms] [ERROR] Failed to load resource: the server responded with a status of 422 () @ https://api.development.qawafel.dev/storefront/v1/customers/addresses:0
+[  891819ms] Object
+[ 1078596ms] [ERROR] Failed to load resource: the server responded with a status of 422 () @ https://api.development.qawafel.dev/storefront/v1/customers/addresses:0
+[ 1078630ms] Object

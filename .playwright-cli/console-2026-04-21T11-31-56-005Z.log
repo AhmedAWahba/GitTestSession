@@ -1,0 +1,12 @@
+[     177ms] [LOG] Sentry initialized @ https://app.development.qawafel.dev/assets/index-28pF0ttt.js:23
+[     537ms] ReferenceError: webengage_fs_configurationMap is not defined
+    at t.onload (https://vite_web_engage_key.in.webengage.co/storage-frame-1.13.htm?cdn=y&cbf=webengage-engagement-callback-frame&lc=VITE_WEB_ENGAGE_KEY:1:2859)
+[    1666ms] [ERROR] TypeError: a is not a constructor
+    at https://app.development.qawafel.dev/assets/index-28pF0ttt.js:480:31497 @ https://app.development.qawafel.dev/assets/index-28pF0ttt.js:23
+[   40957ms] [LOG] %cWebEngage%c %cERROR color: #FFFFFF; background-color: #533370; padding: 2px 4px 1px 4px; border-radius: 2px  color: #FFFFFF; background-color: #FF0048; padding: 2px 4px 1px 4px; border-radius: 2px  SDK config "webengage_fs_configurationMap" is undefined or improper Error: SDK config "webengage_fs_configurationMap" is undefined or improper
+    at P (https://widgets.in.webengage.com/js/webengage-min-v-6.0.js:1:434345)
+    at https://widgets.in.webengage.com/js/webengage-min-v-6.0.js:1:439875
+    at l (https://widgets.in.webengage.com/js/webengage-min-v-6.0.js:1:2401)
+    at https://widgets.in.webengage.com/js/webengage-min-v-6.0.js:1:2793
+    at https://widgets.in.webengage.com/js/webengage-min-v-6.0.js:1:434222
+    at a.ie.a.version.t.onload (https://widgets.in.webengage.com/js/webengage-min-v-6.0.js:1:120881) @ https://app.development.qawafel.dev/assets/index-28pF0ttt.js:23

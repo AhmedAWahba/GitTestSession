@@ -1,0 +1,614 @@
+- generic:
+  - generic:
+    - main:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - link:
+                - /url: /hint
+                - generic:
+                  - img
+                - generic: الواهب 2 الحلويات الشرقية
+              - generic:
+                - link:
+                  - /url: /hint
+                  - text: المنتجات
+                - link:
+                  - /url: /hint/about-us
+                  - text: من نحن
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                    - generic: لا يوجد عنوان
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - img
+                - generic:
+                  - link:
+                    - /url: /hint/cart
+                    - img
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img
+                - generic:
+                  - img
+                - generic:
+                  - img
+                - generic:
+                  - img
+              - button:
+                - img
+              - button:
+                - img
+              - generic:
+                - button
+                - button
+                - button
+                - button
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: ترتيب حسب
+                    - generic:
+                      - generic:
+                        - log
+                        - generic:
+                          - generic:
+                            - generic: الرجاء الاختيار
+                            - generic:
+                              - combobox
+                          - generic:
+                            - generic:
+                              - img
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                          - generic: منتج مميز
+                    - link:
+                      - /url: /hint/products/80112
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80112
+                        - heading [level=3]: لوليبوب الفراولة
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - link:
+                      - /url: /hint/products/80155
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80155
+                        - heading [level=3]: كيك فارس القمر
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80225
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80225
+                        - heading [level=3]: كوكيز الواهب
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80235
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80235
+                        - heading [level=3]: مشروب الهوت شيكوليت
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80689
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80689
+                        - heading [level=3]: حمص الشام
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - link:
+                      - /url: /hint/products/80690
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80690
+                        - heading [level=3]: منتج بالعربي
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80705
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80705
+                        - heading [level=3]: منتج مكرر كذا مرة علشان نجرب الاسم
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - link:
+                      - /url: /hint/products/80698
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80698
+                        - heading [level=3]: لافاندر سويتس
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - link:
+                      - /url: /hint/products/80738
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80738
+                        - heading [level=3]: منتج مرحلة الدفع 2
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: عدة خيارات
+                    - link:
+                      - /url: /hint/products/80706?variant=80780
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80706?variant=80780
+                        - heading [level=3]: منتج مكرر كذا مرة علشان نجرب الاسم
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80702
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80702
+                        - heading [level=3]: تمر سكري ميفاتيل بريميوم من جانوبا (500 جرام) - جنوبة تمر سكرى مفتل ممتاز
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: عدة خيارات
+                    - link:
+                      - /url: /hint/products/80795?variant=80841
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80795?variant=80841
+                        - heading [level=3]: عصير كوكتيل فواكه
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - link:
+                      - /url: /hint/products/80737
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80737
+                        - heading [level=3]: منتج مرحلة الدفع3
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80732
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80732
+                        - heading [level=3]: منتج مكرر كذا مرة علشان نجرب الاسم
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80733
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80733
+                        - heading [level=3]: منتج ريجرو
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80731
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80731
+                        - heading [level=3]: منتج مكرر
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                - generic:
+                  - navigation:
+                    - listitem:
+                      - button [disabled]: السابق
+                    - listitem:
+                      - button: "1"
+                    - listitem:
+                      - button: "2"
+                    - listitem:
+                      - button: التالي
+      - generic:
+        - generic:
+          - generic:
+            - heading [level=2]: "تواصل معنا بسهولة عبر:"
+            - generic:
+              - link:
+                - /url: mailto:Sales@ufuq.co
+                - generic:
+                  - img
+                - generic:
+                  - heading [level=4]: البريد الإلكتروني
+                  - paragraph: Sales@ufuq.co
+              - link:
+                - /url: tell:538989802
+                - generic:
+                  - img
+                - generic:
+                  - heading [level=4]: رقم التواصل
+                  - paragraph: "538989802"
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img
+                - paragraph:
+                  - generic: جميع الحقوق محفوظة
+                  - generic: الواهب 2 الحلويات الشرقية
+                  - generic: 2026 ©
+              - generic:
+                - generic: العنوان
+                - paragraph: NSSB3596، 3596 ابو بكر الصديق، 6916، سلطانة، شرورة 68372، السعودية
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                - generic:
+                  - link:
+                    - /url: https://www.instagram.com/hint__sa?igsh=N3N5d3hnNzRzcTFh
+                    - img
+                  - link:
+                    - /url: https://wa.me/message/4QQNE4EFXXTID1
+                    - img
+                  - link:
+                    - /url: https://www.tiktok.com/@hint_sa?_t=ZS-8wGjOJmywzd&_r=1
+                    - img
+              - generic:
+                - list:
+                  - listitem:
+                    - generic:
+                      - generic: "الرقم الضريبي:"
+                      - generic: "987654329876543"
+                  - listitem:
+                    - generic:
+                      - generic: "السجل التجاري:"
+                      - generic: "1521109956"
+                  - listitem:
+                    - generic:
+                      - generic: شركة
+                      - generic: الواهب 2 الحلويات الشرقية
+                - generic:
+                  - paragraph: جميع الأسعار في الموقع شاملة ضريبة القيمة المضافة
+                  - img
+            - generic: صنع بواسطة قوافل للتسويق الإلكتروني
+      - region "Notifications alt+T"
+  - generic:
+    - alert
+  - dialog [ref=e372]:
+    - generic [ref=e373]:
+      - generic [ref=e374]:
+        - img "Qawafel's logo" [ref=e376]
+        - paragraph [ref=e377]: أكمل الخطوات التالية لإعداد ملفك الشخصي في منصة قوافل
+        - generic [ref=e378]:
+          - generic [ref=e379]:
+            - img [ref=e381]
+            - generic [ref=e384]:
+              - text: بيانات الشركة
+              - paragraph [ref=e385]: ادخل بيانات الشركة و العنوان الخاصة بك
+          - generic [ref=e388]:
+            - text: المعلومات القانونية
+            - paragraph [ref=e389]: ادخل بيانات تسجيل نشاطك التجاري والضرائب
+      - generic [ref=e391]:
+        - generic [ref=e392]:
+          - generic [ref=e393]:
+            - heading "بيانات الشركة" [level=1] [ref=e394]
+            - paragraph [ref=e395]:
+              - text: لنبدأ بإعداد بيانات الشركة. سيساعدنا ذلك في التحقق من بيانات عملك.
+              - generic [ref=e396]: تأكد من أن بياناتك التجارية تتطابق مع المستندات القانونية لتجنب تأخير التحقق.
+          - generic [ref=e397]:
+            - generic [ref=e398]:
+              - generic [ref=e400]:
+                - generic [ref=e401]: اسم الشركة (باللغة العربية)
+                - textbox "أدخل اسم الشركة بالعربية" [ref=e403]:
+                  - /placeholder: "أدخل اسم الشركة بالعربية "
+                  - text: مخبز السعادة للحلويات
+              - generic [ref=e405]:
+                - generic [ref=e406]: اسم الشركة (باللغة الإنجليزية)
+                - textbox "Enter company name in English" [ref=e408]: Makhbaz Al Saadah Sweets
+            - generic [ref=e410]:
+              - generic [ref=e411]: نوع المتجر
+              - generic [ref=e412]:
+                - log [ref=e414]
+                - generic [ref=e415]:
+                  - generic [ref=e416]:
+                    - generic [ref=e531]: مخبز
+                    - combobox [ref=e419]
+                  - img [ref=e423]
+            - generic [ref=e425]:
+              - generic [ref=e427]:
+                - generic [ref=e428]: الاسم الأول
+                - textbox "أدخل الاسم الأول" [ref=e430]: محمد
+              - generic [ref=e432]:
+                - generic [ref=e433]: الاسم الأخير
+                - textbox "أدخل الاسم الأخير" [ref=e435]: العمري
+            - generic [ref=e437]:
+              - generic [ref=e438]: البريد الإلكتروني
+              - textbox "example@email.com" [ref=e440]: makhbaz.saadah@example.com
+            - generic [ref=e442]:
+              - generic [ref=e443]: اسم العنوان
+              - 'textbox "أدخل اسم العنوان (مثال: المكتب الرئيسي، المستودع، المتجر)" [ref=e445]': المخبز الرئيسي
+            - generic [ref=e446]:
+              - generic [ref=e447]: الدولة
+              - generic:
+                - log
+                - generic:
+                  - generic:
+                    - generic: الممكلة العربية السعودية
+                  - generic:
+                    - generic:
+                      - img
+            - generic [ref=e449]:
+              - generic [ref=e450]: العنوان التفصيلي
+              - textbox "أدخل العنوان التفصيلي" [ref=e452]: حي النزهة، شارع الملك فهد
+            - generic [ref=e453]:
+              - generic [ref=e455]:
+                - generic [ref=e456]: المدينة
+                - generic [ref=e457]:
+                  - log [ref=e459]
+                  - generic [ref=e460]:
+                    - generic [ref=e461]:
+                      - generic [ref=e755]: الرياض
+                      - combobox [ref=e464]
+                    - img [ref=e468]
+              - generic [ref=e471]:
+                - generic [ref=e472]: الحي
+                - generic [ref=e756]:
+                  - log [ref=e758]: 167 results available.Use Up and Down to choose options, press Enter to select the currently focused option, press Escape to exit the menu, press Tab to select the option and exit the menu.
+                  - generic [ref=e759]:
+                    - generic [ref=e760]:
+                      - generic [ref=e761]: أدخل اسم الحي
+                      - combobox [expanded] [active] [ref=e763]
+                    - img [ref=e767]
+                  - listbox [ref=e770]:
+                    - option "الفيحاء" [ref=e771]
+                    - option "حي الملك عبدالعزيز" [ref=e772]
+                    - option "النهضة" [ref=e773]
+                    - option "ظهرة لبن" [ref=e774]
+                    - option "الياسمين" [ref=e775]
+                    - option "الخليج" [ref=e776]
+                    - option "النفل" [ref=e777]
+                    - option "العليا" [ref=e778]
+                    - option "عليشة" [ref=e779]
+                    - option "حي النرجس" [ref=e780]
+                    - option "الحائر" [ref=e781]
+                    - option "حي الرحمانية" [ref=e782]
+                    - option "حي النخيل" [ref=e783]
+                    - option "الملك فيصل" [ref=e784]
+                    - option "بدر" [ref=e785]
+                    - option "غبيرة" [ref=e786]
+                    - option "بنبان" [ref=e787]
+                    - option "القدس" [ref=e788]
+                    - option "الصناعية القديمة" [ref=e789]
+                    - option "الملز" [ref=e790]
+                    - option "الدار البيضاء" [ref=e791]
+                    - option "العارض" [ref=e792]
+                    - option "السلي" [ref=e793]
+                    - option "حي التعاون" [ref=e794]
+                    - option "حي السليمانية" [ref=e795]
+                    - option "حي الحزم" [ref=e796]
+                    - option "النزهة" [ref=e797]
+                    - option "الربيع" [ref=e798]
+                    - option "الورود" [ref=e799]
+                    - option "النرجس" [ref=e800]
+                    - option "النموذجية" [ref=e801]
+                    - option "النخيل" [ref=e802]
+                    - option "اشبيلية" [ref=e803]
+                    - option "الاندلس" [ref=e804]
+                    - option "اليرموك" [ref=e805]
+                    - option "الريان" [ref=e806]
+                    - option "عتيقة" [ref=e807]
+                    - option "السويدي" [ref=e808]
+                    - option "الحزم" [ref=e809]
+                    - option "الشفا" [ref=e810]
+                    - option "المرقب" [ref=e811]
+                    - option "المحمدية" [ref=e812]
+                    - option "ثليم" [ref=e813]
+                    - option "الملك فهد" [ref=e814]
+                    - option "السليمانية" [ref=e815]
+                    - option "حي العقيق" [ref=e816]
+                    - option "الملك عبد العزيز" [ref=e817]
+                    - option "حطين" [ref=e818]
+                    - option "مطار الملك خالد الدولي" [ref=e819]
+                    - option "غرناطة" [ref=e820]
+                    - option "حي حطين" [ref=e821]
+                    - option "العقيق" [ref=e822]
+                    - option "أم الحمام الغربي" [ref=e823]
+                    - option "أم الحمام الشرقي" [ref=e824]
+                    - option "المغرزات" [ref=e825]
+                    - option "المرسلات" [ref=e826]
+                    - option "الرحمانية" [ref=e827]
+                    - option "حي المحمدية" [ref=e828]
+                    - option "حي الملك فهد" [ref=e829]
+                    - option "جامعة الملك سعود" [ref=e830]
+                    - option "عرقة" [ref=e831]
+                    - option "منفوحة الجديدة" [ref=e832]
+                    - option "السفارات" [ref=e833]
+                    - option "المونسية" [ref=e834]
+                    - option "المعذر" [ref=e835]
+                    - option "الملك عبدالعزيز" [ref=e836]
+                    - option "الاسكان" [ref=e837]
+                    - option "المهدية" [ref=e838]
+                    - option "القيروان" [ref=e839]
+                    - option "حي المعيزيلة" [ref=e840]
+                    - option "السعادة" [ref=e841]
+                    - option "المؤتمرات" [ref=e842]
+                    - option "عريض" [ref=e843]
+                    - option "حي الخزامى" [ref=e844]
+                    - option "الوزارات" [ref=e845]
+                    - option "الخير" [ref=e846]
+                    - option "الغدير" [ref=e847]
+                    - option "هيت الجنوبية" [ref=e848]
+                    - option "حي الملقا" [ref=e849]
+                    - option "المعذر الشمالي" [ref=e850]
+                    - option "خشم العان،" [ref=e851]
+                    - option "الجنادرية" [ref=e852]
+                    - option "حي عكاظ" [ref=e853]
+                    - option "الفلاح" [ref=e854]
+                    - option "الطريف الجديد" [ref=e855]
+                    - option "المصانع" [ref=e856]
+                    - option "الملك عبدالله" [ref=e857]
+                    - option "صياح" [ref=e858]
+                    - option "العريجاء الوسطى" [ref=e859]
+                    - option "الجزيرة" [ref=e860]
+                    - option "هجرة لبن" [ref=e861]
+                    - option "حي المرسلات" [ref=e862]
+                    - option "الهدا" [ref=e863]
+                    - option "طويق" [ref=e864]
+                    - option "حي المصيف" [ref=e865]
+                    - option "الروضة" [ref=e866]
+                    - option "المشاعل" [ref=e867]
+                    - option "الندى" [ref=e868]
+                    - option "الدرعية الجديدة" [ref=e869]
+                    - option "حي الضباط" [ref=e870]
+                    - option "صلاح الدين" [ref=e871]
+                    - option "Al Ulaya" [ref=e872]
+                    - option "حي الرفيعة" [ref=e873]
+                    - option "الوادي" [ref=e874]
+                    - option "الصحافة" [ref=e875]
+                    - option "الخزامى" [ref=e876]
+                    - option "النسيم الغربي" [ref=e877]
+                    - option "الملقا" [ref=e878]
+                    - option "الازدهار" [ref=e879]
+                    - option "حي النفل" [ref=e880]
+                    - option "المروج" [ref=e881]
+                    - option "حي الورود" [ref=e882]
+                    - option "قرطبة" [ref=e883]
+                    - option "حي العليا" [ref=e884]
+                    - option "جامعة الامام محمد بن سعود الاسلامية" [ref=e885]
+                    - option "الرائد" [ref=e886]
+                    - option "الضباط" [ref=e887]
+                    - option "حي الروضة" [ref=e888]
+                    - option "حي الملز" [ref=e889]
+                    - option "حي اشبيلية" [ref=e890]
+                    - option "حي المروج" [ref=e891]
+                    - option "حي الازدهار" [ref=e892]
+                    - option "حي الدار البيضاء" [ref=e893]
+                    - option "الربوة" [ref=e894]
+                    - option "المصيف" [ref=e895]
+                    - option "حي الربيع" [ref=e896]
+                    - option "حي العزيزية" [ref=e897]
+                    - option "حي الحمراء" [ref=e898]
+                    - option "حي المعذر الشمالي" [ref=e899]
+                    - option "الشرفية" [ref=e900]
+                    - option "حي البديعة" [ref=e901]
+                    - option "حي الهدا" [ref=e902]
+                    - option "حي المغرزات" [ref=e903]
+                    - option "حي قرطبة" [ref=e904]
+                    - option "حي الزهرة" [ref=e905]
+                    - option "حي ظهرة لبن" [ref=e906]
+                    - option "سلطانة" [ref=e907]
+                    - option "حي ظهرة البديعة" [ref=e908]
+                    - option "حي بدر" [ref=e909]
+                    - option "حي الوادي" [ref=e910]
+                    - option "المصفاة" [ref=e911]
+                    - option "حي الملك فيصل" [ref=e912]
+                    - option "حي طيبة" [ref=e913]
+                    - option "ضاحية نمار" [ref=e914]
+                    - option "حي الشرفية" [ref=e915]
+                    - option "حي الفاروق" [ref=e916]
+                    - option "المربع" [ref=e917]
+                    - option "ام الشعال" [ref=e918]
+                    - option "الواحة" [ref=e919]
+                    - option "حي صلاح الدين" [ref=e920]
+                    - option "shqyiqa" [ref=e921]
+                    - option "البرية" [ref=e922]
+                    - option "خشم العان" [ref=e923]
+                    - option "الفاخرية" [ref=e924]
+                    - option "حي النموذجية" [ref=e925]
+                    - option "الرفيعة" [ref=e926]
+                    - option "السلام" [ref=e927]
+                    - option "جرير" [ref=e928]
+                    - option "حي طويق" [ref=e929]
+                    - option "الديرة" [ref=e930]
+                    - option "حي الندى" [ref=e931]
+                    - option "حي الاندلس" [ref=e932]
+                    - option "الرماية" [ref=e933]
+                    - option "الصالحية" [ref=e934]
+                    - option "حي المونسية" [ref=e935]
+                    - option "حي القادسية" [ref=e936]
+                    - option "حي المنار" [ref=e937]
+              - generic [ref=e474]:
+                - generic [ref=e475]: اسم الشارع
+                - textbox "أدخل اسم الشارع" [ref=e477]
+              - generic [ref=e479]:
+                - generic [ref=e480]: رقم المبنى
+                - spinbutton [ref=e482]
+              - generic [ref=e484]:
+                - generic [ref=e485]: الرقم الفرعي للعنوان (اختياري)
+                - spinbutton [ref=e487]
+              - generic [ref=e489]:
+                - generic [ref=e490]: الرمز البريدي
+                - spinbutton [ref=e492]
+              - generic [ref=e494]:
+                - generic [ref=e495]: العنوان الوطني المختصر
+                - textbox "4 أحرف و 4 أرقام (مثال:RRRD2929)" [ref=e497]
+        - button "الخطوة التالية" [ref=e499] [cursor=pointer]

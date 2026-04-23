@@ -1,0 +1,439 @@
+- generic:
+  - generic:
+    - main:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - link:
+                - /url: /hint
+                - generic:
+                  - img
+                - generic: الواهب 2 الحلويات الشرقية
+              - generic:
+                - link:
+                  - /url: /hint
+                  - text: المنتجات
+                - link:
+                  - /url: /hint/about-us
+                  - text: من نحن
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                    - generic: دخول / تسجيل
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img
+                - generic:
+                  - img
+                - generic:
+                  - img
+                - generic:
+                  - img
+              - button:
+                - img
+              - button:
+                - img
+              - generic:
+                - button
+                - button
+                - button
+                - button
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: ترتيب حسب
+                    - generic:
+                      - generic:
+                        - log
+                        - generic:
+                          - generic:
+                            - generic: الرجاء الاختيار
+                            - generic:
+                              - combobox
+                          - generic:
+                            - generic:
+                              - img
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                          - generic: منتج مميز
+                    - link:
+                      - /url: /hint/products/80112
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80112
+                        - heading [level=3]: لوليبوب الفراولة
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - link:
+                      - /url: /hint/products/80155
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80155
+                        - heading [level=3]: كيك فارس القمر
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80225
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80225
+                        - heading [level=3]: كوكيز الواهب
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80235
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80235
+                        - heading [level=3]: مشروب الهوت شيكوليت
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80689
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80689
+                        - heading [level=3]: حمص الشام
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - link:
+                      - /url: /hint/products/80690
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80690
+                        - heading [level=3]: منتج بالعربي
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80705
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80705
+                        - heading [level=3]: منتج مكرر كذا مرة علشان نجرب الاسم
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - link:
+                      - /url: /hint/products/80698
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80698
+                        - heading [level=3]: لافاندر سويتس
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - link:
+                      - /url: /hint/products/80738
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80738
+                        - heading [level=3]: منتج مرحلة الدفع 2
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: عدة خيارات
+                    - link:
+                      - /url: /hint/products/80706?variant=80780
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80706?variant=80780
+                        - heading [level=3]: منتج مكرر كذا مرة علشان نجرب الاسم
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80702
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80702
+                        - heading [level=3]: تمر سكري ميفاتيل بريميوم من جانوبا (500 جرام) - جنوبة تمر سكرى مفتل ممتاز
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: عدة خيارات
+                    - link:
+                      - /url: /hint/products/80795?variant=80841
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80795?variant=80841
+                        - heading [level=3]: عصير كوكتيل فواكه
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - link:
+                      - /url: /hint/products/80737
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80737
+                        - heading [level=3]: منتج مرحلة الدفع3
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80732
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80732
+                        - heading [level=3]: منتج مكرر كذا مرة علشان نجرب الاسم
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80733
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80733
+                        - heading [level=3]: منتج ريجرو
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80731
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80731
+                        - heading [level=3]: منتج مكرر
+                      - generic: يرجى تسجيل الدخول لعرض سعر المنتج
+                - generic:
+                  - navigation:
+                    - listitem:
+                      - button [disabled]: السابق
+                    - listitem:
+                      - button: "1"
+                    - listitem:
+                      - button: "2"
+                    - listitem:
+                      - button: التالي
+      - generic:
+        - generic:
+          - generic:
+            - heading [level=2]: "تواصل معنا بسهولة عبر:"
+            - generic:
+              - link:
+                - /url: mailto:Sales@ufuq.co
+                - generic:
+                  - img
+                - generic:
+                  - heading [level=4]: البريد الإلكتروني
+                  - paragraph: Sales@ufuq.co
+              - link:
+                - /url: tell:538989802
+                - generic:
+                  - img
+                - generic:
+                  - heading [level=4]: رقم التواصل
+                  - paragraph: "538989802"
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img
+                - paragraph:
+                  - generic: جميع الحقوق محفوظة
+                  - generic: الواهب 2 الحلويات الشرقية
+                  - generic: 2026 ©
+              - generic:
+                - generic: العنوان
+                - paragraph: NSSB3596، 3596 ابو بكر الصديق، 6916، سلطانة، شرورة 68372، السعودية
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                - generic:
+                  - link:
+                    - /url: https://www.instagram.com/hint__sa?igsh=N3N5d3hnNzRzcTFh
+                    - img
+                  - link:
+                    - /url: https://wa.me/message/4QQNE4EFXXTID1
+                    - img
+                  - link:
+                    - /url: https://www.tiktok.com/@hint_sa?_t=ZS-8wGjOJmywzd&_r=1
+                    - img
+              - generic:
+                - list:
+                  - listitem:
+                    - generic:
+                      - generic: "الرقم الضريبي:"
+                      - generic: "987654329876543"
+                  - listitem:
+                    - generic:
+                      - generic: "السجل التجاري:"
+                      - generic: "1521109956"
+                  - listitem:
+                    - generic:
+                      - generic: شركة
+                      - generic: الواهب 2 الحلويات الشرقية
+                - generic:
+                  - paragraph: جميع الأسعار في الموقع شاملة ضريبة القيمة المضافة
+                  - img
+            - generic: صنع بواسطة قوافل للتسويق الإلكتروني
+      - region "Notifications alt+T"
+  - generic:
+    - alert
+  - dialog [active] [ref=e359]:
+    - generic [ref=e360]:
+      - generic [ref=e361]:
+        - img "Qawafel's logo" [ref=e363]
+        - paragraph [ref=e364]: أكمل الخطوات التالية لإعداد ملفك الشخصي في منصة قوافل
+        - generic [ref=e365]:
+          - generic [ref=e366]:
+            - img [ref=e368]
+            - generic [ref=e371]:
+              - text: بيانات الشركة
+              - paragraph [ref=e372]: ادخل بيانات الشركة و العنوان الخاصة بك
+          - generic [ref=e375]:
+            - text: المعلومات القانونية
+            - paragraph [ref=e376]: ادخل بيانات تسجيل نشاطك التجاري والضرائب
+      - generic [ref=e378]:
+        - generic [ref=e379]:
+          - generic [ref=e380]:
+            - heading "بيانات الشركة" [level=1] [ref=e381]
+            - paragraph [ref=e382]:
+              - text: لنبدأ بإعداد بيانات الشركة. سيساعدنا ذلك في التحقق من بيانات عملك.
+              - generic [ref=e383]: تأكد من أن بياناتك التجارية تتطابق مع المستندات القانونية لتجنب تأخير التحقق.
+          - generic [ref=e384]:
+            - generic [ref=e385]:
+              - generic [ref=e387]:
+                - generic [ref=e388]: اسم الشركة (باللغة العربية)
+                - textbox "أدخل اسم الشركة بالعربية" [ref=e390]:
+                  - /placeholder: "أدخل اسم الشركة بالعربية "
+                  - text: مخبز الاختبار
+              - generic [ref=e392]:
+                - generic [ref=e393]: اسم الشركة (باللغة الإنجليزية)
+                - textbox "Enter company name in English" [ref=e395]: Test Bakery
+            - generic [ref=e396]:
+              - generic [ref=e397]:
+                - generic [ref=e398]: نوع المتجر
+                - generic [ref=e399]:
+                  - log [ref=e401]
+                  - generic [ref=e402]:
+                    - generic [ref=e403]:
+                      - generic [ref=e404]: اختر النوع
+                      - combobox [ref=e406]
+                    - img [ref=e410]
+              - generic [ref=e489]: نوع المتجر مطلوب
+            - generic [ref=e412]:
+              - generic [ref=e414]:
+                - generic [ref=e415]: الاسم الأول
+                - textbox "أدخل الاسم الأول" [ref=e417]: أحمد
+              - generic [ref=e419]:
+                - generic [ref=e420]: الاسم الأخير
+                - textbox "أدخل الاسم الأخير" [ref=e422]: وهبة
+            - generic [ref=e424]:
+              - generic [ref=e425]: البريد الإلكتروني
+              - textbox "example@email.com" [ref=e427]: test.bakery820@example.com
+            - generic [ref=e429]:
+              - generic [ref=e430]: اسم العنوان
+              - 'textbox "أدخل اسم العنوان (مثال: المكتب الرئيسي، المستودع، المتجر)" [ref=e432]': المخبز الرئيسي
+            - generic [ref=e433]:
+              - generic [ref=e434]: الدولة
+              - generic:
+                - log
+                - generic:
+                  - generic:
+                    - generic: الممكلة العربية السعودية
+                  - generic:
+                    - generic:
+                      - img
+            - generic [ref=e436]:
+              - generic [ref=e437]: العنوان التفصيلي
+              - textbox "أدخل العنوان التفصيلي" [ref=e439]: حي النزهة، شارع الملك فهد
+            - generic [ref=e440]:
+              - generic [ref=e442]:
+                - generic [ref=e443]: المدينة
+                - generic [ref=e444]:
+                  - log [ref=e446]
+                  - generic [ref=e447]:
+                    - generic [ref=e448]:
+                      - generic [ref=e501]: الرياض
+                      - combobox [ref=e451]
+                    - img [ref=e455]
+              - generic [ref=e458]:
+                - generic [ref=e459]: الحي
+                - generic [ref=e502]:
+                  - log [ref=e504]
+                  - generic [ref=e505]:
+                    - generic [ref=e506]:
+                      - generic [ref=e507]: الفيحاء
+                      - combobox [ref=e509]
+                    - img [ref=e513]
+              - generic [ref=e461]:
+                - generic [ref=e462]: اسم الشارع
+                - textbox "أدخل اسم الشارع" [ref=e464]: شارع الملك فهد
+              - generic [ref=e466]:
+                - generic [ref=e467]: رقم المبنى
+                - spinbutton [ref=e469]: "8118"
+              - generic [ref=e471]:
+                - generic [ref=e472]: الرقم الفرعي للعنوان (اختياري)
+                - spinbutton [ref=e474]: "1234"
+              - generic [ref=e476]:
+                - generic [ref=e477]: الرمز البريدي
+                - spinbutton [ref=e479]: "12345"
+              - generic [ref=e481]:
+                - generic [ref=e482]: العنوان الوطني المختصر
+                - textbox "4 أحرف و 4 أرقام (مثال:RRRD2929)" [ref=e484]: TSTB8200
+        - button "الخطوة التالية" [ref=e486] [cursor=pointer]

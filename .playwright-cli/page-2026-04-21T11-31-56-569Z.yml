@@ -1,0 +1,19 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - main [ref=e5]:
+      - generic [ref=e7]:
+        - button [ref=e8] [cursor=pointer]:
+          - img [ref=e10]
+        - button [ref=e12] [cursor=pointer]:
+          - img [ref=e14]
+        - link "جديد" [ref=e16] [cursor=pointer]:
+          - /url: /release-notes
+          - generic [ref=e17]: جديد
+          - img [ref=e18]
+        - button "EN" [ref=e42] [cursor=pointer]
+        - button "الواهب 2 الحلويات الشرقية" [ref=e44] [cursor=pointer]:
+          - generic [ref=e45]:
+            - generic [ref=e49]: الواهب 2 الحلويات الشرقية
+            - img [ref=e51]
+    - region "Notifications alt+T"
+  - region "Notifications Alt+T"

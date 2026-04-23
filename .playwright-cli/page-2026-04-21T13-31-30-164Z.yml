@@ -1,0 +1,421 @@
+- generic [ref=e1]:
+  - main [ref=e3]:
+    - generic [ref=e7]:
+      - link "الواهب 2 الحلويات الشرقية الواهب 2 الحلويات الشرقية" [ref=e294] [cursor=pointer]:
+        - /url: /hint
+        - img "الواهب 2 الحلويات الشرقية" [ref=e295]
+        - generic [ref=e296]: الواهب 2 الحلويات الشرقية
+      - generic [ref=e10]:
+        - link "المنتجات" [ref=e11] [cursor=pointer]:
+          - /url: /hint
+        - link "من نحن" [ref=e12] [cursor=pointer]:
+          - /url: /hint/about-us
+      - generic [ref=e13]:
+        - generic [ref=e15] [cursor=pointer]:
+          - img "User's addresses" [ref=e297]
+          - generic [ref=e298]: Home
+          - img "arrow icon" [ref=e299]
+        - generic [ref=e24] [cursor=pointer]:
+          - img "avatar icon" [ref=e25]
+          - generic [ref=e300]: Ahmed
+          - img "arrow icon" [ref=e26]
+        - link "Open cart 3" [ref=e301] [cursor=pointer]:
+          - /url: /hint/cart
+          - img "Open cart" [ref=e29]
+          - generic [ref=e302]: "3"
+    - generic [ref=e32]:
+      - generic [ref=e304]:
+        - img "warning" [ref=e305]
+        - paragraph [ref=e306]: لبدء الطلب من قوافل، يرجى استكمال البيانات القانونية (السجل التجاري، الرقم الضريبي، العنوان)
+        - generic [ref=e307] [cursor=pointer]: تأكيد الحساب
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - img "Banner 1" [ref=e36]
+          - img "Banner 2" [ref=e38]
+          - img "Banner 3" [ref=e40]
+          - img "Banner 4" [ref=e42]
+        - button "Previous slide" [ref=e43] [cursor=pointer]:
+          - img [ref=e44]
+        - button "Next slide" [ref=e46] [cursor=pointer]:
+          - img [ref=e47]
+        - generic [ref=e49]:
+          - button "Go to slide 1" [ref=e50] [cursor=pointer]
+          - button "Go to slide 2" [ref=e51] [cursor=pointer]
+          - button "Go to slide 3" [ref=e52] [cursor=pointer]
+          - button "Go to slide 4" [ref=e53] [cursor=pointer]
+      - generic [ref=e55]:
+        - generic [ref=e57]:
+          - generic [ref=e58]: ترتيب حسب
+          - generic [ref=e60]:
+            - log [ref=e62]
+            - generic [ref=e63]:
+              - generic [ref=e64]:
+                - generic [ref=e65]: الرجاء الاختيار
+                - combobox [ref=e67]
+              - img [ref=e71]
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e77]:
+              - img "Special product" [ref=e78]
+              - generic [ref=e79]: منتج مميز
+            - link "لوليبوب الفراولة لديك 80 قطعة فى السلة" [ref=e308] [cursor=pointer]:
+              - /url: /hint/products/80112
+              - img "لوليبوب الفراولة" [ref=e81]
+              - generic [ref=e309]: لديك 80 قطعة فى السلة
+            - generic [ref=e82]:
+              - link "لوليبوب الفراولة" [ref=e83] [cursor=pointer]:
+                - /url: /hint/products/80112
+                - heading "لوليبوب الفراولة" [level=3] [ref=e84]
+              - generic [ref=e310]:
+                - generic [ref=e311]:
+                  - text: "3.62"
+                  - generic [ref=e312]: ﷼
+                - paragraph [ref=e313]: هامش الربح المتوقع 38%
+            - button "icon في السلة (80)" [ref=e315] [cursor=pointer]:
+              - img "icon" [ref=e317]
+              - generic [ref=e318]: في السلة (80)
+          - generic [ref=e86]:
+            - link "كيك فارس القمر لديك 13 قطعة فى السلة" [ref=e319] [cursor=pointer]:
+              - /url: /hint/products/80155
+              - img "كيك فارس القمر" [ref=e88]
+              - generic [ref=e320]: لديك 13 قطعة فى السلة
+            - generic [ref=e89]:
+              - link "كيك فارس القمر" [ref=e90] [cursor=pointer]:
+                - /url: /hint/products/80155
+                - heading "كيك فارس القمر" [level=3] [ref=e91]
+              - generic [ref=e321]:
+                - generic [ref=e322]:
+                  - text: "50"
+                  - generic [ref=e323]: ﷼
+                - paragraph [ref=e324]: هامش الربح المتوقع 20%
+            - button "icon في السلة (13)" [ref=e326] [cursor=pointer]:
+              - img "icon" [ref=e328]
+              - generic [ref=e329]: في السلة (13)
+          - generic [ref=e93]:
+            - generic [ref=e97]: شامل عينة
+            - link "كوكيز الواهب لديك 20 قطعة فى السلة" [ref=e330] [cursor=pointer]:
+              - /url: /hint/products/80225
+              - img "كوكيز الواهب" [ref=e99]
+              - generic [ref=e331]: لديك 20 قطعة فى السلة
+            - generic [ref=e100]:
+              - link "كوكيز الواهب" [ref=e101] [cursor=pointer]:
+                - /url: /hint/products/80225
+                - heading "كوكيز الواهب" [level=3] [ref=e102]
+              - generic [ref=e332]:
+                - generic [ref=e333]:
+                  - text: "19"
+                  - generic [ref=e334]: ﷼
+                - paragraph [ref=e335]: هامش الربح المتوقع 137%
+            - button "icon في السلة (20)" [ref=e337] [cursor=pointer]:
+              - img "icon" [ref=e339]
+              - generic [ref=e340]: في السلة (20)
+          - generic [ref=e104]:
+            - generic [ref=e108]: شامل عينة
+            - link "حمص الشام" [ref=e341] [cursor=pointer]:
+              - /url: /hint/products/80689
+              - img "حمص الشام" [ref=e342]
+            - generic [ref=e111]:
+              - link "حمص الشام" [ref=e343] [cursor=pointer]:
+                - /url: /hint/products/80689
+                - heading "حمص الشام" [level=3] [ref=e344]
+              - generic [ref=e345]:
+                - generic [ref=e346]:
+                  - text: "100"
+                  - generic [ref=e347]: ﷼
+                - paragraph [ref=e348]: هامش الربح المتوقع 40%
+            - button "icon إضافة للسلة" [ref=e350] [cursor=pointer]:
+              - img "icon" [ref=e352]
+              - generic [ref=e353]: إضافة للسلة
+          - generic [ref=e115]:
+            - link "منتج بالعربي" [ref=e354] [cursor=pointer]:
+              - /url: /hint/products/80690
+              - img "منتج بالعربي" [ref=e355]
+            - generic [ref=e122]:
+              - link "منتج بالعربي" [ref=e356] [cursor=pointer]:
+                - /url: /hint/products/80690
+                - heading "منتج بالعربي" [level=3] [ref=e357]
+              - generic [ref=e358]:
+                - generic [ref=e359]:
+                  - text: "50"
+                  - generic [ref=e360]: ﷼
+                - paragraph [ref=e361]: هامش الربح المتوقع 10%
+            - button "icon إضافة للسلة" [ref=e363] [cursor=pointer]:
+              - img "icon" [ref=e365]
+              - generic [ref=e366]: إضافة للسلة
+          - generic [ref=e126]:
+            - generic [ref=e370]: شامل عينة
+            - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e371] [cursor=pointer]:
+              - /url: /hint/products/80705
+              - img "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e372]
+            - generic [ref=e129]:
+              - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e373] [cursor=pointer]:
+                - /url: /hint/products/80705
+                - heading "منتج مكرر كذا مرة علشان نجرب الاسم" [level=3] [ref=e374]
+              - generic [ref=e375]:
+                - generic [ref=e376]:
+                  - text: "200"
+                  - generic [ref=e377]: ﷼
+                - paragraph [ref=e378]: هامش الربح المتوقع 5%
+            - button "icon إضافة للسلة" [ref=e380] [cursor=pointer]:
+              - img "icon" [ref=e382]
+              - generic [ref=e383]: إضافة للسلة
+          - generic [ref=e133]:
+            - link "لافاندر سويتس" [ref=e384] [cursor=pointer]:
+              - /url: /hint/products/80698
+              - img "لافاندر سويتس" [ref=e385]
+            - generic [ref=e140]:
+              - link "لافاندر سويتس" [ref=e386] [cursor=pointer]:
+                - /url: /hint/products/80698
+                - heading "لافاندر سويتس" [level=3] [ref=e387]
+              - generic [ref=e388]:
+                - generic [ref=e389]:
+                  - text: "20"
+                  - generic [ref=e390]: ﷼
+                - paragraph [ref=e391]: هامش الربح المتوقع 25%
+            - button "icon إضافة للسلة" [ref=e393] [cursor=pointer]:
+              - img "icon" [ref=e395]
+              - generic [ref=e396]: إضافة للسلة
+          - generic [ref=e144]:
+            - link "منتج مرحلة الدفع 2" [ref=e397] [cursor=pointer]:
+              - /url: /hint/products/80738
+              - img "منتج مرحلة الدفع 2" [ref=e398]
+            - generic [ref=e147]:
+              - link "منتج مرحلة الدفع 2" [ref=e399] [cursor=pointer]:
+                - /url: /hint/products/80738
+                - heading "منتج مرحلة الدفع 2" [level=3] [ref=e400]
+              - generic [ref=e401]:
+                - generic [ref=e402]:
+                  - text: "600"
+                  - generic [ref=e403]: ﷼
+                - paragraph [ref=e404]: هامش الربح المتوقع 17%
+            - button "icon إضافة للسلة" [ref=e406] [cursor=pointer]:
+              - img "icon" [ref=e408]
+              - generic [ref=e409]: إضافة للسلة
+          - generic [ref=e151]:
+            - generic [ref=e413]: عدة خيارات
+            - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e414] [cursor=pointer]:
+              - /url: /hint/products/80706?variant=80780
+              - img "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e415]
+            - generic [ref=e154]:
+              - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e416] [cursor=pointer]:
+                - /url: /hint/products/80706?variant=80780
+                - heading "منتج مكرر كذا مرة علشان نجرب الاسم" [level=3] [ref=e417]
+              - generic [ref=e419]:
+                - text: "120"
+                - generic [ref=e420]: ﷼
+            - button "icon إضافة للسلة" [ref=e422] [cursor=pointer]:
+              - img "icon" [ref=e424]
+              - generic [ref=e425]: إضافة للسلة
+          - generic [ref=e158]:
+            - generic [ref=e427]: شامل عينة
+            - link "تمر سكري ميفاتيل بريميوم من جانوبا (500 جرام) - جنوبة تمر سكرى مفتل ممتاز" [ref=e428] [cursor=pointer]:
+              - /url: /hint/products/80702
+              - img "تمر سكري ميفاتيل بريميوم من جانوبا (500 جرام) - جنوبة تمر سكرى مفتل ممتاز" [ref=e429]
+            - generic [ref=e165]:
+              - link "تمر سكري ميفاتيل بريميوم من جانوبا (500 جرام) - جنوبة تمر سكرى مفتل ممتاز" [ref=e430] [cursor=pointer]:
+                - /url: /hint/products/80702
+                - heading "تمر سكري ميفاتيل بريميوم من جانوبا (500 جرام) - جنوبة تمر سكرى مفتل ممتاز" [level=3] [ref=e431]
+              - generic [ref=e433]:
+                - text: "100"
+                - generic [ref=e434]: ﷼
+            - button "icon إضافة للسلة" [ref=e436] [cursor=pointer]:
+              - img "icon" [ref=e438]
+              - generic [ref=e439]: إضافة للسلة
+          - generic [ref=e169]:
+            - generic [ref=e441]: عدة خيارات
+            - link "عصير كوكتيل فواكه" [ref=e442] [cursor=pointer]:
+              - /url: /hint/products/80795?variant=80840
+              - img "عصير كوكتيل فواكه" [ref=e443]
+            - generic [ref=e176]:
+              - link "عصير كوكتيل فواكه" [ref=e444] [cursor=pointer]:
+                - /url: /hint/products/80795?variant=80840
+                - heading "عصير كوكتيل فواكه" [level=3] [ref=e445]
+              - generic [ref=e446]:
+                - generic [ref=e447]:
+                  - text: "50"
+                  - generic [ref=e448]: ﷼
+                - paragraph [ref=e449]: هامش الربح المتوقع 100%
+            - button "icon إضافة للسلة" [ref=e451] [cursor=pointer]:
+              - img "icon" [ref=e453]
+              - generic [ref=e454]: إضافة للسلة
+          - generic [ref=e180]:
+            - link "منتج مرحلة الدفع3" [ref=e455] [cursor=pointer]:
+              - /url: /hint/products/80737
+              - img "منتج مرحلة الدفع3" [ref=e456]
+            - generic [ref=e187]:
+              - link "منتج مرحلة الدفع3" [ref=e457] [cursor=pointer]:
+                - /url: /hint/products/80737
+                - heading "منتج مرحلة الدفع3" [level=3] [ref=e458]
+              - generic [ref=e459]:
+                - generic [ref=e460]:
+                  - text: "800"
+                  - generic [ref=e461]: ﷼
+                - paragraph [ref=e462]: هامش الربح المتوقع 13%
+            - button "icon إضافة للسلة" [ref=e464] [cursor=pointer]:
+              - img "icon" [ref=e466]
+              - generic [ref=e467]: إضافة للسلة
+          - generic [ref=e191]:
+            - generic [ref=e471]: شامل عينة
+            - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e472] [cursor=pointer]:
+              - /url: /hint/products/80732
+              - img "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e473]
+            - generic [ref=e194]:
+              - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e474] [cursor=pointer]:
+                - /url: /hint/products/80732
+                - heading "منتج مكرر كذا مرة علشان نجرب الاسم" [level=3] [ref=e475]
+              - generic [ref=e476]:
+                - generic [ref=e477]:
+                  - text: "600"
+                  - generic [ref=e478]: ﷼
+                - paragraph [ref=e479]: هامش الربح المتوقع 8%
+            - button "icon إضافة للسلة" [ref=e481] [cursor=pointer]:
+              - img "icon" [ref=e483]
+              - generic [ref=e484]: إضافة للسلة
+          - generic [ref=e198]:
+            - generic [ref=e202]: شامل عينة
+            - link "منتج ريجرو" [ref=e485] [cursor=pointer]:
+              - /url: /hint/products/80733
+              - img "منتج ريجرو" [ref=e486]
+            - generic [ref=e205]:
+              - link "منتج ريجرو" [ref=e487] [cursor=pointer]:
+                - /url: /hint/products/80733
+                - heading "منتج ريجرو" [level=3] [ref=e488]
+              - generic [ref=e489]:
+                - generic [ref=e490]:
+                  - text: "300"
+                  - generic [ref=e491]: ﷼
+                - paragraph [ref=e492]: هامش الربح المتوقع 17%
+            - button "icon إضافة للسلة" [ref=e494] [cursor=pointer]:
+              - img "icon" [ref=e496]
+              - generic [ref=e497]: إضافة للسلة
+          - generic [ref=e209]:
+            - generic [ref=e213]: شامل عينة
+            - link "منتج مكرر" [ref=e498] [cursor=pointer]:
+              - /url: /hint/products/80731
+              - img "منتج مكرر" [ref=e499]
+            - generic [ref=e216]:
+              - link "منتج مكرر" [ref=e500] [cursor=pointer]:
+                - /url: /hint/products/80731
+                - heading "منتج مكرر" [level=3] [ref=e501]
+              - generic [ref=e502]:
+                - generic [ref=e503]:
+                  - text: "600"
+                  - generic [ref=e504]: ﷼
+                - paragraph [ref=e505]: هامش الربح المتوقع 8%
+            - button "icon إضافة للسلة" [ref=e507] [cursor=pointer]:
+              - img "icon" [ref=e509]
+              - generic [ref=e510]: إضافة للسلة
+          - generic [ref=e511]:
+            - generic [ref=e513]:
+              - generic [ref=e515]: عدة خيارات
+              - generic [ref=e517]: شامل عينة
+            - link "منتج خصومات" [ref=e518] [cursor=pointer]:
+              - /url: /hint/products/80834?variant=80907
+              - img "منتج خصومات" [ref=e519]
+            - generic [ref=e520]:
+              - link "منتج خصومات" [ref=e521] [cursor=pointer]:
+                - /url: /hint/products/80834?variant=80907
+                - heading "منتج خصومات" [level=3] [ref=e522]
+              - generic [ref=e524]:
+                - text: 4,000
+                - generic [ref=e525]: ﷼
+            - button "icon إضافة للسلة" [ref=e527] [cursor=pointer]:
+              - img "icon" [ref=e529]
+              - generic [ref=e530]: إضافة للسلة
+        - navigation "Pagination" [ref=e221]:
+          - listitem [ref=e222]:
+            - button "Previous page" [disabled] [ref=e223]: السابق
+          - listitem [ref=e224]:
+            - button "Page 1 is your current page" [ref=e531] [cursor=pointer]: "1"
+          - listitem [ref=e226]:
+            - button "Page 2" [ref=e532] [cursor=pointer]: "2"
+          - listitem [ref=e228]:
+            - button "Next page" [ref=e229] [cursor=pointer]: التالي
+    - generic [ref=e230]:
+      - generic [ref=e232]:
+        - heading "تواصل معنا بسهولة عبر:" [level=2] [ref=e233]
+        - generic [ref=e234]:
+          - link "Contact us via email البريد الإلكتروني Sales@ufuq.co" [ref=e533] [cursor=pointer]:
+            - /url: mailto:Sales@ufuq.co
+            - img "Contact us via email" [ref=e237]
+            - generic [ref=e238]:
+              - heading "البريد الإلكتروني" [level=4] [ref=e239]
+              - paragraph [ref=e534]: Sales@ufuq.co
+          - link "Call us رقم التواصل 538989802" [ref=e535] [cursor=pointer]:
+            - /url: tell:538989802
+            - img "Call us" [ref=e242]
+            - generic [ref=e243]:
+              - heading "رقم التواصل" [level=4] [ref=e244]
+              - paragraph [ref=e536]: "538989802"
+      - generic [ref=e246]:
+        - generic [ref=e247]:
+          - generic [ref=e248]:
+            - img "الواهب 2 الحلويات الشرقية" [ref=e537]
+            - paragraph [ref=e250]:
+              - generic [ref=e251]: جميع الحقوق محفوظة
+              - generic [ref=e538]: الواهب 2 الحلويات الشرقية
+              - generic [ref=e252]: 2026 ©
+          - generic [ref=e253]:
+            - generic [ref=e254]: العنوان
+            - paragraph [ref=e539]: NSSB3596، 3596 ابو بكر الصديق، 6916، سلطانة، شرورة 68372، السعودية
+        - generic [ref=e255]:
+          - generic [ref=e540]:
+            - generic [ref=e541]:
+              - img [ref=e543]
+              - img [ref=e546]
+              - img [ref=e553]
+              - img [ref=e560]
+            - generic [ref=e562]:
+              - link [ref=e563] [cursor=pointer]:
+                - /url: https://www.instagram.com/hint__sa?igsh=N3N5d3hnNzRzcTFh
+                - img [ref=e564]
+              - link [ref=e566] [cursor=pointer]:
+                - /url: https://wa.me/message/4QQNE4EFXXTID1
+                - img [ref=e567]
+              - link [ref=e569] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@hint_sa?_t=ZS-8wGjOJmywzd&_r=1
+                - img [ref=e570]
+          - generic [ref=e256]:
+            - list [ref=e257]:
+              - listitem [ref=e572]:
+                - generic [ref=e573]:
+                  - generic [ref=e574]: "الرقم الضريبي:"
+                  - generic [ref=e575]: "987654329876543"
+              - listitem [ref=e258]:
+                - generic [ref=e259]:
+                  - generic [ref=e260]: "السجل التجاري:"
+                  - generic [ref=e576]: "1521109956"
+              - listitem [ref=e261]:
+                - generic [ref=e262]:
+                  - generic [ref=e263]: شركة
+                  - generic [ref=e577]: الواهب 2 الحلويات الشرقية
+            - generic [ref=e264]:
+              - paragraph [ref=e265]: جميع الأسعار في الموقع شاملة ضريبة القيمة المضافة
+              - img [ref=e266]
+        - generic [ref=e268]: صنع بواسطة قوافل للتسويق الإلكتروني
+    - generic [ref=e269]:
+      - generic [ref=e271]:
+        - img "Qawafel Logo" [ref=e273]
+        - generic [ref=e578]:
+          - generic [ref=e579]:
+            - paragraph [ref=e580]: أدخل رمز التحقق
+            - paragraph [ref=e581]:
+              - text: تم إرسال رمز التحقق إلى رقم الجوال
+              - generic [ref=e582]: (+966)555989804
+              - button "تعديل" [ref=e583] [cursor=pointer]
+          - generic [ref=e584]:
+            - generic:
+              - generic:
+                - separator:
+                  - img
+              - textbox [active] [ref=e585]
+          - generic [ref=e587]:
+            - paragraph [ref=e588]: لم يصلك رمز التحقق؟
+            - paragraph [ref=e589]:
+              - text: إعادة إرسال رمز التحقق بعد
+              - generic [ref=e590]: 04:59
+          - button "تأكيد" [disabled] [ref=e591]
+      - img "Registration Background" [ref=e292]
+    - region "Notifications alt+T"
+    - button
+  - alert [ref=e293]

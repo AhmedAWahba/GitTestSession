@@ -1,0 +1,238 @@
+- generic [active] [ref=e1]:
+  - main [ref=e3]:
+    - generic [ref=e7]:
+      - link [ref=e8] [cursor=pointer]:
+        - /url: /hint
+      - generic [ref=e10]:
+        - link "المنتجات" [ref=e11] [cursor=pointer]:
+          - /url: /hint
+        - link "من نحن" [ref=e12] [cursor=pointer]:
+          - /url: /hint/about-us
+      - generic [ref=e13]:
+        - status [ref=e17] [cursor=pointer]:
+          - img [ref=e18]
+          - generic [ref=e21]: Loading...
+        - generic [ref=e24] [cursor=pointer]:
+          - img "avatar icon" [ref=e25]
+          - img "arrow icon" [ref=e26]
+        - link "Open cart" [ref=e28] [cursor=pointer]:
+          - /url: /hint/cart
+          - img "Open cart" [ref=e29]
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - img "Banner 1" [ref=e36]
+          - img "Banner 2" [ref=e38]
+          - img "Banner 3" [ref=e40]
+          - img "Banner 4" [ref=e42]
+        - button "Previous slide" [ref=e43] [cursor=pointer]:
+          - img [ref=e44]
+        - button "Next slide" [ref=e46] [cursor=pointer]:
+          - img [ref=e47]
+        - generic [ref=e49]:
+          - button "Go to slide 1" [ref=e50] [cursor=pointer]
+          - button "Go to slide 2" [ref=e51] [cursor=pointer]
+          - button "Go to slide 3" [ref=e52] [cursor=pointer]
+          - button "Go to slide 4" [ref=e53] [cursor=pointer]
+      - generic [ref=e55]:
+        - generic [ref=e57]:
+          - generic [ref=e58]: ترتيب حسب
+          - generic [ref=e60]:
+            - log [ref=e62]
+            - generic [ref=e63]:
+              - generic [ref=e64]:
+                - generic [ref=e65]: الرجاء الاختيار
+                - combobox [ref=e67]
+              - img [ref=e71]
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e77]:
+              - img "Special product" [ref=e78]
+              - generic [ref=e79]: منتج مميز
+            - link "لوليبوب الفراولة" [ref=e80] [cursor=pointer]:
+              - /url: /hint/products/80112
+              - img "لوليبوب الفراولة" [ref=e81]
+            - generic [ref=e82]:
+              - link "لوليبوب الفراولة" [ref=e83] [cursor=pointer]:
+                - /url: /hint/products/80112
+                - heading "لوليبوب الفراولة" [level=3] [ref=e84]
+              - generic [ref=e85] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e86]:
+            - link "كيك فارس القمر" [ref=e87] [cursor=pointer]:
+              - /url: /hint/products/80155
+              - img "كيك فارس القمر" [ref=e88]
+            - generic [ref=e89]:
+              - link "كيك فارس القمر" [ref=e90] [cursor=pointer]:
+                - /url: /hint/products/80155
+                - heading "كيك فارس القمر" [level=3] [ref=e91]
+              - generic [ref=e92] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e93]:
+            - generic [ref=e97]: شامل عينة
+            - link "كوكيز الواهب" [ref=e98] [cursor=pointer]:
+              - /url: /hint/products/80225
+              - img "كوكيز الواهب" [ref=e99]
+            - generic [ref=e100]:
+              - link "كوكيز الواهب" [ref=e101] [cursor=pointer]:
+                - /url: /hint/products/80225
+                - heading "كوكيز الواهب" [level=3] [ref=e102]
+              - generic [ref=e103] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e104]:
+            - generic [ref=e108]: شامل عينة
+            - link "مشروب الهوت شيكوليت" [ref=e109] [cursor=pointer]:
+              - /url: /hint/products/80235
+              - img "مشروب الهوت شيكوليت" [ref=e110]
+            - generic [ref=e111]:
+              - link "مشروب الهوت شيكوليت" [ref=e112] [cursor=pointer]:
+                - /url: /hint/products/80235
+                - heading "مشروب الهوت شيكوليت" [level=3] [ref=e113]
+              - generic [ref=e114] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e115]:
+            - generic [ref=e119]: شامل عينة
+            - link "حمص الشام" [ref=e120] [cursor=pointer]:
+              - /url: /hint/products/80689
+              - img "حمص الشام" [ref=e121]
+            - generic [ref=e122]:
+              - link "حمص الشام" [ref=e123] [cursor=pointer]:
+                - /url: /hint/products/80689
+                - heading "حمص الشام" [level=3] [ref=e124]
+              - generic [ref=e125] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e126]:
+            - link "منتج بالعربي" [ref=e127] [cursor=pointer]:
+              - /url: /hint/products/80690
+              - img "منتج بالعربي" [ref=e128]
+            - generic [ref=e129]:
+              - link "منتج بالعربي" [ref=e130] [cursor=pointer]:
+                - /url: /hint/products/80690
+                - heading "منتج بالعربي" [level=3] [ref=e131]
+              - generic [ref=e132] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e133]:
+            - generic [ref=e137]: شامل عينة
+            - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e138] [cursor=pointer]:
+              - /url: /hint/products/80705
+              - img "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e139]
+            - generic [ref=e140]:
+              - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e141] [cursor=pointer]:
+                - /url: /hint/products/80705
+                - heading "منتج مكرر كذا مرة علشان نجرب الاسم" [level=3] [ref=e142]
+              - generic [ref=e143] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e144]:
+            - link "لافاندر سويتس" [ref=e145] [cursor=pointer]:
+              - /url: /hint/products/80698
+              - img "لافاندر سويتس" [ref=e146]
+            - generic [ref=e147]:
+              - link "لافاندر سويتس" [ref=e148] [cursor=pointer]:
+                - /url: /hint/products/80698
+                - heading "لافاندر سويتس" [level=3] [ref=e149]
+              - generic [ref=e150] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e151]:
+            - link "منتج مرحلة الدفع 2" [ref=e152] [cursor=pointer]:
+              - /url: /hint/products/80738
+              - img "منتج مرحلة الدفع 2" [ref=e153]
+            - generic [ref=e154]:
+              - link "منتج مرحلة الدفع 2" [ref=e155] [cursor=pointer]:
+                - /url: /hint/products/80738
+                - heading "منتج مرحلة الدفع 2" [level=3] [ref=e156]
+              - generic [ref=e157] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e158]:
+            - generic [ref=e162]: عدة خيارات
+            - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e163] [cursor=pointer]:
+              - /url: /hint/products/80706?variant=80780
+              - img "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e164]
+            - generic [ref=e165]:
+              - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e166] [cursor=pointer]:
+                - /url: /hint/products/80706?variant=80780
+                - heading "منتج مكرر كذا مرة علشان نجرب الاسم" [level=3] [ref=e167]
+              - generic [ref=e168] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e169]:
+            - generic [ref=e173]: شامل عينة
+            - link "تمر سكري ميفاتيل بريميوم من جانوبا (500 جرام) - جنوبة تمر سكرى مفتل ممتاز" [ref=e174] [cursor=pointer]:
+              - /url: /hint/products/80702
+              - img "تمر سكري ميفاتيل بريميوم من جانوبا (500 جرام) - جنوبة تمر سكرى مفتل ممتاز" [ref=e175]
+            - generic [ref=e176]:
+              - link "تمر سكري ميفاتيل بريميوم من جانوبا (500 جرام) - جنوبة تمر سكرى مفتل ممتاز" [ref=e177] [cursor=pointer]:
+                - /url: /hint/products/80702
+                - heading "تمر سكري ميفاتيل بريميوم من جانوبا (500 جرام) - جنوبة تمر سكرى مفتل ممتاز" [level=3] [ref=e178]
+              - generic [ref=e179] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e180]:
+            - generic [ref=e184]: عدة خيارات
+            - link "عصير كوكتيل فواكه" [ref=e185] [cursor=pointer]:
+              - /url: /hint/products/80795?variant=80842
+              - img "عصير كوكتيل فواكه" [ref=e186]
+            - generic [ref=e187]:
+              - link "عصير كوكتيل فواكه" [ref=e188] [cursor=pointer]:
+                - /url: /hint/products/80795?variant=80842
+                - heading "عصير كوكتيل فواكه" [level=3] [ref=e189]
+              - generic [ref=e190] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e191]:
+            - link "منتج مرحلة الدفع3" [ref=e192] [cursor=pointer]:
+              - /url: /hint/products/80737
+              - img "منتج مرحلة الدفع3" [ref=e193]
+            - generic [ref=e194]:
+              - link "منتج مرحلة الدفع3" [ref=e195] [cursor=pointer]:
+                - /url: /hint/products/80737
+                - heading "منتج مرحلة الدفع3" [level=3] [ref=e196]
+              - generic [ref=e197] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e198]:
+            - generic [ref=e202]: شامل عينة
+            - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e203] [cursor=pointer]:
+              - /url: /hint/products/80732
+              - img "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e204]
+            - generic [ref=e205]:
+              - link "منتج مكرر كذا مرة علشان نجرب الاسم" [ref=e206] [cursor=pointer]:
+                - /url: /hint/products/80732
+                - heading "منتج مكرر كذا مرة علشان نجرب الاسم" [level=3] [ref=e207]
+              - generic [ref=e208] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+          - generic [ref=e209]:
+            - generic [ref=e213]: شامل عينة
+            - link "منتج ريجرو" [ref=e214] [cursor=pointer]:
+              - /url: /hint/products/80733
+              - img "منتج ريجرو" [ref=e215]
+            - generic [ref=e216]:
+              - link "منتج ريجرو" [ref=e217] [cursor=pointer]:
+                - /url: /hint/products/80733
+                - heading "منتج ريجرو" [level=3] [ref=e218]
+              - generic [ref=e219] [cursor=pointer]: يرجى تسجيل الدخول لعرض سعر المنتج
+        - navigation "Pagination" [ref=e221]:
+          - listitem [ref=e222]:
+            - button "Previous page" [ref=e223] [cursor=pointer]: السابق
+          - listitem [ref=e224]:
+            - button "Page 1" [ref=e225] [cursor=pointer]: "1"
+          - listitem [ref=e226]:
+            - button "Page 2 is your current page" [ref=e227] [cursor=pointer]: "2"
+          - listitem [ref=e228]:
+            - button "Next page" [disabled] [ref=e229]: التالي
+    - generic [ref=e230]:
+      - generic [ref=e232]:
+        - heading "تواصل معنا بسهولة عبر:" [level=2] [ref=e233]
+        - generic [ref=e234]:
+          - link "Contact us via email البريد الإلكتروني" [ref=e235] [cursor=pointer]:
+            - /url: "mailto:"
+            - img "Contact us via email" [ref=e237]
+            - generic [ref=e238]:
+              - heading "البريد الإلكتروني" [level=4] [ref=e239]
+              - paragraph
+          - link "Call us رقم التواصل" [ref=e240] [cursor=pointer]:
+            - /url: "tell:"
+            - img "Call us" [ref=e242]
+            - generic [ref=e243]:
+              - heading "رقم التواصل" [level=4] [ref=e244]
+              - paragraph
+      - generic [ref=e246]:
+        - generic [ref=e247]:
+          - paragraph [ref=e250]:
+            - generic [ref=e251]: جميع الحقوق محفوظة
+            - generic [ref=e252]: 2026 ©
+          - generic [ref=e253]:
+            - generic [ref=e254]: العنوان
+            - paragraph
+        - generic [ref=e256]:
+          - list [ref=e257]:
+            - listitem [ref=e258]:
+              - generic [ref=e260]: "السجل التجاري:"
+            - listitem [ref=e261]:
+              - generic [ref=e263]: شركة
+          - generic [ref=e264]:
+            - paragraph [ref=e265]: جميع الأسعار في الموقع شاملة ضريبة القيمة المضافة
+            - img [ref=e266]
+        - generic [ref=e268]: صنع بواسطة قوافل للتسويق الإلكتروني
+  - alert [ref=e269]

@@ -1,0 +1,17 @@
+﻿[
+    {
+        "id":  "2001:10023",
+        "name":  "Flow",
+        "type":  "CANVAS"
+    },
+    {
+        "id":  "2010:17216",
+        "name":  "Signup",
+        "type":  "FRAME"
+    },
+    {
+        "id":  "2028:10494",
+        "name":  "Signup 1",
+        "type":  "FRAME"
+    }
+]

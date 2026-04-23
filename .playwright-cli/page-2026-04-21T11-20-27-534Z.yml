@@ -1,0 +1,248 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - main [ref=e5]:
+        - generic [ref=e91]:
+          - button "9" [ref=e92] [cursor=pointer]:
+            - generic [ref=e93]:
+              - img [ref=e94]
+              - superscript [ref=e96]:
+                - generic [ref=e97]: "9"
+          - button [ref=e98] [cursor=pointer]:
+            - img [ref=e100]
+          - link "جديد" [ref=e102] [cursor=pointer]:
+            - /url: /release-notes
+            - generic [ref=e103]: جديد
+            - img [ref=e104]
+          - button "EN" [ref=e128] [cursor=pointer]
+          - button "شيكووورلد" [ref=e130] [cursor=pointer]:
+            - generic [ref=e131]:
+              - generic [ref=e135]: شيكووورلد
+              - img [ref=e137]
+        - generic [ref=e139]:
+          - generic [ref=e143]:
+            - generic [ref=e144]:
+              - text: أهلاً وسهلاً، شيكووورلد
+              - generic [ref=e145]: 👋
+            - generic [ref=e146]:
+              - generic [ref=e147]: حياك الله عميلنا العزيز
+              - button "اضغط لإستلام هديتك 🎁" [ref=e148] [cursor=pointer]:
+                - paragraph [ref=e149]: اضغط لإستلام هديتك 🎁
+          - generic [ref=e152]:
+            - region [ref=e154]:
+              - group [ref=e157]:
+                - link "Marketing banner 1 - Click to learn more" [ref=e158] [cursor=pointer]:
+                  - /url: https://sit.almubasher.com.sa/business3/new/#/login?merchantCode=bbfsl_000104&flow=PLAT_APPLY
+                  - img "Marketing banner 1 - Click to learn more" [ref=e159]
+            - generic [ref=e160]:
+              - generic [ref=e161]:
+                - generic [ref=e163]:
+                  - generic [ref=e164]: ملخص الطلبات
+                  - generic [ref=e169] [cursor=pointer]:
+                    - text: أبريل 2026
+                    - img [ref=e171]
+                - generic [ref=e174]:
+                  - generic [ref=e175] [cursor=pointer]:
+                    - generic [ref=e177]: بإنتظار التأكيد
+                    - generic [ref=e181]: "0"
+                  - generic [ref=e182] [cursor=pointer]:
+                    - generic [ref=e184]: تحت التجهيز
+                    - generic [ref=e188]: "0"
+                  - generic [ref=e189] [cursor=pointer]:
+                    - generic [ref=e191]: جاهز للشحن
+                    - generic [ref=e195]: "0"
+                  - generic [ref=e196] [cursor=pointer]:
+                    - generic [ref=e198]: جاري التوصيل
+                    - generic [ref=e202]: "0"
+                  - generic [ref=e203] [cursor=pointer]:
+                    - generic [ref=e205]: تم التوصيل
+                    - generic [ref=e209]: "0"
+                  - generic [ref=e210] [cursor=pointer]:
+                    - generic [ref=e212]: ملغي
+                    - generic [ref=e216]: "0"
+              - generic [ref=e217]:
+                - generic [ref=e219]:
+                  - generic [ref=e220]: ملخص الأداء
+                  - generic [ref=e225] [cursor=pointer]:
+                    - text: أبريل 2026
+                    - img [ref=e227]
+                - generic [ref=e230]:
+                  - generic [ref=e231] [cursor=pointer]:
+                    - generic [ref=e233]: إجمالي المبيعات
+                    - generic [ref=e236]: "0"
+                  - generic [ref=e237] [cursor=pointer]:
+                    - generic [ref=e239]: عدد المشترين
+                    - generic [ref=e242]: "0"
+                  - generic [ref=e243] [cursor=pointer]:
+                    - generic [ref=e245]: عدد الطلبات
+                    - generic [ref=e248]: "0"
+                  - generic [ref=e249] [cursor=pointer]:
+                    - generic [ref=e251]: تقييم المشترين
+                    - generic [ref=e254]: "0"
+                  - generic [ref=e255] [cursor=pointer]:
+                    - generic [ref=e257]: متوسط قيمة الطلب
+                    - generic [ref=e260]: "0"
+                  - generic [ref=e261] [cursor=pointer]:
+                    - generic [ref=e263]: المنتجات المرتجعة
+                    - generic [ref=e266]: "0"
+            - generic [ref=e267]:
+              - generic [ref=e268]: ملخص التحصيلات
+              - generic [ref=e270]:
+                - generic [ref=e271] [cursor=pointer]:
+                  - generic [ref=e274]: إجمالي الائتمان المستحق
+                  - generic [ref=e279]:
+                    - generic [ref=e280]: "0"
+                    - generic [ref=e281]: ﷼
+                - generic [ref=e282] [cursor=pointer]:
+                  - generic [ref=e285]: إجمالي التحصيلات المتأخرة
+                  - generic [ref=e290]:
+                    - generic [ref=e291]: "0"
+                    - generic [ref=e292]: ﷼
+                - generic [ref=e293] [cursor=pointer]:
+                  - generic [ref=e295]:
+                    - generic [ref=e296]: التحصيلات القادمة لشهر
+                    - generic [ref=e302]:
+                      - text: أبريل 2026
+                      - img [ref=e304]
+                  - generic [ref=e309]:
+                    - generic [ref=e310]: "0"
+                    - generic [ref=e311]: ﷼
+            - generic [ref=e312]:
+              - generic [ref=e313]: أفضل المدن مبيعاً
+              - generic [ref=e315]: لاتوجد بيانات
+            - generic [ref=e319]:
+              - generic [ref=e320] [cursor=pointer]:
+                - img [ref=e321]
+                - img [ref=e324]
+              - generic [ref=e326]:
+                - paragraph [ref=e327]: إدارة المنتجات الجديدة كليا
+                - paragraph [ref=e329]: ‏في هذا الإصدار تم إضافة إمكانية إدارة المنتجات من داخل تطبيق الموردين، ‏ليس عليك أن تتواصل مع مدير حسابك لإضافة منتج. الآن يمكنك إضافة جميع المنتجات من داخل تطبيق الموردين بضغطة زر
+            - generic [ref=e330]:
+              - generic [ref=e331]: مقالات مقترحة
+              - generic [ref=e333]:
+                - generic [ref=e335]:
+                  - img "article_img" [ref=e337]
+                  - generic [ref=e338]:
+                    - generic [ref=e339]:
+                      - paragraph [ref=e340]: كيفية تعديل عنوان عميل لديك ؟
+                      - paragraph [ref=e341]:
+                        - generic [ref=e342]: في حالة تغيير أي من أو كل تفاصيل عنوان عميل لديك ، تعرف على كيفية تحديث العنوان لضمان دقة وصول الطلبات للعميل.
+                    - button "إقراء المقال" [ref=e344] [cursor=pointer]:
+                      - paragraph [ref=e345]:
+                        - generic [ref=e346]:
+                          - text: إقراء المقال
+                          - img [ref=e348]
+                - generic [ref=e351]:
+                  - img "article_img" [ref=e353]
+                  - generic [ref=e354]:
+                    - generic [ref=e355]:
+                      - paragraph [ref=e356]: كيفية البحث وإيجاد حساب أحد عملائك ؟
+                      - paragraph [ref=e357]:
+                        - generic [ref=e358]: من قائمة عملائك ، تعرف على خطوات البحث عن عميل محدد أو ايجار بياناته
+                    - button "إقراء المقال" [ref=e360] [cursor=pointer]:
+                      - paragraph [ref=e361]:
+                        - generic [ref=e362]:
+                          - text: إقراء المقال
+                          - img [ref=e364]
+                - generic [ref=e367]:
+                  - img "article_img" [ref=e369]
+                  - generic [ref=e370]:
+                    - generic [ref=e371]:
+                      - paragraph [ref=e372]: كيف تضيف عميل جديد ؟
+                      - paragraph [ref=e373]:
+                        - generic [ref=e374]: خطوات توضيحية لكيفية إضافة عميل جديد وتسجيل بياناته إلى قائمة عملائك الحاليين .
+                    - button "إقراء المقال" [ref=e376] [cursor=pointer]:
+                      - paragraph [ref=e377]:
+                        - generic [ref=e378]:
+                          - text: إقراء المقال
+                          - img [ref=e380]
+      - generic [ref=e382]:
+        - generic [ref=e383]:
+          - button "Collapse sidebar" [ref=e384] [cursor=pointer]:
+            - img [ref=e385]
+          - link [ref=e388] [cursor=pointer]:
+            - /url: /
+            - img [ref=e389]
+        - navigation [ref=e392]:
+          - link "الرئيسية" [ref=e394] [cursor=pointer]:
+            - /url: /home
+            - img [ref=e395]
+            - generic [ref=e397]: الرئيسية
+          - generic [ref=e398]:
+            - generic [ref=e399] [cursor=pointer]:
+              - img [ref=e400]
+              - generic [ref=e402]: البيع
+              - img [ref=e403]
+            - generic [ref=e405]:
+              - link "الطلبات" [ref=e408] [cursor=pointer]:
+                - /url: /orders/marketplace/all
+                - generic [ref=e409]: الطلبات
+              - link "عروض الأسعار" [ref=e412] [cursor=pointer]:
+                - /url: /procurement/quotations
+                - generic [ref=e413]: عروض الأسعار
+              - link "الفواتير" [ref=e416] [cursor=pointer]:
+                - /url: /invoices
+                - generic [ref=e417]: الفواتير
+              - link "إشعارات الدائن" [ref=e420] [cursor=pointer]:
+                - /url: /procurement/credit-notes
+                - generic [ref=e421]: إشعارات الدائن
+              - link "المشترين" [ref=e424] [cursor=pointer]:
+                - /url: /customers
+                - generic [ref=e425]: المشترين
+              - link "المنتجات" [ref=e428] [cursor=pointer]:
+                - /url: /products
+                - generic [ref=e429]: المنتجات
+              - link "الخصومات" [ref=e432] [cursor=pointer]:
+                - /url: /discounts
+                - generic [ref=e433]: الخصومات
+          - generic [ref=e434]:
+            - generic [ref=e435] [cursor=pointer]:
+              - img [ref=e436]
+              - generic [ref=e438]: الشراء
+              - img [ref=e439]
+            - generic [ref=e441]:
+              - link "الموردين" [ref=e444] [cursor=pointer]:
+                - /url: /suppliers
+                - generic [ref=e445]: الموردين
+              - link "عناصر الموردين" [ref=e448] [cursor=pointer]:
+                - /url: /items
+                - generic [ref=e449]: عناصر الموردين
+              - link "أوامر الشراء" [ref=e452] [cursor=pointer]:
+                - /url: /procurement/purchase-orders
+                - generic [ref=e453]: أوامر الشراء
+              - link "إشعارات الاستلام" [ref=e456] [cursor=pointer]:
+                - /url: /procurement/received-notes
+                - generic [ref=e457]: إشعارات الاستلام
+          - generic [ref=e458]:
+            - generic [ref=e459] [cursor=pointer]:
+              - img [ref=e460]
+              - generic [ref=e462]: المالية
+              - img [ref=e463]
+            - generic [ref=e465]:
+              - link "تمويل الفواتير قريباً" [ref=e468] [cursor=pointer]:
+                - /url: /invoice-financing
+                - generic [ref=e469]: تمويل الفواتير
+                - generic [ref=e470]: قريباً
+              - link "تمويل أوامر الشراء قريباً" [ref=e473] [cursor=pointer]:
+                - /url: /purchase-order-financing
+                - generic [ref=e474]: تمويل أوامر الشراء
+                - generic [ref=e475]: قريباً
+              - link "التحصيلات" [ref=e478] [cursor=pointer]:
+                - /url: /collections
+                - generic [ref=e479]: التحصيلات
+              - link "روابط الدفع" [ref=e482] [cursor=pointer]:
+                - /url: /payments
+                - generic [ref=e483]: روابط الدفع
+          - link "سوق التطبيقات" [ref=e485] [cursor=pointer]:
+            - /url: /apps
+            - img [ref=e486]
+            - generic [ref=e489]: سوق التطبيقات
+          - link "الإدارة" [ref=e491] [cursor=pointer]:
+            - /url: /settings
+            - img [ref=e492]
+            - generic [ref=e495]: الإدارة
+      - region "Notifications alt+T"
+    - generic [ref=e71] [cursor=pointer]:
+      - img [ref=e72]
+      - text: مساعدة
+  - region "Notifications Alt+T"

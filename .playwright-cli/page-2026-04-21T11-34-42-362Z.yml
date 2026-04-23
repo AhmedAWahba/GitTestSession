@@ -1,0 +1,357 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - main [ref=e5]:
+        - generic [ref=e7]:
+          - button "99+" [ref=e60] [cursor=pointer]:
+            - generic [ref=e9]:
+              - img [ref=e10]
+              - superscript [ref=e61]: 99+
+          - button [ref=e12] [cursor=pointer]:
+            - img [ref=e14]
+          - link "جديد" [ref=e16] [cursor=pointer]:
+            - /url: /release-notes
+            - generic [ref=e17]: جديد
+            - img [ref=e18]
+          - button "EN" [ref=e42] [cursor=pointer]
+          - button "الواهب 2 الحلويات الشرقية" [ref=e44] [cursor=pointer]:
+            - generic [ref=e45]:
+              - generic [ref=e49]: الواهب 2 الحلويات الشرقية
+              - img [ref=e51]
+        - generic [ref=e253]:
+          - generic [ref=e255]:
+            - generic [ref=e257]:
+              - generic [ref=e258]: تهيئة المتجر الالكتروني للشركة
+              - generic [ref=e260]: مفعل
+            - generic [ref=e262]:
+              - button "مشاركة رابط المتجر" [ref=e263] [cursor=pointer]:
+                - img [ref=e266]
+                - paragraph [ref=e268]: مشاركة رابط المتجر
+              - button "معاينة" [ref=e269] [cursor=pointer]:
+                - img [ref=e272]
+                - paragraph [ref=e274]: معاينة
+              - button "إلغاء تفعيل المتجر الالكتروني للشركة" [ref=e275] [cursor=pointer]:
+                - img [ref=e278]
+                - paragraph [ref=e280]: إلغاء تفعيل المتجر الالكتروني للشركة
+          - generic [ref=e283]:
+            - generic [ref=e285]:
+              - button "المعلومات الأساسية" [ref=e286] [cursor=pointer]:
+                - paragraph [ref=e287]: المعلومات الأساسية
+              - button "طرق الدفع" [ref=e288] [cursor=pointer]:
+                - paragraph [ref=e289]: طرق الدفع
+              - button "المنتجات" [ref=e290] [cursor=pointer]:
+                - paragraph [ref=e291]: المنتجات
+            - generic [ref=e293]:
+              - generic [ref=e294]:
+                - generic [ref=e295]:
+                  - paragraph [ref=e296]: المعلومات الأساسية
+                  - generic [ref=e297]:
+                    - generic [ref=e299]:
+                      - generic [ref=e300]:
+                        - text: رابط المتجر
+                        - generic [ref=e301]: (هذا الحقل مطلوب)
+                      - generic [ref=e302]:
+                        - generic [ref=e303]: store.qawafel.sa/
+                        - textbox "رابط المتجر (هذا الحقل مطلوب)" [ref=e304]:
+                          - /placeholder: رابط المتجر
+                          - text: hint
+                    - generic [ref=e305]:
+                      - generic [ref=e306]:
+                        - text: رقم الجوال
+                        - generic [ref=e307]: (هذا الحقل مطلوب)
+                      - generic [ref=e308]:
+                        - generic [ref=e309]: "+966"
+                        - textbox "رقم الجوال (هذا الحقل مطلوب)" [ref=e310]:
+                          - /placeholder: رقم الجوال
+                          - text: "538989802"
+                    - generic [ref=e311]:
+                      - generic [ref=e312]:
+                        - text: البريد الإلكتروني
+                        - generic [ref=e313]: (هذا الحقل مطلوب)
+                      - textbox "البريد الإلكتروني (هذا الحقل مطلوب)" [ref=e315]:
+                        - /placeholder: البريد الإلكتروني
+                        - text: Sales@ufuq.co
+                  - generic [ref=e319]:
+                    - generic [ref=e320]:
+                      - text: وصف المتجر (من نحن)
+                      - generic [ref=e321]: (هذا الحقل مطلوب)
+                    - textbox "اكتب وصف واضح لعملائك عن قصتك أو تاريخك..." [ref=e322]: هنت | Hint نصنع أثرا بمذاق فاخر🧡
+                  - generic [ref=e323]:
+                    - generic [ref=e324]:
+                      - generic [ref=e325]:
+                        - text: شعار المتجر
+                        - generic [ref=e326]: (هذا الحقل مطلوب)
+                      - generic [ref=e327]:
+                        - button "Choose File" [ref=e328] [cursor=pointer]
+                        - img "Preview" [ref=e329]
+                    - generic [ref=e330]:
+                      - text: صور (بانر) المتجر في الصفحة الرئيسية (4 كحد أقصى)
+                      - generic [ref=e331]:
+                        - generic [ref=e333]:
+                          - generic [ref=e335]: الصورة الرئيسية
+                          - button "Choose File" [ref=e336] [cursor=pointer]
+                          - img "Preview" [ref=e337]
+                          - button [ref=e339] [cursor=pointer]:
+                            - img [ref=e341]
+                        - generic [ref=e346]:
+                          - button "Choose File" [ref=e347] [cursor=pointer]
+                          - img "Preview" [ref=e348]
+                          - button [ref=e350] [cursor=pointer]:
+                            - img [ref=e352]
+                        - generic [ref=e357]:
+                          - button "Choose File" [ref=e358] [cursor=pointer]
+                          - img "Preview" [ref=e359]
+                          - button [ref=e361] [cursor=pointer]:
+                            - img [ref=e363]
+                        - generic [ref=e368]:
+                          - button "Choose File" [ref=e369] [cursor=pointer]
+                          - img "Preview" [ref=e370]
+                          - button [ref=e372] [cursor=pointer]:
+                            - img [ref=e374]
+                - separator [ref=e378]
+                - generic [ref=e379]:
+                  - paragraph [ref=e380]: حسابات التواصل الاجتماعي
+                  - generic [ref=e381]:
+                    - generic [ref=e382]:
+                      - generic [ref=e383]: حساب واتساب
+                      - generic [ref=e384]:
+                        - img [ref=e387]
+                        - textbox "حساب واتساب" [ref=e392]:
+                          - /placeholder: أدخل رابط الحساب
+                          - text: https://wa.me/message/4QQNE4EFXXTID1
+                    - generic [ref=e393]:
+                      - generic [ref=e394]: حساب انستجرام
+                      - generic [ref=e395]:
+                        - img [ref=e398]
+                        - textbox "حساب انستجرام" [ref=e406]:
+                          - /placeholder: أدخل رابط الحساب
+                          - text: https://www.instagram.com/hint__sa?igsh=N3N5d3hnNzRzcTFh
+                    - generic [ref=e407]:
+                      - generic [ref=e408]: حساب سناب شات
+                      - generic [ref=e409]:
+                        - img "Snapchat" [ref=e412]
+                        - textbox "حساب سناب شات" [ref=e416]:
+                          - /placeholder: أدخل رابط الحساب
+                    - generic [ref=e417]:
+                      - generic [ref=e418]: حساب تيك توك
+                      - generic [ref=e419]:
+                        - img [ref=e422]
+                        - textbox "حساب تيك توك" [ref=e428]:
+                          - /placeholder: أدخل رابط الحساب
+                          - text: https://www.tiktok.com/@hint_sa?_t=ZS-8wGjOJmywzd&_r=1
+                    - generic [ref=e429]:
+                      - generic [ref=e430]: حساب إكس (تويتر)
+                      - generic [ref=e431]:
+                        - img [ref=e434]
+                        - textbox "حساب إكس (تويتر)" [ref=e436]:
+                          - /placeholder: أدخل رابط الحساب
+                    - generic [ref=e437]:
+                      - generic [ref=e438]: حساب فيسبوك
+                      - generic [ref=e439]:
+                        - img [ref=e442]
+                        - textbox "حساب فيسبوك" [ref=e447]:
+                          - /placeholder: أدخل رابط الحساب
+                    - generic [ref=e448]:
+                      - generic [ref=e449]: حساب يوتيوب
+                      - generic [ref=e450]:
+                        - img [ref=e453]
+                        - textbox "حساب يوتيوب" [ref=e456]:
+                          - /placeholder: أدخل رابط الحساب
+                    - generic [ref=e457]:
+                      - generic [ref=e458]: حساب لينكد إن
+                      - generic [ref=e459]:
+                        - img [ref=e462]
+                        - textbox "حساب لينكد إن" [ref=e465]:
+                          - /placeholder: أدخل رابط الحساب
+                - separator [ref=e466]
+                - generic [ref=e467]:
+                  - paragraph [ref=e468]: تحسين محركات البحث SEO
+                  - generic [ref=e469]:
+                    - generic [ref=e470]:
+                      - generic [ref=e471]:
+                        - text: عنوان الصفحة الرئيسية للمتجر
+                        - generic [ref=e472]: (هذا الحقل مطلوب)
+                      - generic [ref=e473]:
+                        - textbox "عنوان الصفحة الرئيسية للمتجر (هذا الحقل مطلوب)" [ref=e474]:
+                          - /placeholder: اضف عنواناً للصفحة الرئيسية للمتجر
+                          - text: هنت
+                        - img [ref=e476]
+                    - generic [ref=e478]:
+                      - generic [ref=e479]:
+                        - text: وصف الصفحة الرئيسية
+                        - generic [ref=e480]: (هذا الحقل مطلوب)
+                      - generic [ref=e481]:
+                        - textbox "وصف الصفحة الرئيسية (هذا الحقل مطلوب)" [ref=e482]:
+                          - /placeholder: اضف وصفاً للصفحة الرئيسية للمتجر
+                          - text: نصنع أثرا بمذاق فاخر🧡
+                        - img [ref=e484]
+                  - generic [ref=e487]:
+                    - text: الكلمات المفتاحية
+                    - generic [ref=e488]:
+                      - generic [ref=e489]:
+                        - generic [ref=e490]: سيسيس
+                        - button "remove سيسيس" [ref=e491] [cursor=pointer]: ✕
+                      - generic [ref=e492]:
+                        - generic [ref=e493]: يسيسي
+                        - button "remove يسيسي" [ref=e494] [cursor=pointer]: ✕
+                      - textbox "اضف كلمات مفتاحية مناسبة لمتجرك" [ref=e495]
+                    - generic [ref=e496]: افصل بين الكلمات بعلامة الفاصلة , او انقر على Enter
+                - separator [ref=e497]
+                - generic [ref=e498]:
+                  - paragraph [ref=e499]: الإعدادات المتقدمة لطلبات المتجر
+                  - generic [ref=e500]:
+                    - generic [ref=e501]:
+                      - generic [ref=e502]:
+                        - switch [checked] [ref=e503] [cursor=pointer]
+                        - paragraph [ref=e505]: المهلة الزمنية لإلغاء الدفع
+                      - generic [ref=e507]:
+                        - textbox "00" [ref=e508]: "48"
+                        - generic [ref=e509]: ساعات
+                    - generic [ref=e511]:
+                      - generic [ref=e512]: الحد الأدنى لإتمام طلب الشراء
+                      - generic [ref=e513]:
+                        - generic [ref=e515]: ﷼
+                        - textbox "الحد الأدنى لإتمام طلب الشراء" [ref=e516]:
+                          - /placeholder: "0"
+                          - text: "1"
+                    - generic [ref=e517]:
+                      - generic [ref=e518]:
+                        - switch [checked] [ref=e519] [cursor=pointer]
+                        - paragraph [ref=e521]: المهلة الزمنية لإلغاء تأكيد الطلب
+                      - generic [ref=e523]:
+                        - textbox "0" [ref=e524]: "48"
+                        - generic [ref=e525]: ساعات
+                    - generic [ref=e526]:
+                      - generic [ref=e527]:
+                        - switch [checked] [ref=e528] [cursor=pointer]
+                        - paragraph [ref=e530]: المهلة الزمنية من تأكيد حالة الطلب إلى حالة “جاهز للاستلام”
+                      - generic [ref=e532]:
+                        - textbox "0" [ref=e533]: "48"
+                        - generic [ref=e534]: ساعات
+                    - generic [ref=e535]:
+                      - generic [ref=e536]:
+                        - switch [checked] [ref=e537] [cursor=pointer]
+                        - paragraph [ref=e539]: المهلة الزمنية لتحويل حالة الطلب من تم التوصيل إلى مكتمل
+                      - generic [ref=e541]:
+                        - textbox "0" [ref=e542]: "48"
+                        - generic [ref=e543]: ساعات
+                    - generic [ref=e544]:
+                      - generic [ref=e545]:
+                        - switch [checked] [ref=e546] [cursor=pointer]
+                        - paragraph [ref=e548]: المهلة الزمنية لتذكير المشتري بإكمال الدفع (إذا كانت طريقة الدفع عبر الحوالة البنكية)
+                      - generic [ref=e550]:
+                        - textbox "0" [ref=e551]: "48"
+                        - generic [ref=e552]: ساعات
+                    - generic [ref=e553]:
+                      - generic [ref=e554]:
+                        - switch [ref=e555] [cursor=pointer]
+                        - paragraph [ref=e557]: المهلة الزمنية لاستخدام المحفظة لإتمام دفع الطلب
+                      - generic [ref=e559]:
+                        - textbox "0" [disabled] [ref=e560]: "48"
+                        - generic [ref=e561]: ساعات
+                    - generic [ref=e563]:
+                      - switch [ref=e564] [cursor=pointer]
+                      - paragraph [ref=e566]: تفعيل الدفع عبر المحفظة
+              - generic [ref=e567]:
+                - text: توجد تغييرات حدثت
+                - button [ref=e568] [cursor=pointer]:
+                  - paragraph [ref=e569]: حفظ التغيرات
+                - button [ref=e570] [cursor=pointer]:
+                  - paragraph [ref=e571]:
+                    - generic [ref=e572]: إلغاء
+      - generic [ref=e127]:
+        - generic [ref=e128]:
+          - button "Collapse sidebar" [ref=e129] [cursor=pointer]:
+            - img [ref=e130]
+          - link [ref=e133] [cursor=pointer]:
+            - /url: /
+            - img [ref=e134]
+        - navigation [ref=e137]:
+          - link "الرئيسية" [ref=e139] [cursor=pointer]:
+            - /url: /home
+            - img [ref=e140]
+            - generic [ref=e142]: الرئيسية
+          - generic [ref=e143]:
+            - generic [ref=e144] [cursor=pointer]:
+              - img [ref=e145]
+              - generic [ref=e147]: البيع
+              - img [ref=e148]
+            - generic [ref=e150]:
+              - link "الطلبات" [ref=e153] [cursor=pointer]:
+                - /url: /orders/marketplace/all
+                - generic [ref=e154]: الطلبات
+              - link "عروض الأسعار" [ref=e157] [cursor=pointer]:
+                - /url: /procurement/quotations
+                - generic [ref=e158]: عروض الأسعار
+              - link "الفواتير" [ref=e161] [cursor=pointer]:
+                - /url: /invoices
+                - generic [ref=e162]: الفواتير
+              - link "إشعارات الدائن" [ref=e165] [cursor=pointer]:
+                - /url: /procurement/credit-notes
+                - generic [ref=e166]: إشعارات الدائن
+              - link "المشترين" [ref=e169] [cursor=pointer]:
+                - /url: /customers
+                - generic [ref=e170]: المشترين
+              - link "المنتجات" [ref=e173] [cursor=pointer]:
+                - /url: /products
+                - generic [ref=e174]: المنتجات
+              - link "الخصومات" [ref=e177] [cursor=pointer]:
+                - /url: /discounts
+                - generic [ref=e178]: الخصومات
+              - link "التقييمات" [ref=e181] [cursor=pointer]:
+                - /url: /reviews
+                - generic [ref=e182]: التقييمات
+              - link "شكاوى المشترين" [ref=e185] [cursor=pointer]:
+                - /url: /complaints
+                - generic [ref=e186]: شكاوى المشترين
+          - generic [ref=e187]:
+            - generic [ref=e188] [cursor=pointer]:
+              - img [ref=e189]
+              - generic [ref=e191]: الشراء
+              - img [ref=e192]
+            - generic [ref=e194]:
+              - link "الموردين" [ref=e197] [cursor=pointer]:
+                - /url: /suppliers
+                - generic [ref=e198]: الموردين
+              - link "عناصر الموردين" [ref=e201] [cursor=pointer]:
+                - /url: /items
+                - generic [ref=e202]: عناصر الموردين
+              - link "أوامر الشراء" [ref=e205] [cursor=pointer]:
+                - /url: /procurement/purchase-orders
+                - generic [ref=e206]: أوامر الشراء
+              - link "إشعارات الاستلام" [ref=e209] [cursor=pointer]:
+                - /url: /procurement/received-notes
+                - generic [ref=e210]: إشعارات الاستلام
+          - generic [ref=e211]:
+            - generic [ref=e212] [cursor=pointer]:
+              - img [ref=e213]
+              - generic [ref=e215]: المالية
+              - img [ref=e216]
+            - generic [ref=e218]:
+              - link "تمويل الفواتير قريباً" [ref=e221] [cursor=pointer]:
+                - /url: /invoice-financing
+                - generic [ref=e222]: تمويل الفواتير
+                - generic [ref=e223]: قريباً
+              - link "تمويل أوامر الشراء قريباً" [ref=e226] [cursor=pointer]:
+                - /url: /purchase-order-financing
+                - generic [ref=e227]: تمويل أوامر الشراء
+                - generic [ref=e228]: قريباً
+              - link "التحصيلات" [ref=e231] [cursor=pointer]:
+                - /url: /collections
+                - generic [ref=e232]: التحصيلات
+              - link "روابط الدفع" [ref=e235] [cursor=pointer]:
+                - /url: /payments
+                - generic [ref=e236]: روابط الدفع
+          - link "سوق التطبيقات" [ref=e238] [cursor=pointer]:
+            - /url: /apps
+            - img [ref=e239]
+            - generic [ref=e242]: سوق التطبيقات
+          - link "الإدارة" [ref=e244] [cursor=pointer]:
+            - /url: /settings
+            - img [ref=e245]
+            - generic [ref=e248]: الإدارة
+      - region "Notifications alt+T"
+    - generic [ref=e249] [cursor=pointer]:
+      - img [ref=e250]
+      - text: مساعدة
+  - region "Notifications Alt+T"

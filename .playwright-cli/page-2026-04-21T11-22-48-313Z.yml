@@ -1,0 +1,6 @@
+- generic [active] [ref=e1]:
+  - main [ref=e3]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: "404"
+      - generic [ref=e7]: لم يتم العثور على المتجر
+  - alert [ref=e8]

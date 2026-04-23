@@ -1,0 +1,600 @@
+- generic [active]:
+  - generic:
+    - main:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - link:
+                - /url: /hint
+                - generic:
+                  - img
+                - generic: الواهب 2 الحلويات الشرقية
+              - generic:
+                - link:
+                  - /url: /hint
+                  - text: المنتجات
+                - link:
+                  - /url: /hint/about-us
+                  - text: من نحن
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                    - generic: Home
+                    - img
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - generic: Ahmed
+                      - img
+                - generic:
+                  - link:
+                    - /url: /hint/cart
+                    - img
+                    - generic: "3"
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - img
+                - paragraph: لبدء الطلب من قوافل، يرجى استكمال البيانات القانونية (السجل التجاري، الرقم الضريبي، العنوان)
+                - generic: تأكيد الحساب
+            - generic:
+              - generic:
+                - generic:
+                  - img
+                - generic:
+                  - img
+                - generic:
+                  - img
+                - generic:
+                  - img
+              - button:
+                - img
+              - button:
+                - img
+              - generic:
+                - button
+                - button
+                - button
+                - button
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: ترتيب حسب
+                    - generic:
+                      - generic:
+                        - log
+                        - generic:
+                          - generic:
+                            - generic: الرجاء الاختيار
+                            - generic:
+                              - combobox
+                          - generic:
+                            - generic:
+                              - img
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                          - generic: منتج مميز
+                    - link:
+                      - /url: /hint/products/80112
+                      - img
+                      - generic: لديك 80 قطعة فى السلة
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80112
+                        - heading [level=3]: لوليبوب الفراولة
+                      - generic:
+                        - generic:
+                          - text: "3.62"
+                          - generic: ﷼
+                        - paragraph: هامش الربح المتوقع 38%
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                        - generic: في السلة (80)
+                  - generic:
+                    - link:
+                      - /url: /hint/products/80155
+                      - img
+                      - generic: لديك 13 قطعة فى السلة
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80155
+                        - heading [level=3]: كيك فارس القمر
+                      - generic:
+                        - generic:
+                          - text: "50"
+                          - generic: ﷼
+                        - paragraph: هامش الربح المتوقع 20%
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                        - generic: في السلة (13)
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80225
+                      - img
+                      - generic: لديك 20 قطعة فى السلة
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80225
+                        - heading [level=3]: كوكيز الواهب
+                      - generic:
+                        - generic:
+                          - text: "19"
+                          - generic: ﷼
+                        - paragraph: هامش الربح المتوقع 137%
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                        - generic: في السلة (20)
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80689
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80689
+                        - heading [level=3]: حمص الشام
+                      - generic:
+                        - generic:
+                          - text: "100"
+                          - generic: ﷼
+                        - paragraph: هامش الربح المتوقع 40%
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                        - generic: إضافة للسلة
+                  - generic:
+                    - link:
+                      - /url: /hint/products/80690
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80690
+                        - heading [level=3]: منتج بالعربي
+                      - generic:
+                        - generic:
+                          - text: "50"
+                          - generic: ﷼
+                        - paragraph: هامش الربح المتوقع 10%
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                        - generic: إضافة للسلة
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80705
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80705
+                        - heading [level=3]: منتج مكرر كذا مرة علشان نجرب الاسم
+                      - generic:
+                        - generic:
+                          - text: "200"
+                          - generic: ﷼
+                        - paragraph: هامش الربح المتوقع 5%
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                        - generic: إضافة للسلة
+                  - generic:
+                    - link:
+                      - /url: /hint/products/80698
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80698
+                        - heading [level=3]: لافاندر سويتس
+                      - generic:
+                        - generic:
+                          - text: "20"
+                          - generic: ﷼
+                        - paragraph: هامش الربح المتوقع 25%
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                        - generic: إضافة للسلة
+                  - generic:
+                    - link:
+                      - /url: /hint/products/80738
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80738
+                        - heading [level=3]: منتج مرحلة الدفع 2
+                      - generic:
+                        - generic:
+                          - text: "600"
+                          - generic: ﷼
+                        - paragraph: هامش الربح المتوقع 17%
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                        - generic: إضافة للسلة
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: عدة خيارات
+                    - link:
+                      - /url: /hint/products/80706?variant=80780
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80706?variant=80780
+                        - heading [level=3]: منتج مكرر كذا مرة علشان نجرب الاسم
+                      - generic:
+                        - generic:
+                          - text: "120"
+                          - generic: ﷼
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                        - generic: إضافة للسلة
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80702
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80702
+                        - heading [level=3]: تمر سكري ميفاتيل بريميوم من جانوبا (500 جرام) - جنوبة تمر سكرى مفتل ممتاز
+                      - generic:
+                        - generic:
+                          - text: "100"
+                          - generic: ﷼
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                        - generic: إضافة للسلة
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: عدة خيارات
+                    - link:
+                      - /url: /hint/products/80795?variant=80840
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80795?variant=80840
+                        - heading [level=3]: عصير كوكتيل فواكه
+                      - generic:
+                        - generic:
+                          - text: "50"
+                          - generic: ﷼
+                        - paragraph: هامش الربح المتوقع 100%
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                        - generic: إضافة للسلة
+                  - generic:
+                    - link:
+                      - /url: /hint/products/80737
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80737
+                        - heading [level=3]: منتج مرحلة الدفع3
+                      - generic:
+                        - generic:
+                          - text: "800"
+                          - generic: ﷼
+                        - paragraph: هامش الربح المتوقع 13%
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                        - generic: إضافة للسلة
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80732
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80732
+                        - heading [level=3]: منتج مكرر كذا مرة علشان نجرب الاسم
+                      - generic:
+                        - generic:
+                          - text: "600"
+                          - generic: ﷼
+                        - paragraph: هامش الربح المتوقع 8%
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                        - generic: إضافة للسلة
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80733
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80733
+                        - heading [level=3]: منتج ريجرو
+                      - generic:
+                        - generic:
+                          - text: "300"
+                          - generic: ﷼
+                        - paragraph: هامش الربح المتوقع 17%
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                        - generic: إضافة للسلة
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80731
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80731
+                        - heading [level=3]: منتج مكرر
+                      - generic:
+                        - generic:
+                          - text: "600"
+                          - generic: ﷼
+                        - paragraph: هامش الربح المتوقع 8%
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                        - generic: إضافة للسلة
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: عدة خيارات
+                        - generic:
+                          - generic: شامل عينة
+                    - link:
+                      - /url: /hint/products/80834?variant=80907
+                      - img
+                    - generic:
+                      - link:
+                        - /url: /hint/products/80834?variant=80907
+                        - heading [level=3]: منتج خصومات
+                      - generic:
+                        - generic:
+                          - text: 4,000
+                          - generic: ﷼
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                        - generic: إضافة للسلة
+                - generic:
+                  - navigation:
+                    - listitem:
+                      - button [disabled]: السابق
+                    - listitem:
+                      - button: "1"
+                    - listitem:
+                      - button: "2"
+                    - listitem:
+                      - button: التالي
+      - generic:
+        - generic:
+          - generic:
+            - heading [level=2]: "تواصل معنا بسهولة عبر:"
+            - generic:
+              - link:
+                - /url: mailto:Sales@ufuq.co
+                - generic:
+                  - img
+                - generic:
+                  - heading [level=4]: البريد الإلكتروني
+                  - paragraph: Sales@ufuq.co
+              - link:
+                - /url: tell:538989802
+                - generic:
+                  - img
+                - generic:
+                  - heading [level=4]: رقم التواصل
+                  - paragraph: "538989802"
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img
+                - paragraph:
+                  - generic: جميع الحقوق محفوظة
+                  - generic: الواهب 2 الحلويات الشرقية
+                  - generic: 2026 ©
+              - generic:
+                - generic: العنوان
+                - paragraph: NSSB3596، 3596 ابو بكر الصديق، 6916، سلطانة، شرورة 68372، السعودية
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                - generic:
+                  - link:
+                    - /url: https://www.instagram.com/hint__sa?igsh=N3N5d3hnNzRzcTFh
+                    - img
+                  - link:
+                    - /url: https://wa.me/message/4QQNE4EFXXTID1
+                    - img
+                  - link:
+                    - /url: https://www.tiktok.com/@hint_sa?_t=ZS-8wGjOJmywzd&_r=1
+                    - img
+              - generic:
+                - list:
+                  - listitem:
+                    - generic:
+                      - generic: "الرقم الضريبي:"
+                      - generic: "987654329876543"
+                  - listitem:
+                    - generic:
+                      - generic: "السجل التجاري:"
+                      - generic: "1521109956"
+                  - listitem:
+                    - generic:
+                      - generic: شركة
+                      - generic: الواهب 2 الحلويات الشرقية
+                - generic:
+                  - paragraph: جميع الأسعار في الموقع شاملة ضريبة القيمة المضافة
+                  - img
+            - generic: صنع بواسطة قوافل للتسويق الإلكتروني
+      - region "Notifications alt+T"
+  - generic:
+    - alert
+  - dialog [ref=e594]:
+    - generic [ref=e595]:
+      - generic [ref=e596]:
+        - img "Qawafel's logo" [ref=e598]
+        - paragraph [ref=e599]: أكمل الخطوات التالية لإعداد ملفك الشخصي في منصة قوافل
+        - generic [ref=e600]:
+          - generic [ref=e601]:
+            - img [ref=e603]
+            - generic [ref=e606]:
+              - text: بيانات الشركة
+              - paragraph [ref=e607]: ادخل بيانات الشركة و العنوان الخاصة بك
+          - generic [ref=e610]:
+            - text: المعلومات القانونية
+            - paragraph [ref=e611]: ادخل بيانات تسجيل نشاطك التجاري والضرائب
+      - generic [ref=e613]:
+        - generic [ref=e614]:
+          - generic [ref=e615]:
+            - heading "بيانات الشركة" [level=1] [ref=e616]
+            - paragraph [ref=e617]:
+              - text: لنبدأ بإعداد بيانات الشركة. سيساعدنا ذلك في التحقق من بيانات عملك.
+              - generic [ref=e618]: تأكد من أن بياناتك التجارية تتطابق مع المستندات القانونية لتجنب تأخير التحقق.
+          - generic [ref=e619]:
+            - generic [ref=e620]:
+              - generic [ref=e622]:
+                - generic [ref=e623]: اسم الشركة (باللغة العربية)
+                - textbox "أدخل اسم الشركة بالعربية" [ref=e625]:
+                  - /placeholder: "أدخل اسم الشركة بالعربية "
+              - generic [ref=e627]:
+                - generic [ref=e628]: اسم الشركة (باللغة الإنجليزية)
+                - textbox "Enter company name in English" [ref=e630]
+            - generic [ref=e632]:
+              - generic [ref=e633]: نوع المتجر
+              - generic [ref=e634]:
+                - log [ref=e636]
+                - generic [ref=e637]:
+                  - generic [ref=e638]:
+                    - generic [ref=e639]: اختر النوع
+                    - combobox [ref=e641]
+                  - img [ref=e645]
+            - generic [ref=e647]:
+              - generic [ref=e649]:
+                - generic [ref=e650]: الاسم الأول
+                - textbox "أدخل الاسم الأول" [ref=e652]
+              - generic [ref=e654]:
+                - generic [ref=e655]: الاسم الأخير
+                - textbox "أدخل الاسم الأخير" [ref=e657]
+            - generic [ref=e659]:
+              - generic [ref=e660]: البريد الإلكتروني
+              - textbox "example@email.com" [ref=e662]
+            - generic [ref=e664]:
+              - generic [ref=e665]: اسم العنوان
+              - 'textbox "أدخل اسم العنوان (مثال: المكتب الرئيسي، المستودع، المتجر)" [ref=e667]'
+            - generic [ref=e668]:
+              - generic [ref=e669]: الدولة
+              - generic:
+                - log
+                - generic:
+                  - generic:
+                    - generic: الممكلة العربية السعودية
+                  - generic:
+                    - generic:
+                      - img
+            - generic [ref=e671]:
+              - generic [ref=e672]: العنوان التفصيلي
+              - textbox "أدخل العنوان التفصيلي" [ref=e674]
+            - generic [ref=e675]:
+              - generic [ref=e677]:
+                - generic [ref=e678]: المدينة
+                - generic [ref=e679]:
+                  - log [ref=e681]
+                  - generic [ref=e682]:
+                    - generic [ref=e683]:
+                      - generic [ref=e684]: اختر المدينة
+                      - combobox [ref=e686]
+                    - img [ref=e690]
+              - generic [ref=e693]:
+                - generic [ref=e694]: الحي
+                - generic:
+                  - log
+                  - generic:
+                    - generic:
+                      - generic: أدخل اسم الحي
+                    - generic:
+                      - generic:
+                        - img
+              - generic [ref=e696]:
+                - generic [ref=e697]: اسم الشارع
+                - textbox "أدخل اسم الشارع" [ref=e699]
+              - generic [ref=e701]:
+                - generic [ref=e702]: رقم المبنى
+                - spinbutton [ref=e704]
+              - generic [ref=e706]:
+                - generic [ref=e707]: الرقم الفرعي للعنوان (اختياري)
+                - spinbutton [ref=e709]
+              - generic [ref=e711]:
+                - generic [ref=e712]: الرمز البريدي
+                - spinbutton [ref=e714]
+              - generic [ref=e716]:
+                - generic [ref=e717]: العنوان الوطني المختصر
+                - textbox "4 أحرف و 4 أرقام (مثال:RRRD2929)" [ref=e719]
+        - button "الخطوة التالية" [ref=e721] [cursor=pointer]

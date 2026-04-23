@@ -1,0 +1,22 @@
+[     124ms] [LOG] Sentry initialized @ https://app.development.qawafel.dev/assets/index-28pF0ttt.js:23
+[     933ms] ReferenceError: webengage_fs_configurationMap is not defined
+    at t.onload (https://vite_web_engage_key.in.webengage.co/storage-frame-1.13.htm?cdn=y&cbf=webengage-engagement-callback-frame&lc=VITE_WEB_ENGAGE_KEY:1:2859)
+[    1548ms] [ERROR] TypeError: a is not a constructor
+    at https://app.development.qawafel.dev/assets/index-28pF0ttt.js:480:31497 @ https://app.development.qawafel.dev/assets/index-28pF0ttt.js:23
+[    4324ms] Error: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at rD (https://store.development.qawafel.dev/_next/static/chunks/framework-dcb6cdc195ca2166.js?dpl=dpl_9VrR3JMLYfbPyv1kH4C8bBwU3Voo:1:35504)
+    at oK (https://store.development.qawafel.dev/_next/static/chunks/framework-dcb6cdc195ca2166.js?dpl=dpl_9VrR3JMLYfbPyv1kH4C8bBwU3Voo:1:86068)
+    at uS (https://store.development.qawafel.dev/_next/static/chunks/framework-dcb6cdc195ca2166.js?dpl=dpl_9VrR3JMLYfbPyv1kH4C8bBwU3Voo:1:116637)
+    at https://store.development.qawafel.dev/_next/static/chunks/framework-dcb6cdc195ca2166.js?dpl=dpl_9VrR3JMLYfbPyv1kH4C8bBwU3Voo:1:116482
+    at uw (https://store.development.qawafel.dev/_next/static/chunks/framework-dcb6cdc195ca2166.js?dpl=dpl_9VrR3JMLYfbPyv1kH4C8bBwU3Voo:1:116490)
+    at uc (https://store.development.qawafel.dev/_next/static/chunks/framework-dcb6cdc195ca2166.js?dpl=dpl_9VrR3JMLYfbPyv1kH4C8bBwU3Voo:1:111865)
+    at uZ (https://store.development.qawafel.dev/_next/static/chunks/framework-dcb6cdc195ca2166.js?dpl=dpl_9VrR3JMLYfbPyv1kH4C8bBwU3Voo:1:135003)
+    at MessagePort.N (https://store.development.qawafel.dev/_next/static/chunks/framework-dcb6cdc195ca2166.js?dpl=dpl_9VrR3JMLYfbPyv1kH4C8bBwU3Voo:1:187775)
+[    4380ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://store.development.qawafel.dev/_next/image?url=https%3A%2F%2Fqawafel-backend-assets-development.s3.eu-central-1.amazonaws.com%2Fmedia%2F13025%2Fconversions%2Fcake-gallery-solapur-1bwckirwtx-(1)-medium.jpg&w=384&q=75:0
+[   84768ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://store.development.qawafel.dev/_next/image?url=https%3A%2F%2Fqawafel-backend-assets-development.s3.eu-central-1.amazonaws.com%2Fmedia%2F13025%2Fconversions%2Fcake-gallery-solapur-1bwckirwtx-(1)-medium.jpg&w=384&q=75:0
+[  569605ms] [ERROR] Failed to load resource: the server responded with a status of 502 () @ https://store.development.qawafel.dev/_next/image?url=https%3A%2F%2Fqawafel-backend-assets-development.s3.eu-central-1.amazonaws.com%2Fmedia%2F13025%2Fconversions%2Fcake-gallery-solapur-1bwckirwtx-(1)-medium.jpg&w=384&q=75:0
+[  571565ms] UserflowError: userflow.init() was called but missing Userflow.js Token
+    at al.init (https://js.userflow.com/es2020/userflow.js:4:8135)
+    at Object.init (https://js.userflow.com/es2020/userflow.js:17:25588)
+    at ll (https://js.userflow.com/es2020/userflow.js:17:28788)
+    at https://js.userflow.com/es2020/userflow.js:17:25525
