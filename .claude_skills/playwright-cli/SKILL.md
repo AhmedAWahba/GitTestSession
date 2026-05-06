@@ -132,3 +132,31 @@ playwright-cli run-code fixtures/check-response.js
 | Register button | `button:has-text('أنشئ الحساب')` |
 | Sidebar menu | `.sidebar-menu` or `text=الإدارة` |
 | User profile name | `.header .user-name` or snapshot to locate |
+
+## Gherkin Scenario Standards
+
+This project follows strict Gherkin standards to ensure scenarios are clear, atomic, and executable.
+
+### Gherkin Style Guide (Summary)
+1. **Write Behaviour, Not Implementation**: Focus on "what" happens, not "how" (avoid click-by-click instructions like "click button").
+2. **Explicit Preconditions**: Use `Background` for shared setup and `Given` for state.
+3. **Atomic Scenarios**: One coherent behaviour per scenario. Keep scenarios under 10 steps.
+4. **Observable Outcomes**: Use visible UI changes (toasts, redirects, status changes) in `Then` steps.
+5. **Data Richness**: Use Data Tables for structured input like forms.
+6. **Independence**: Scenarios should set up their own state or explicitly link to prerequisites.
+
+### Review Rubric
+| Gate | Requirement |
+| :--- | :--- |
+| **Clear Start** | Explicit context, state, and prerequisites. |
+| **Clear Actions** | Unambiguous and easy to follow. |
+| **Clear Outcomes** | Observable success/failure metrics reachable via browser snapshots. |
+| **Contained Scope** | One coherent behaviour per scenario. |
+
+### Anti-patterns to Avoid
+- **Vague outcomes**: e.g., "Then it works".
+- **Implementation leakage**: Using CSS selectors or hardcoded waits in scenario text.
+- **Enormous scenarios**: 10+ steps are likely mixing multiple behaviours.
+
+---
+*Refer to [gherkin/style-guide.md](gherkin/style-guide.md) and [gherkin/rubric.md](gherkin/rubric.md) for full specifications.*
