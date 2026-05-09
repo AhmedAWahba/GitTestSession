@@ -67,7 +67,6 @@ Feature: Generate Payment Link
     Then the "Create Payment Request" modal opens
     When I select "Send Later" as the send timing
     Then a "Scheduled Date" picker and a "Scheduled Time" picker appear
-    When I set the scheduled date to tomorrow's date
     And I set the scheduled time to "10:00 AM"
     And I select "30 Days" as the payment link expiration
     And I select "SADAD" as the payment method
