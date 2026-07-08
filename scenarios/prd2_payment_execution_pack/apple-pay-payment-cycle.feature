@@ -17,9 +17,10 @@ Feature: Apple Pay Payment Cycle from Payment Link
   @smoke @success @guest
   Scenario: Guest buyer completes payment successfully with Apple Pay
     Given I open the payment link as a guest buyer without logging in
+    And I am using a device and browser that supports Apple Pay
     And Apple Pay is available in the payment methods list
     When I select "Apple Pay"
-    And I authorize payment in the Apple Pay sheet
+    And I confirm the payment in the Apple Pay authorization sheet
     Then the payment status should become "Paid"
     And I should see a payment success screen with:
       | Field             |
@@ -32,19 +33,21 @@ Feature: Apple Pay Payment Cycle from Payment Link
     And the "Download Receipt" action should be available
     And the seller's created payment request should be updated to "Paid"
     And the linked invoice status should be updated to "Paid"
-    And this payment should not appear in any buyer received requests list
+    And this payment should not appear in the "Received Payment Requests" list for any buyer account
 
   @success @registered-buyer
   Scenario: Registered buyer successful Apple Pay is visible in buyer records
     Given I am logged in as a registered buyer account
+    And I am using a device and browser that supports Apple Pay
     And I open the payment link
     And Apple Pay is available in the payment methods list
     When I select "Apple Pay"
-    And I authorize payment in the Apple Pay sheet
+    And I confirm the payment in the Apple Pay authorization sheet
     Then the payment status should become "Paid"
     And the seller's created payment request should be updated to "Paid"
     And the linked invoice status should be updated to "Paid"
-    And the payment should appear in my "Received Payment Requests" list with status "Paid"
+    And I navigate to "Received Payment Requests" in the buyer dashboard
+    And the payment should appear in the list with status "Paid"
 
   @failure @device-eligibility
   Scenario: Apple Pay is unavailable on unsupported device or browser
@@ -60,11 +63,12 @@ Feature: Apple Pay Payment Cycle from Payment Link
   @failure @user-cancel
   Scenario: Buyer cancels Apple Pay authorization and can retry another method
     Given I open the payment link
+    And I am using a device and browser that supports Apple Pay
     And Apple Pay is available in the payment methods list
     When I select "Apple Pay"
     And I cancel the Apple Pay sheet before authorization
     Then the payment status should remain "Awaiting Payment"
-    And I should see the call to action "Try Another Method"
+    And I should see a "Try Another Method" button on the payment page
     And these payment methods should remain available:
       | Method      |
       | Apple Pay   |
@@ -74,12 +78,13 @@ Feature: Apple Pay Payment Cycle from Payment Link
   @failure @gateway-error
   Scenario: Apple Pay authorization succeeds but gateway capture fails
     Given I open the payment link
+    And I am using a device and browser that supports Apple Pay
     And Apple Pay is available in the payment methods list
+    And the test environment is configured to simulate a gateway capture failure
     When I select "Apple Pay"
-    And I authorize payment in the Apple Pay sheet
-    And the payment gateway returns a capture failure
+    And I confirm the payment in the Apple Pay authorization sheet
     Then the payment status should become "Failed"
-    And I should see a visible payment error message with a retry action
+    And I should see a visible payment failure message with a retry action on the payment page
     And the payment link should remain "Active" until expiry
     And the linked invoice status should remain "Sent"
 
@@ -94,10 +99,13 @@ Feature: Apple Pay Payment Cycle from Payment Link
   @failure @idempotency
   Scenario: Duplicate Apple Pay submission does not create duplicate payment records
     Given I open the payment link
+    And I am using a device and browser that supports Apple Pay
     And Apple Pay is available in the payment methods list
-    When I submit Apple Pay authorization twice for the same payment link
+    And the test environment is configured to simulate a duplicate Apple Pay submission
+    When the payment authorization is submitted twice for the same payment link
     Then only one payment reference should be created
-    And the payment request status should be consistent with a single payment outcome
+    And the payment request status should be "Paid"
+    And the linked invoice status should be updated to "Paid" exactly once
 
   @failure @method-config
   Scenario: Apple Pay is hidden when seller did not enable Apple Pay for the link
