@@ -370,3 +370,144 @@
 - Require each PRD to include: acceptance table, edge-case matrix, copy catalog, and API/UI constraints.
 - Enforce design/PRD parity check at story kickoff and before QA sign-off.
 - Add a single source-of-truth action matrix for invoice and credit-note statuses used by list and detail views.
+
+## Question Analysis by PRD (Single Table)
+| PRD Title | Section | Question |
+|---|---|---|
+| PRD 4: Invoice Creation - Drafting | Invoice Date | Are past dates and future dates both allowed during Draft, and is there a max back/future range? |
+| PRD 4: Invoice Creation - Drafting | Unit Price | What min/max values and decimal precision are allowed for Unit Price? |
+| PRD 4: Invoice Creation - Drafting | Select Business Partner | Can inactive trading partners be selected as buyers? |
+| PRD 4: Invoice Creation - Drafting | Save Draft | What happens if seller or buyer profile data changes after a draft is saved? |
+| PRD 4: Invoice Creation - Drafting | Quantity | Are decimal quantities allowed, or integers only? |
+| PRD 5: Invoice Creation - Submission and ZATCA | Submit Action | How is duplicate-click submit handled to prevent double submission? |
+| PRD 5: Invoice Creation - Submission and ZATCA | Sent to ZATCA | Is there an internal SLA/escalation if status stays Sent to ZATCA for too long? |
+| PRD 5: Invoice Creation - Submission and ZATCA | Reference Numbering | What is the retry/collision strategy if reference assignment fails at submit time? |
+| PRD 5: Invoice Creation - Submission and ZATCA | Rejected Invoice | Is there a create-from-rejected-copy shortcut, or always manual re-entry? |
+| PRD 5: Invoice Creation - Submission and ZATCA | Date Lock | Which timezone is authoritative for the locked submission date? |
+| PRD 6: Invoice Import - Bulk CSV (Invoices) | File Limits | What are max file size, max rows, and max line items per invoice? |
+| PRD 6: Invoice Import - Bulk CSV (Invoices) | Reference Matching | Is duplicate detection case-sensitive and whitespace-sensitive? |
+| PRD 6: Invoice Import - Bulk CSV (Invoices) | Trading Partner Match | Which fields are used for matching partner records, and in what priority order? |
+| PRD 6: Invoice Import - Bulk CSV (Invoices) | Partial Import | Is import transactional per row, per invoice, or per whole file? |
+| PRD 6: Invoice Import - Bulk CSV (Invoices) | Error Reporting | Can users download structured error reports with reason codes? |
+| PRD 7: Credit Notes Import - Bulk CSV (Credit Notes) | Dependency Order | If invoice and credit note are in same upload, which is processed first? |
+| PRD 7: Credit Notes Import - Bulk CSV (Credit Notes) | Missing Original Invoice | Is there a deferred retry queue, or immediate rejection only? |
+| PRD 7: Credit Notes Import - Bulk CSV (Credit Notes) | Amount Validation | How do we prevent over-credit when multiple notes target the same invoice concurrently? |
+| PRD 7: Credit Notes Import - Bulk CSV (Credit Notes) | Recalculation | What rounding rule is used when recalculating outstanding balances? |
+| PRD 7: Credit Notes Import - Bulk CSV (Credit Notes) | Duplicate Reference | Is uniqueness enforced across all channels or only CSV-imported notes? |
+| PRD 8: Invoice Import - API (Invoices) | Idempotency | What idempotency key/strategy is required for safe client retries? |
+| PRD 8: Invoice Import - API (Invoices) | Access Approval | Who approves test-to-live access and what is the target SLA? |
+| PRD 8: Invoice Import - API (Invoices) | API Contract | Is there a versioned schema and error-code catalog available? |
+| PRD 8: Invoice Import - API (Invoices) | Throughput | What are API rate limits and payload size limits? |
+| PRD 8: Invoice Import - API (Invoices) | Failure Responses | Are errors machine-readable and stable for integration partners? |
+| PRD 9: Credit Notes Import - API (Credit Notes) | Out-of-Order Arrival | What happens if a credit note arrives before its original invoice via API? |
+| PRD 9: Credit Notes Import - API (Credit Notes) | Retry Behavior | Should clients retry on dependency failures, and after how long? |
+| PRD 9: Credit Notes Import - API (Credit Notes) | Link Integrity | How is duplicate linking prevented when same credit note is retried? |
+| PRD 9: Credit Notes Import - API (Credit Notes) | Balance Recalculation | What is recalculation order if multiple credit notes clear close together? |
+| PRD 9: Credit Notes Import - API (Credit Notes) | Error Semantics | Are rejection reasons standardized across API and CSV channels? |
+| PRD 10: Invoice List View | Search | Is search exact, partial, case-insensitive, and does it support Arabic normalization? |
+| PRD 10: Invoice List View | Filters | Is one-filter-only intentional, or should combined filters be supported? |
+| PRD 10: Invoice List View | Overdue Highlight | Which timezone and cutoff time determine overdue status? |
+| PRD 10: Invoice List View | Pagination | What is default page size and max page size? |
+| PRD 10: Invoice List View | Empty States | What are the exact approved messages for each empty-state scenario? |
+| PRD 11: Invoice Detail View and Status Lifecycle | Payment Status | If manual and derived payment statuses conflict, which one wins? |
+| PRD 11: Invoice Detail View and Status Lifecycle | History Timeline | Is status history immutable, and can admins correct wrong events? |
+| PRD 11: Invoice Detail View and Status Lifecycle | Action Matrix | Is there one canonical action matrix used by both UI and API? |
+| PRD 11: Invoice Detail View and Status Lifecycle | Linked Records | What is shown if related credit note link is broken or unavailable? |
+| PRD 11: Invoice Detail View and Status Lifecycle | Deletion Rules | Are there any emergency deletion exceptions for compliance incidents? |
+| PRD 12: Credit Note Creation | Credit Note Reason | What are the exact five allowed ZATCA reason values? |
+| PRD 12: Credit Note Creation | Quantity and Amount | Are partial quantities decimal-allowed, and what precision is enforced? |
+| PRD 12: Credit Note Creation | Late Issuance Warning | What is the exact warning copy and locale behavior? |
+| PRD 12: Credit Note Creation | Amount Cap | Is cumulative cap checked against original invoice live balance or original total only? |
+| PRD 12: Credit Note Creation | Numbering | What is the exact format for credit-note prefix and sequence continuity? |
+| PRD 13: Credit Note Submission and Lifecycle | Submit Safety | How is duplicate submit prevented for credit notes? |
+| PRD 13: Credit Note Submission and Lifecycle | Pending State | What operational action happens if Sent to ZATCA remains unresolved? |
+| PRD 13: Credit Note Submission and Lifecycle | Rejected Flow | Is there a guided start-new-credit-note path from rejected state? |
+| PRD 13: Credit Note Submission and Lifecycle | Recalculation | What triggers recalculation first: balance, payment status, or both atomically? |
+| PRD 13: Credit Note Submission and Lifecycle | Auditability | What audit events are required for submission and lifecycle transitions? |
+| PRD 14: Credit Note List View | Search Scope | Does search tokenize invoice reference and buyer name similarly to invoice list? |
+| PRD 14: Credit Note List View | Filter Behavior | Are multi-select or combined filters intentionally out of scope? |
+| PRD 14: Credit Note List View | Sorting | What is tie-breaker when two notes share same date/time? |
+| PRD 14: Credit Note List View | Empty States | What exact copy should appear for no data vs no filter/search results? |
+| PRD 14: Credit Note List View | Navigation | If invoice link target is inaccessible, what fallback behavior is expected? |
+| PRD 15: Credit Note Detail View and Status Lifecycle | Original Invoice Link | What should user see if original invoice is archived or unavailable? |
+| PRD 15: Credit Note Detail View and Status Lifecycle | Action Governance | How do we guarantee list-level and detail-level action parity? |
+| PRD 15: Credit Note Detail View and Status Lifecycle | History Source | Are history events sourced from one service or multiple services? |
+| PRD 15: Credit Note Detail View and Status Lifecycle | Download Output | What file format, signature, and compliance metadata are required? |
+| PRD 15: Credit Note Detail View and Status Lifecycle | Retention | How is never-deleted retention implemented operationally (archive tier, retrieval SLA)? |
+| PRD 16: Invoice Sharing | Delivery Lifecycle | What are statuses for inside-Qawafel send (queued, sent, delivered, read, failed)? |
+| PRD 16: Invoice Sharing | Eligibility | Where are Cleared-only and Qawafel-generated-only checks enforced (UI, API, or both)? |
+| PRD 16: Invoice Sharing | Irreversibility | Is there any correction flow if sent to wrong buyer by mistake? |
+| PRD 16: Invoice Sharing | Auto-Send Scope | Is auto-send configured per business, per user, or per buyer relationship? |
+| PRD 16: Invoice Sharing | Notifications | What channels, retries, and failure messages are required for buyer notifications? |
+
+## Audit of Question Coverage
+
+### Coverage Status
+| Area | Status | Notes |
+|---|---|---|
+| Functional flow | Partially covered | Core lifecycle questions are present across drafting, submission, imports, list/detail, credit notes, and sharing. |
+| Edge cases | Partially covered | Good coverage for duplicates/retries/order, but concurrency and reconciliation remain under-specified. |
+| Non-functional | Not covered | No explicit SLO, throughput, availability, or recovery targets. |
+| UX/content | Partially covered | Some copy and empty-state questions exist; full error catalog and irreversible-action safeguards are missing. |
+| Performance | Not covered | No measurable targets for import throughput, list/search latency, or recalculation timing. |
+| Security/privacy | Partially covered | Governance intent appears, but no explicit RBAC matrix, tamper controls, or audit-event minimum set. |
+| Accessibility/localization | Not covered | No explicit WCAG, keyboard, screen-reader, or RTL/date-number formatting criteria. |
+| Compliance/auditability | Partially covered | Retention and immutability are raised, but operational evidence and legal-hold controls are not defined. |
+
+### Gaps by Area
+| Area | Gap |
+|---|---|
+| Functional | Missing explicit state-machine acceptance criteria for all transition and failure paths. |
+| Non-functional | Missing SLO/SLA for ZATCA pending states, import completion times, and list/detail responsiveness. |
+| UX | Missing mandated confirmation/warning patterns for irreversible or destructive actions. |
+| Performance | Missing hard limits and burst-capacity assumptions for CSV/API imports and parallel recalculations. |
+| Security | Missing complete role-action matrix, minimum audit-event set, and document integrity/tamper rules. |
+| Accessibility | Missing keyboard flow, focus order, contrast, labels, and bidi/RTL acceptance criteria. |
+
+### Recommended Clarifying Questions (Prioritized)
+| Priority | Area | Clarifying question | Intent |
+|---|---|---|---|
+| P0 | Security/Functional | What is the authoritative role-action matrix per status and channel for invoices and credit notes? | Prevent unauthorized actions and UI/API drift. |
+| P0 | Data Integrity | What idempotency contract applies to submit/import operations and retries? | Eliminate duplicate legal records. |
+| P0 | Financial Correctness | What rounding/precision order applies at line, VAT bucket, subtotal, total, and credit recalculation? | Ensure consistent monetary outcomes across UI/API/documents. |
+| P0 | Lifecycle Reliability | What is the reconciliation model when Sent to ZATCA remains unresolved? | Define deterministic pending-state operations. |
+| P0 | Concurrency | How is cumulative credit cap enforced under concurrent credit notes/payments? | Prevent over-credit and negative outstanding balance. |
+| P0 | Reference Governance | How are reference numbers normalized across manual, CSV, and API channels? | Prevent hidden duplicate collisions. |
+| P0 | Compliance/Audit | What minimum immutable audit events are required for legal traceability? | Make immutability and retention testable. |
+| P0 | Sharing Safety | What remediation path exists for wrong-recipient invoice sharing, without violating irreversibility? | Reduce irreversible-send business risk. |
+| P1 | Performance | What are P95 targets for list/search latency and import/recalculation completion? | Create measurable NFR pass/fail criteria. |
+| P1 | UX/content | What is the approved versioned error/warning/empty-state message catalog? | Stabilize behavior and regression testing. |
+| P1 | Accessibility | What WCAG and localization requirements are mandatory for invoice and credit-note flows? | Ensure inclusive and locale-correct implementation. |
+| P1 | Notifications | What delivery guarantees and retry policies apply to sharing notifications? | Prevent silent delivery failures. |
+| P1 | Retention Ops | How is never-deleted retention implemented (archive tier, retrieval SLA, legal hold)? | Operationalize compliance requirements. |
+| P2 | Operability | What dashboards/alerts/runbooks are required for import and pending-state incidents? | Improve incident detection and triage speed. |
+| P2 | Compatibility | How are API versioning and deprecation managed for import clients? | Avoid integration breakage over time. |
+
+### Concrete Acceptance Criteria to Add
+| Area | Acceptance criterion |
+|---|---|
+| Idempotency | Replaying the same submit/import request with same idempotency key returns same outcome and does not create duplicate records. |
+| Authorization | For every status, UI and API enforce identical allowed actions; unauthorized attempts are rejected and audited. |
+| Monetary Precision | Calculation order and precision are defined and deterministic; totals match across UI, API, and exported documents. |
+| Pending Reconciliation | Retry cadence, reconciliation trigger, and escalation thresholds are documented with ownership and measurable SLA. |
+| Concurrency | Parallel credit-note/payment operations cannot produce negative outstanding balances or credit totals above original invoice total. |
+| Accessibility | All primary flows are keyboard-complete, screen-reader labeled, and pass defined color-contrast and RTL rendering checks. |
+
+### Ambiguous or Conflicting Questions to Refine
+| Existing question | Ambiguity | Clarifying question |
+|---|---|---|
+| Is one-filter-only intentional, or should combined filters be supported? | Could challenge an intentional PRD rule. | Confirm one-filter-only as a release constraint and document explicit non-goal rationale. |
+| Is there a create-from-rejected-copy shortcut, or always manual re-entry? | May conflict with no-resubmit rule. | Can clone-as-new-draft be allowed while preserving new identifiers and no-resubmit semantics? |
+| Are there emergency deletion exceptions for compliance incidents? | Can conflict with never-deleted requirement. | Is physical deletion prohibited in all cases; if exceptions exist, what legal authority and controls apply? |
+| Is there a deferred retry queue, or immediate rejection only? | Behavior may differ by channel and dependency state. | For dependency-not-found imports, define strict reject vs queued retry behavior per channel. |
+| Is there correction flow if sent to wrong buyer by mistake? | May conflict with irreversible send statement. | What non-reversal remediation is allowed post-send and what evidence trail is required? |
+| If manual and derived payment statuses conflict, which one wins? | Model currently under-specified. | Define precedence, trigger order, and lock behavior between manual edits and derived updates. |
+
+### Suggested Next Steps
+| Step | Action | Owner |
+|---|---|---|
+| 1 | Convert P0 clarifying questions into explicit acceptance criteria per PRD section. | PM + Engineering |
+| 2 | Publish one canonical invoice/credit-note status-action matrix for UI, API, and QA. | Product + Architecture |
+| 3 | Add NFR appendix covering SLO, limits, idempotency, reconciliation, and observability. | Engineering |
+| 4 | Add accessibility/localization appendix with testable pass criteria. | Design + QA |
+| 5 | Run PRD-prototype reconciliation for unresolved ambiguities and freeze a versioned baseline. | PM + Design + QA |
