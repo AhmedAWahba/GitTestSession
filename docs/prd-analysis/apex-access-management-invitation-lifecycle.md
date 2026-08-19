@@ -201,63 +201,78 @@ Document 1 creates invitation state and metadata that Document 2 consumes (token
 
 ## 14. QC Question Triage (Sorted per Access Management PRD)
 
+> **Evaluation note (2026-08-17):** All questions were re-verified line-by-line against the PRD text. Questions removed were either answered directly in the PRD, belong to a different PRD (identity/onboarding), or are engineering/process concerns with no hook in the access management FRs. Questions added were genuine gaps not previously raised.
+
+---
+
+### Removed questions and reason
+
+| Q# | Original question | Reason removed |
+|---|---|---|
+| Q3 | If Owner-only is the final rule, which sections need updating? | Process/action item, not a QC question on PRD content |
+| Q10 | What is the definitive release/module boundary? | Release metadata — irrelevant to PRD logic gaps |
+| Q11 (original framing) | Where is the permission contract for Admin vs Owner? | PRD note explicitly defers this to the roles/permissions module; not a gap in this PRD |
+| Q15 | What is the exact identity matching algorithm? | Belongs to the Identity/Onboarding PRD, not Access Management |
+| Q16 | What happens with ambiguous identity matches? | Same — belongs to Onboarding PRD |
+| Q21 | When PRD and prototype copy diverge, which wins? | General process question with no anchor in any access management FR |
+| Q22 | Is Figma or prototype the design source of truth? | Same — general governance question, not a PRD gap |
+| Q24 | What are minimum observability events? | Engineering/ops concern; no FR in this PRD creates the gap |
+| Q25 | What regression pack is mandatory before release? | QA planning — not a PRD analysis question |
+
+---
+
 ### PRD 1 — Sending an Invitation
 
 | # | Question | Status | Evidence (PRD ID) | Gap | Owner |
 |---|---|---|---|---|---|
-| Q1 | Which document is authoritative for invitation authority: Owner-only, or Owner + Admin? | Partially Answered | INV-1.1 — Owner or Admin can invite; Users-list note defers full contract to roles/permissions module | Backend auth contract not formalized | PM / Security |
-| Q3 | What is the exact expiry cutoff rule: timezone, calendar boundary, and job execution tolerance? | Partially Answered | INV-1.14 — "expires 7 calendar days"; INV-1.15 — resend restarts 7-day clock | Timezone and DST edge undefined | Dev / Platform |
-| Q4 | Is invitation resend rate-limited, and what thresholds apply? | Open | Not defined in PRD | No rate limit, retry cap, or abuse control specified | Security / PM |
-| Q7 | What retention policy source governs invitation audit metadata permanently? | Partially Answered | INV-1.10 — "permanently records … regardless of outcome" | Full data-retention policy framework not referenced | Compliance / Dev |
-| Q9 | Does role change on pending invitation intentionally send no recipient notification? | **Answered** | INV-1.17 — "does not send a new email; the recipient sees the current role when they open the invitation" | None — rule is explicit | PM / Security |
-| Q10 | What is the definitive release/module boundary for this feature set? | Open | Not defined in PRD | Release identifier missing | PM |
-| Q11 | Where is the explicit permission contract defined for Admin vs Owner in backend enforcement? | Partially Answered | INV-1.1, UC-1.9 — Admin invite is permitted; note says permissions module owns this | Backend contract deferred | Security / Dev |
-| Q21 | When PRD text and prototype copy diverge, which is authoritative? | Open | Not defined in PRD | No source-of-truth tie-break rule | PM / Design |
-| Q24 | What are the minimum observability events required for invitation lifecycle? | Open | Not defined in PRD | No telemetry/audit event specification | Dev / QA |
-| Q25 | What regression pack is mandatory before release for this flow? | Open | Not defined in PRD | No release regression scope defined | QA |
+| Q1 | Does the self-invite block in INV-1.5 account for case-insensitive email and plus-alias variants? | Open | INV-1.5 — "entering the sender's own address … is blocked" — no normalization spec | Case-folding and alias handling undefined | Dev / QA |
+| Q2 | When two Admins send an invitation to the same email concurrently, which wins and does a duplicate entry appear? | Open | INV-1.6 — duplicate pending blocked, but no race/idempotency contract | Concurrent-send race condition not addressed | Dev |
+| Q3 | INV-1.8 says the "existing entry returns to Pending" — how is the same person identified across historical states: by email only, or by verified identity? | Open | INV-1.8 — "existing entry returns to pending" — merge key not defined | Person-identity merge key undefined | Dev / QA |
+| Q4 | Is there a maximum number of resends permitted on a single pending invitation before it must be withdrawn and re-created? | Open | INV-1.15 — resend restarts expiry; no cap mentioned | Unlimited resend could be abused | Security / PM |
+| Q5 | What is the exact timezone and time-of-day cutoff for the 7-calendar-day expiry? | Open | INV-1.14 — "7 calendar days" — timezone and cutoff undefined | DST and boundary edge unspecified | Dev / Platform |
+| Q6 | After withdrawal, how quickly is the link invalidated — is there a CDN/cache window where it may still work? | Open | INV-1.16 — "link stops working" — no propagation latency defined | Cache invalidation timing not specified | Dev |
+| Q7 | Is the role change on a pending invitation (INV-1.17) logged in an audit trail even though no email is sent? | Open | INV-1.17 — role updates silently; no audit log mention | Role-change audit trail not specified | Dev / Compliance |
+| Q8 | INV-1.10 states permanent record keeping — what is the retention period and who can query the audit data? | Partially Answered | INV-1.10 — "retained for the life of the invitation and afterwards, regardless of outcome" | Retention period, query scope, and access rights not defined | Compliance / Dev |
 
 ### PRD 2 — Accepting an Invitation
 
 | # | Question | Status | Evidence (PRD ID) | Gap | Owner |
 |---|---|---|---|---|---|
-| Q5 | Should the no-access screen include a support/escalation path? | **Answered** | INV-2.23 — "The screen states that the person has no business access. It offers no action." | None — rule is explicit | PM |
-| Q6 | What exact identity matching algorithm enforces one person, one APEX account? | Partially Answered | INV-2.13 — identity-based uniqueness principle stated; Document 2 note — "identified by their verified identity rather than by an email address" | Matching algorithm and collision resolution logic not specified | Dev / Data |
-| Q13 | For existing verified users, what exact prerequisites must be true for immediate access after accept? | **Answered** | INV-2.9 — "existing account with verified identity gains access immediately"; INV-2.10 — "previous member gains access immediately"; INV-2.21 — resume path for partway users | None — all three paths covered | QA |
-| Q14 | Is Nafath required for invited users always, by role, or never? | Partially Answered | INV-2.6 — new users complete "mobile number, one-time code, identity details, and Nafath"; INV-2.9 — existing verified user skips all verification | Not normalized as a global policy across role/risk tiers | PM / Security |
-| Q15 | What is the exact algorithm for matching one person, one account across email/mobile/identity? | Open | Not defined in PRD | Implementation-level specification missing | Dev |
-| Q16 | What happens when identity match confidence is ambiguous or conflicting across sources? | Open | Not defined in PRD | Fallback path and escalation depth unspecified | Dev / Support |
-| Q22 | Is Figma or prototype the design source of truth when they conflict with PRD wording? | Open | Not defined in PRD | No precedence rule established | PM / Design |
-| Q23 | What support path exists for "no business access" users if screen has no action? | **Answered** | INV-2.23 — screen shows message only; UC-2.21 — "You do not currently have access to any business." No action offered | No gap within PRD scope; support escalation path is a product decision | PM / Support |
+| Q9 | INV-2.4 states access is never granted without explicit acceptance — what is the server-side event order that prevents a race between accept-click and access-grant? | Open | INV-2.4 — "accepting is a deliberate action" — consent-before-grant sequence not defined | Server event ordering not formalized | Dev |
+| Q10 | If Nafath is unavailable when a new invited user reaches verification, what is the fallback path? | Open | INV-2.6 — identity verification steps defined; no failure/degradation path stated | Nafath outage behavior undefined for invite flow | Dev / PM |
+| Q11 | What exactly constitutes a "verified identity" for the purpose of INV-2.9 immediate access — Nafath completion alone, or mobile OTP as well? | Open | INV-2.9 — "verified identity gains access immediately" — verified-identity definition not stated | Minimum verification threshold for immediate access unclear | Dev / QA |
+| Q12 | INV-2.5 locks account creation to the invited email address — what happens if the recipient can no longer access that mailbox? | Open | INV-2.5 — "account is created at the email address the invitation was sent to" | No alternative path or support process defined | PM / Support |
+| Q13 | INV-2.8 says status becomes Active when identity verification completes — is this update atomic with the membership grant, or can a window exist where access is open but the list still shows Pending? | Open | INV-2.8 — both outcomes stated without atomicity guarantee | Transaction boundary between access grant and list update not specified | Dev |
+| Q14 | INV-2.23 shows no-access screen with no action — is there any support or contact path available, even outside the platform? | **Answered** | INV-2.23 — "The screen states that the person has no business access. It offers no action." | Explicitly no action in PRD scope; out-of-platform support path is a product decision | PM |
 
 ### PRD 3 — Users List & Access Changes
 
 | # | Question | Status | Evidence (PRD ID) | Gap | Owner |
 |---|---|---|---|---|---|
-| Q2 | What are the exact allowed and forbidden status transitions among the six states? | Partially Answered | INV-3.4 — six statuses defined; INV-3.9, INV-3.12, INV-3.13 describe some transitions | Full state machine with forbidden transitions not formalized | Dev / QA |
-| Q8 | What list performance targets apply for large businesses in the single Users list view? | Open | Not defined in PRD | No pagination, latency, or scaling NFR | Dev / PM |
-| Q17 | How quickly must access revocation terminate active sessions after removal (SLA)? | **Answered** | INV-3.12 — "ends their access … immediately, including any session they currently have open"; UC-3.9 — session stops working at once | SLA defined as immediate; propagation latency budget still missing | Dev |
-| Q18 | Are pending invitations sent by a removed user revoked in the same transaction as removal? | Partially Answered | INV-3.13 — "withdraws any invitations they had sent that are still pending"; UC-3.8 — lists this as part of the same removal outcome | Transactionality / atomicity guarantee not explicitly stated | Dev |
-| Q19 | Where is historical transition data accessible for audit when the list shows current state only? | Partially Answered | INV-3.18 — "list shows each person's current standing … not a history" | Audit-history retrieval mechanism not defined | Dev / Compliance |
-| Q20 | What list performance targets and scalability requirements exist? | Open | Not defined in PRD | No pagination defaults, latency target, or member-count scale spec | Dev / PM |
-| Q24 | What observability events are required for role-change and removal actions? | Open | Not defined in PRD | No event/monitoring specification | Dev / QA |
+| Q15 | What are all allowed status transitions? Specifically: can Declined transition directly back to Pending via invite-again, and can Revoked? | Partially Answered | INV-3.4 — six statuses; INV-3.9 — terminal entries can be invited again; UC-3.5 confirms Declined/Expired/Revoked/Removed → Pending via invite-again | Forbidden transitions and direct-path rules not formalized as a state machine | Dev / QA |
+| Q16 | Can an Admin remove themselves, or does INV-3.8 only permit removing others? | Open | INV-3.8 — "an active member can … be removed"; INV-3.17 — "Admin can remove another Admin" — self-removal not addressed | Self-removal not covered | Dev / QA |
+| Q17 | What prevents the last Admin (besides the Owner) from being removed, leaving only the Owner with no delegate? | Open | INV-3.17 — "only the Owner is protected" — no anti-lockout rule for Admin seat | Last-admin lockout scenario not addressed | Dev / PM |
+| Q18 | INV-3.11 states a role-change email is sent — what is the exact template content and which language(s) does it use? | Open | INV-3.11 — "an email is sent to that person" — content and locale not defined | Role-change email template undefined | Design / PM |
+| Q19 | INV-3.12 states access ends "immediately" — does this mean synchronously within the same HTTP request, or is it eventual-consistency with a bounded propagation delay? | Open | INV-3.12 — "access ends at once" — synchronous vs eventual not stated | Session revocation propagation model undefined | Dev |
+| Q20 | INV-3.13 states removal revokes pending invitations the removed user sent — is this in the same database transaction, or can the invite revocation lag? | Partially Answered | INV-3.13 — "withdraws any invitations … that are still pending"; UC-3.8 — described as same removal outcome | Atomicity guarantee not explicitly stated | Dev |
+| Q21 | INV-3.18 says the list shows current standing only — where can a business user or auditor access the full transition history for compliance? | Open | INV-3.18 — current standing only; no history surface defined | Audit-history access mechanism not specified | Dev / Compliance |
 
 ### PRD 4 — Access Management Capability Matrix
 
 | # | Question | Status | Evidence (PRD ID) | Gap | Owner |
 |---|---|---|---|---|---|
-| Q1 | If Admin invitation authority is confirmed, where is the backend enforcement contract? | Partially Answered | Matrix row — "Add Admins & Members: Owner Yes, Admin Yes, Member No" | Per-action API authorization model not linked | Security / Dev |
-| Q11 | Where is the per-module permission operation matrix with API enforcement mapping? | Partially Answered | Matrix — "All platform modules … Owner Full access, Admin Full access, Member View only" | Granular per-endpoint mapping and denial response missing | Dev / Security |
-| Q12 | If Owner-only ends up as the final invite rule, which PRD sections require updates? | Open | Conflict between Matrix (Owner+Admin can add) and Onboarding alignment (Owner-only per FR-E-024) | Cross-PRD authority not resolved | PM |
-| Q14 | How are financing-role constraints tied to invitation acceptance and access activation? | Partially Answered | Matrix — "Apply for financing: Owner Yes, Admin No, Member No" | Interaction with invited-user access activation timeline not specified | PM / Dev |
-| Q24 | What audit/event model covers role-based access actions across matrix rows? | Open | Not defined in PRD | No event or compliance trace specification | Dev / QA |
+| Q22 | The matrix says "All platform modules … Member: View only" — which specific write operations are blocked, and what UI state or API response does a Member see when they attempt one? | Open | Matrix — view only for Member; no denial UX or API response defined | Member write-denial behavior not specified | Dev / Design |
+| Q23 | The matrix says "Apply for financing: Admin No" — what does an Admin see when they navigate to the financing section: is it hidden, disabled, or shown with an error? | Open | Matrix — "No (view only)"; no UI treatment for denied financing actions defined | Financing denial UX not specified | Design / PM |
+| Q24 | The matrix covers current modules but says "future modules, etc" — what is the default permission assignment for a newly added module before it is explicitly configured? | Open | Matrix header — "future modules" mentioned; no default-permission fallback stated | Default permission for new modules undefined | Dev / PM |
+| Q25 | There is a conflict between this matrix (Owner+Admin can invite) and Onboarding alignment FR-E-024 (Owner-only invite authority) — which is the resolved rule? | Open | Matrix — "Add Admins & Members: Owner Yes, Admin Yes"; FR-E-024 — Owner-only | Cross-PRD authority unresolved; this is a blocker for both test design and implementation | PM |
 
 ### Summary Count
 
 | Status | PRD 1 | PRD 2 | PRD 3 | PRD 4 | Total |
 |---|---|---|---|---|---|
-| Answered | 1 | 3 | 1 | 0 | **5** |
-| Partially Answered | 4 | 2 | 3 | 3 | **12** |
-| Open | 5 | 3 | 3 | 2 | **13** |
-| **Total** | **10** | **8** | **7** | **5** | **30** |
+| Answered | 0 | 1 | 0 | 0 | **1** |
+| Partially Answered | 1 | 0 | 2 | 0 | **3** |
+| Open | 7 | 5 | 5 | 4 | **21** |
+| **Total** | **8** | **6** | **7** | **4** | **25** |
 
 `docs/prd-analysis/apex-access-management-invitation-lifecycle.md`
