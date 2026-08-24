@@ -162,3 +162,142 @@ Screenshots:
 - [fixtures/figma-review/invoice-cn-wireframes/image85.png](fixtures/figma-review/invoice-cn-wireframes/image85.png)
 - [fixtures/figma-review/invoice-cn-wireframes/image86.png](fixtures/figma-review/invoice-cn-wireframes/image86.png)
 - [fixtures/figma-review/invoice-cn-wireframes/image87.png](fixtures/figma-review/invoice-cn-wireframes/image87.png)
+
+---
+
+## New PRD Question Sections
+
+The following sections contain the reviewed open questions. Questions already answered directly by the PRD are excluded. `Previously Asked` means the question was in the earlier question list. `New Question` means it was added during the detailed PRD review.
+
+### Sales Invoices PRD
+
+| Section | Question | Describe | PRD Section |
+|---|---|---|---|
+| Sales Invoice | What min/max values are allowed for Unit Price? | Previously Asked | Sales Invoices PRD / FR-1.5 |
+| Sales Invoice | How many decimal places are allowed for Unit Price? | Previously Asked | Sales Invoices PRD / FR-1.5 |
+| Sales Invoice | Are decimal quantities allowed, or only whole numbers? | Previously Asked | Sales Invoices PRD / FR-1.5 |
+| Sales Invoice | How many decimal places are allowed for Quantity? | New Question | Sales Invoices PRD / FR-1.5 |
+| Sales Invoice | What min/max values are allowed for fixed-amount and percentage discounts? | New Question | Sales Invoices PRD / FR-1.5 |
+| Sales Invoice | How many decimal places are allowed for discounts? | New Question | Sales Invoices PRD / FR-1.5 |
+| Sales Invoice | What are the minimum and maximum dates allowed for the Invoice Date? | New Question | Sales Invoices PRD / FR-1.4 |
+| Sales Invoice | What are the minimum and maximum dates allowed for the Due Date? | New Question | Sales Invoices PRD / FR-1.4 |
+| Sales Invoice | Can the Due Date be before the Invoice Date? | New Question | Sales Invoices PRD / FR-1.4 |
+| Sales Invoice | Which timezone is used for the Invoice Date and Due Date? | New Question | Sales Invoices PRD / FR-1.4 |
+| Sales Invoice | How are case differences handled when checking duplicate invoice references? | Previously Asked | Sales Invoices PRD / FR-1.7 and FR-1.8 |
+| Sales Invoice | Are spaces at the beginning or end removed before checking duplicate invoice references? | Previously Asked | Sales Invoices PRD / FR-1.7 and FR-1.8 |
+| Sales Invoice | Are Arabic and English numbers treated as the same value when checking duplicate invoice references? | Previously Asked | Sales Invoices PRD / FR-1.7 and FR-1.8 |
+| Sales Invoice | How are special characters and punctuation handled when checking duplicate invoice references? | Previously Asked | Sales Invoices PRD / FR-1.7 and FR-1.8 |
+| Sales Invoice | What happens if the system cannot assign a unique invoice reference? | Previously Asked | Sales Invoices PRD / FR-1.7 and FR-1.8 |
+| Sales Invoice | What is the maximum file size allowed for a structured invoice file? | Previously Asked | Sales Invoices PRD / FR-1.3 |
+| Sales Invoice | What is the maximum number of invoices allowed in one structured file? | New Question | Sales Invoices PRD / FR-1.3 |
+| Sales Invoice | What is the maximum number of rows allowed in one structured file? | Previously Asked | Sales Invoices PRD / FR-1.3 |
+| Sales Invoice | What is the maximum number of line items allowed for one invoice? | New Question | Sales Invoices PRD / FR-1.4 and FR-1.5 |
+| Sales Invoice | When a file contains valid and invalid invoices, are the invoices processed in a fixed order? | Previously Asked | Sales Invoices PRD / FR-1.3 |
+| Sales Invoice | Is the import result handled per row, per invoice, or for the complete file? | Previously Asked | Sales Invoices PRD / FR-1.3 and FR-1.9 |
+| Sales Invoice | Should rejected invoices include an error code as well as the error message? | Previously Asked | Sales Invoices PRD / FR-1.9 |
+| Sales Invoice | What should happen if the same invoice is sent through the API more than once? | Previously Asked | Sales Invoices PRD / FR-1.1 |
+| Sales Invoice | What should happen if the same invoice is submitted through more than one channel? | New Question | Sales Invoices PRD / FR-1.1, FR-1.2, and FR-1.3 |
+| Sales Invoice | Which buyer details are used to match the invoice with an existing business record? | New Question | Sales Invoices PRD / FR-1.4 |
+| Sales Invoice | What happens when the buyer details in the submitted invoice do not match the business record? | New Question | Sales Invoices PRD / FR-1.4 |
+| Sales Invoice | What is the maximum API request size for an invoice? | New Question | Sales Invoices PRD / FR-1.1 |
+| Sales Invoice | What is the maximum number of invoice API requests allowed within a period? | New Question | Sales Invoices PRD / FR-1.1 |
+
+### Sales Credit Notes PRD
+
+| Section | Question | Describe | PRD Section |
+|---|---|---|---|
+| Sales Credit Note | What are the allowed sales credit-note reasons? | Previously Asked | Sales Credit Notes PRD / FR-2.1 |
+| Sales Credit Note | Should each sales credit-note reason have its own code? | New Question | Sales Credit Notes PRD / FR-2.1 |
+| Sales Credit Note | What min/max values are allowed for the credited amount? | New Question | Sales Credit Notes PRD / FR-2.1 and FR-2.4 |
+| Sales Credit Note | How many decimal places are allowed for the credited amount? | New Question | Sales Credit Notes PRD / FR-2.1 and FR-2.4 |
+| Sales Credit Note | Are partial quantities allowed for credited line items? | Previously Asked | Sales Credit Notes PRD / FR-2.1 |
+| Sales Credit Note | How many decimal places are allowed for credited quantities? | New Question | Sales Credit Notes PRD / FR-2.1 |
+| Sales Credit Note | Should the total credit-note amount be limited to the original invoice total or the current outstanding balance? | Previously Asked | Sales Credit Notes PRD / FR-2.1 and FR-2.4 |
+| Sales Credit Note | What should happen if the credit note is higher than the allowed amount: reject the full credit note or accept only the allowed amount? | Previously Asked | Sales Credit Notes PRD / FR-2.1 and FR-2.4 |
+| Sales Credit Note | What should happen if two credit notes are created for the same invoice at the same time? | Previously Asked | Sales Credit Notes PRD / FR-2.1 |
+| Sales Credit Note | What are the minimum and maximum dates allowed for the Credit Note Date? | New Question | Sales Credit Notes PRD / FR-2.1 |
+| Sales Credit Note | Which timezone is used for the Credit Note Date? | Previously Asked | Sales Credit Notes PRD / FR-2.1 |
+| Sales Credit Note | How are case differences handled when checking duplicate credit-note references? | Previously Asked | Sales Credit Notes PRD / FR-2.3 |
+| Sales Credit Note | Are spaces at the beginning or end removed before checking duplicate credit-note references? | Previously Asked | Sales Credit Notes PRD / FR-2.3 |
+| Sales Credit Note | Are Arabic and English numbers treated as the same value when checking duplicate credit-note references? | Previously Asked | Sales Credit Notes PRD / FR-2.3 |
+| Sales Credit Note | How are special characters and punctuation handled when checking duplicate credit-note references? | Previously Asked | Sales Credit Notes PRD / FR-2.3 |
+| Sales Credit Note | Is duplicate checking applied across API, file upload, and structured-file channels? | Previously Asked | Sales Credit Notes PRD / FR-2.3 and FR-2.9 |
+| Sales Credit Note | What should happen if the same sales credit note is sent through the API more than once? | Previously Asked | Sales Credit Notes PRD / FR-2.9 |
+| Sales Credit Note | What should happen if the same sales credit note is submitted through different channels? | Previously Asked | Sales Credit Notes PRD / FR-2.9 |
+| Sales Credit Note | If the original invoice and credit note are in the same file, which one is processed first? | Previously Asked | Sales Credit Notes PRD / FR-2.2 and FR-2.9 |
+| Sales Credit Note | What should happen if the original invoice is not registered yet: reject the credit note or retry it later? | Previously Asked | Sales Credit Notes PRD / FR-2.2 |
+| Sales Credit Note | What is the maximum file size allowed for a structured credit-note file? | New Question | Sales Credit Notes PRD / FR-2.9 |
+| Sales Credit Note | What is the maximum number of credit notes allowed in one structured file? | New Question | Sales Credit Notes PRD / FR-2.9 |
+| Sales Credit Note | What is the maximum number of rows allowed in one structured file? | New Question | Sales Credit Notes PRD / FR-2.9 |
+| Sales Credit Note | When a file contains valid and invalid credit notes, are they processed in a fixed order? | Previously Asked | Sales Credit Notes PRD / FR-2.4 and FR-2.9 |
+| Sales Credit Note | Is the import result handled per row, per credit note, or for the complete file? | Previously Asked | Sales Credit Notes PRD / FR-2.4 and FR-2.9 |
+| Sales Credit Note | Should rejected credit notes include an error code as well as the error message? | Previously Asked | Sales Credit Notes PRD / FR-2.4 |
+| Sales Credit Note | What rounding rule is used when recalculating the original invoice balance? | Previously Asked | Sales Credit Notes PRD / FR-2.1 |
+| Sales Credit Note | When is the original invoice balance recalculated after registering a credit note? | New Question | Sales Credit Notes PRD / FR-2.1 |
+| Sales Credit Note | What should happen if several credit notes update the same invoice balance at the same time? | Previously Asked | Sales Credit Notes PRD / FR-2.1 |
+
+### Purchase Invoices PRD
+
+| Section | Question | Describe | PRD Section |
+|---|---|---|---|
+| Purchase Invoice | What min/max values are allowed for Unit Price? | Previously Asked | Purchase Invoices PRD / FR-3.5 |
+| Purchase Invoice | How many decimal places are allowed for Unit Price? | Previously Asked | Purchase Invoices PRD / FR-3.5 |
+| Purchase Invoice | Are decimal quantities allowed, or only whole numbers? | Previously Asked | Purchase Invoices PRD / FR-3.5 |
+| Purchase Invoice | How many decimal places are allowed for Quantity? | New Question | Purchase Invoices PRD / FR-3.5 |
+| Purchase Invoice | What min/max values are allowed for fixed-amount and percentage discounts? | New Question | Purchase Invoices PRD / FR-3.5 |
+| Purchase Invoice | How many decimal places are allowed for discounts? | New Question | Purchase Invoices PRD / FR-3.5 |
+| Purchase Invoice | What are the minimum and maximum dates allowed for the Invoice Date? | New Question | Purchase Invoices PRD / FR-3.4 |
+| Purchase Invoice | What are the minimum and maximum dates allowed for the Due Date? | New Question | Purchase Invoices PRD / FR-3.4 |
+| Purchase Invoice | Can the Due Date be before the Invoice Date? | New Question | Purchase Invoices PRD / FR-3.4 |
+| Purchase Invoice | Which timezone is used for the Invoice Date and Due Date? | New Question | Purchase Invoices PRD / FR-3.4 |
+| Purchase Invoice | How are case differences handled when checking duplicate purchase-invoice references? | Previously Asked | Purchase Invoices PRD / FR-3.7 and FR-3.8 |
+| Purchase Invoice | Are spaces at the beginning or end removed before checking duplicate purchase-invoice references? | Previously Asked | Purchase Invoices PRD / FR-3.7 and FR-3.8 |
+| Purchase Invoice | Are Arabic and English numbers treated as the same value when checking duplicate purchase-invoice references? | Previously Asked | Purchase Invoices PRD / FR-3.7 and FR-3.8 |
+| Purchase Invoice | How are special characters and punctuation handled when checking duplicate purchase-invoice references? | Previously Asked | Purchase Invoices PRD / FR-3.7 and FR-3.8 |
+| Purchase Invoice | What is the maximum file size allowed for a structured purchase-invoice file? | Previously Asked | Purchase Invoices PRD / FR-3.2 |
+| Purchase Invoice | What is the maximum number of purchase invoices allowed in one structured file? | New Question | Purchase Invoices PRD / FR-3.2 |
+| Purchase Invoice | What is the maximum number of rows allowed in one structured file? | New Question | Purchase Invoices PRD / FR-3.2 |
+| Purchase Invoice | What is the maximum number of line items allowed for one purchase invoice? | New Question | Purchase Invoices PRD / FR-3.4 and FR-3.5 |
+| Purchase Invoice | When a file contains valid and invalid purchase invoices, are the invoices processed in a fixed order? | New Question | Purchase Invoices PRD / FR-3.2 and FR-3.9 |
+| Purchase Invoice | Is the import result handled per row, per invoice, or for the complete file? | New Question | Purchase Invoices PRD / FR-3.2 and FR-3.9 |
+| Purchase Invoice | Should rejected purchase invoices include an error code as well as the error message? | New Question | Purchase Invoices PRD / FR-3.9 |
+| Purchase Invoice | What should happen if the same purchase invoice is sent through the API more than once? | New Question | Purchase Invoices PRD / FR-3.3 |
+| Purchase Invoice | What should happen if the same purchase invoice is submitted through different channels? | New Question | Purchase Invoices PRD / FR-3.1, FR-3.2, and FR-3.3 |
+| Purchase Invoice | Which seller details are used to match the purchase invoice with an existing business record? | New Question | Purchase Invoices PRD / FR-3.4 |
+| Purchase Invoice | What happens when the seller details in the purchase invoice do not match the business record? | New Question | Purchase Invoices PRD / FR-3.4 |
+| Purchase Invoice | What is the maximum API request size for a purchase invoice? | New Question | Purchase Invoices PRD / FR-3.3 |
+| Purchase Invoice | What is the maximum number of purchase-invoice API requests allowed within a period? | New Question | Purchase Invoices PRD / FR-3.3 |
+
+### Purchase Credit Notes PRD
+
+| Section | Question | Describe | PRD Section |
+|---|---|---|---|
+| Purchase Credit Note | What are the allowed purchase credit-note reasons? | Previously Asked | Purchase Credit Notes PRD / FR-4.1 |
+| Purchase Credit Note | Should each purchase credit-note reason have its own code? | New Question | Purchase Credit Notes PRD / FR-4.1 |
+| Purchase Credit Note | What min/max values are allowed for the credited amount? | New Question | Purchase Credit Notes PRD / FR-4.1 and FR-4.4 |
+| Purchase Credit Note | How many decimal places are allowed for the credited amount? | New Question | Purchase Credit Notes PRD / FR-4.1 and FR-4.4 |
+| Purchase Credit Note | Are partial quantities allowed for credited line items? | Previously Asked | Purchase Credit Notes PRD / FR-4.1 |
+| Purchase Credit Note | How many decimal places are allowed for credited quantities? | New Question | Purchase Credit Notes PRD / FR-4.1 |
+| Purchase Credit Note | Should the total purchase credit-note amount be limited to the original invoice total or the current outstanding balance? | Previously Asked | Purchase Credit Notes PRD / FR-4.1 and FR-4.4 |
+| Purchase Credit Note | What should happen if the purchase credit note is higher than the allowed amount: reject the full credit note or accept only the allowed amount? | Previously Asked | Purchase Credit Notes PRD / FR-4.1 and FR-4.4 |
+| Purchase Credit Note | What should happen if two purchase credit notes are created for the same invoice at the same time? | Previously Asked | Purchase Credit Notes PRD / FR-4.1 |
+| Purchase Credit Note | What are the minimum and maximum dates allowed for the Credit Note Date? | New Question | Purchase Credit Notes PRD / FR-4.1 |
+| Purchase Credit Note | Which timezone is used for the Purchase Credit Note Date? | Previously Asked | Purchase Credit Notes PRD / FR-4.1 |
+| Purchase Credit Note | How are case differences handled when checking duplicate purchase credit-note references? | Previously Asked | Purchase Credit Notes PRD / FR-4.3 |
+| Purchase Credit Note | Are spaces at the beginning or end removed before checking duplicate purchase credit-note references? | Previously Asked | Purchase Credit Notes PRD / FR-4.3 |
+| Purchase Credit Note | Are Arabic and English numbers treated as the same value when checking duplicate purchase credit-note references? | Previously Asked | Purchase Credit Notes PRD / FR-4.3 |
+| Purchase Credit Note | How are special characters and punctuation handled when checking duplicate purchase credit-note references? | Previously Asked | Purchase Credit Notes PRD / FR-4.3 |
+| Purchase Credit Note | Is duplicate checking applied across API, file upload, and structured-file channels? | Previously Asked | Purchase Credit Notes PRD / FR-4.3 and FR-4.9 |
+| Purchase Credit Note | What should happen if the same purchase credit note is sent through the API more than once? | New Question | Purchase Credit Notes PRD / FR-4.9 |
+| Purchase Credit Note | What should happen if the same purchase credit note is submitted through different channels? | New Question | Purchase Credit Notes PRD / FR-4.9 |
+| Purchase Credit Note | If the original purchase invoice and credit note are in the same file, which one is processed first? | Previously Asked | Purchase Credit Notes PRD / FR-4.2 and FR-4.9 |
+| Purchase Credit Note | What should happen if the original purchase invoice is not registered yet: reject the credit note or retry it later? | Previously Asked | Purchase Credit Notes PRD / FR-4.2 |
+| Purchase Credit Note | What is the maximum file size allowed for a structured purchase credit-note file? | New Question | Purchase Credit Notes PRD / FR-4.9 |
+| Purchase Credit Note | What is the maximum number of purchase credit notes allowed in one structured file? | New Question | Purchase Credit Notes PRD / FR-4.9 |
+| Purchase Credit Note | What is the maximum number of rows allowed in one structured file? | New Question | Purchase Credit Notes PRD / FR-4.9 |
+| Purchase Credit Note | When a file contains valid and invalid purchase credit notes, are they processed in a fixed order? | New Question | Purchase Credit Notes PRD / FR-4.4 and FR-4.9 |
+| Purchase Credit Note | Is the import result handled per row, per credit note, or for the complete file? | New Question | Purchase Credit Notes PRD / FR-4.4 and FR-4.9 |
+| Purchase Credit Note | Should rejected purchase credit notes include an error code as well as the error message? | New Question | Purchase Credit Notes PRD / FR-4.4 |
+| Purchase Credit Note | What rounding rule is used when recalculating the original purchase invoice balance? | New Question | Purchase Credit Notes PRD / FR-4.1 |
+| Purchase Credit Note | When is the original purchase invoice balance recalculated after registering a credit note? | New Question | Purchase Credit Notes PRD / FR-4.1 |
+| Purchase Credit Note | What should happen if several purchase credit notes update the same purchase invoice balance at the same time? | New Question | Purchase Credit Notes PRD / FR-4.1 |
