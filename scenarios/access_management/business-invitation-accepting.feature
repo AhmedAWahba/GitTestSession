@@ -1,0 +1,184 @@
+@access-management @business-invitation @accepting
+Feature: Accepting a Business Invitation
+  As an invited Apex user
+  I want to complete the required activation steps for an invitation
+  So that I can access the business that invited me
+
+  Background:
+    Given the user is on the Qawafel invitation account flow
+
+  @accepting @design-alignment @negative
+  Scenario: Invitation flow does not show an Accept or Reject decision
+    When the invitation flow loads
+    Then no "Accept invitation" action should be displayed
+    And no "Reject invitation" action should be displayed
+    And the user should be directed to sign in or create an account
+
+  @accepting @activation @negative
+  Scenario: Invitation flow does not start business verification
+    Given a pending invitation exists for "new.user@business.com"
+    When the invited user follows the invitation account-creation path
+    Then no business identifier should be requested
+    And no business verification should be started
+    And no ownership check should be performed against the invited user
+
+  @accepting @activation @negative
+  Scenario: Invitation for one email cannot activate a different signed-in account
+    Given a pending invitation exists for "member@business.com"
+    And the recipient is signed in with "different.user@business.com"
+    When the recipient continues from the invitation link
+    Then access should not be added to "different.user@business.com"
+    And the invitation should remain pending for "member@business.com"
+    And the invited email address should be shown
+
+  @accepting @activation @negative
+  Scenario: Expired invitation cannot activate after required steps finish
+    Given an invitation for "new.user@business.com" has expired
+    When the user completes the remaining required activation steps
+    Then no Business User relationship should be activated for the invited business
+    And the user should not be allowed to enter the invited business
+
+  @accepting @activation @negative
+  Scenario: Withdrawn invitation cannot activate after required steps finish
+    Given an invitation for "new.user@business.com" has been withdrawn
+    When the user completes the remaining required activation steps
+    Then no Business User relationship should be activated for the invited business
+    And the user should not be allowed to enter the invited business
+
+  @accepting @activation @negative
+  Scenario: Activation and invitation expiry at the same time produce no partial access
+    Given a pending invitation is reaching its expiry boundary
+    When identity verification completion and invitation expiry occur at the same time
+    Then the invitation should produce one final outcome
+    And the user should either have complete access or no access to that business
+    And no partial Business User relationship should remain
+
+  @accepting @routing @negative
+  Scenario: Expired or withdrawn invitation shows the inactive invitation notice
+    Given the recipient has no business access
+    And the invitation has expired or been withdrawn before activation
+    When the recipient completes the available account steps
+    Then the notice "Your invitation is no longer active" should be displayed
+    And the notice should not name the business or sender
+    And an action to continue to business registration should be available
+
+  @accepting @routing @negative
+  Scenario: Business routing takes precedence over the inactive invitation notice
+    Given at least one invitation activates for the user
+    And another invitation for the user has expired or been withdrawn
+    When the activation flow completes
+    Then the user should be routed to an available business or business selection
+    And the inactive invitation notice should not be displayed
+
+  # ──────────────── Validation scenarios ────────────────
+
+  @accepting @activation @positive
+  Scenario: New invited user account creation does not activate access
+    Given a pending invitation exists for "new.user@business.com"
+    When the invited user creates an account through the business-linked path
+    Then the account should use email "new.user@business.com"
+    And the invited email address should not be editable
+    And business access should remain pending
+    And the user should not be allowed to enter the invited business
+
+  @accepting @activation @positive
+  Scenario: Existing verified user is not asked to repeat identity verification
+    Given the invited email belongs to a user with a verified identity
+    When the user follows the invitation sign-in path
+    Then the user should not be asked to complete identity verification again
+    And the pending business access should be eligible for activation
+
+  @accepting @routing @positive
+  Scenario: Invitation link opens account creation for an unknown email
+    Given no Qawafel user has email "new.user@business.com"
+    When the recipient opens the invitation link
+    Then the account-creation flow should be displayed
+    And the invited email address should be carried into the flow
+    And the recipient should not be asked to choose the destination
+
+  @accepting @routing @positive
+  Scenario: Invitation link opens sign-in for an existing email
+    Given a Qawafel user exists with email "member@business.com"
+    When the recipient opens the invitation link
+    Then the sign-in flow should be displayed
+    And the recipient should not be shown an account-creation flow first
+
+  @accepting @verification @positive
+  Scenario: Invited user sees the personal details verification step
+    Given a new account has been created through the invitation path
+    When the recipient continues the invitation flow
+    Then the personal details step should be displayed
+    And the recipient should not be asked for business verification details
+
+  # ──────────────── Positive scenarios ────────────────
+
+  @accepting @activation @positive @smoke
+  Scenario: New invited user gains access after personal details and mobile verification
+    Given a pending invitation exists for "new.user@business.com"
+    And the invited user has created an account through the business-linked path
+    When the invited user completes the required personal details
+    And the invited user completes mobile verification
+    Then the business access should become active
+    And a Business User relationship should exist before business entry is allowed
+    And the invited user should enter the invited business
+
+  @accepting @activation @positive
+  Scenario: Multiple valid invitations activate for multiple businesses
+    Given valid pending invitations exist for the same verified email address
+    And each invitation belongs to a different business
+    When the user completes the required activation steps
+    Then each valid invitation should become active
+    And the user should have access to each invited business
+    And the business selection screen should be displayed
+
+  @accepting @routing @positive
+  Scenario: User with one active business is routed to that business
+    Given the user has access to exactly one business after invitation activation
+    When the activation flow completes
+    Then the user should be routed to that business
+    And the business selection screen should not be displayed
+
+  @accepting @routing @positive
+  Scenario: User with multiple active businesses sees business selection
+    Given the user has access to more than one business after invitation activation
+    When the activation flow completes
+    Then the business selection screen should be displayed
+    And each available business should be selectable
+
+  @accepting @routing @positive
+  Scenario: User can switch between active businesses without signing out
+    Given the user has access to more than one business
+    And one business is the active context
+    When the user selects another business from the business switcher
+    Then the selected business should become the active context
+    And the user should remain signed in
+    And the page data should be scoped to the selected business
+
+  @accepting @routing @positive
+  Scenario: User with no business access continues to business registration when no invitation is active
+    Given the user has no business access
+    And the user has no expired or withdrawn invitation for the account email
+    When the user completes personal identity verification
+    Then the business registration flow should be displayed
+    And the inactive invitation notice should not be displayed
+
+  @accepting @resume @positive
+  Scenario: Returning user resumes outstanding invitation activation steps
+    Given the recipient created an account but stopped before completing activation
+    And the invitation has not expired or been withdrawn
+    When the recipient signs in again
+    Then the outstanding personal activation steps should be displayed
+    And the invitation should remain pending until those steps are complete
+
+  # ──────────────── End-to-end happy path ────────────────
+
+  @accepting @happy-path @positive @smoke
+  Scenario: Recipient completes activation and enters the invited business
+    Given a pending invitation exists for "new.user@business.com"
+    And the invitation link opens the account-creation path
+    When the recipient creates an account with the invited email address
+    And the recipient completes the required personal details
+    And the recipient completes mobile verification
+    Then the invitation should become active
+    And a Business User relationship should exist for the invited business
+    And the recipient should enter the invited business
