@@ -62,10 +62,10 @@ Feature: Accepting a Business Invitation
     And no partial Business User relationship should remain
 
   @accepting @routing @negative
-  Scenario Outline: Terminal invitation notice appears for an Expired or Revoked invitation
+  Scenario Outline: Terminal invitation notice appears after invitation history ends during onboarding
     Given the authenticated recipient has completed personal identity verification
     And the recipient has no accessible business destination
-    And the matching invitation has status "<InvitationStatus>"
+    And the matching invitation became "<InvitationStatus>" before activation
     When post-verification invitation routing completes
     Then the notice "Your invitation is no longer active" should be displayed
     And the notice should not name the business or sender
@@ -75,6 +75,17 @@ Feature: Accepting a Business Invitation
       | InvitationStatus |
       | Expired          |
       | Revoked          |
+
+  @accepting @routing @negative
+  Scenario: Recipient whose invitation is revoked after account creation sees the terminal notice
+    Given a pending invitation exists for "new.user@business.com"
+    And the invited user has created an account through the invitation path
+    And the invitation is revoked before personal identity verification completes
+    When the invited user completes personal identity verification
+    Then no Active membership should exist for the invited business
+    And the terminal invitation notice should be displayed
+    And the notice should not identify the business or sender
+    And an action to continue to business registration should be available
 
   @accepting @routing @negative
   Scenario: Pending invitation does not show the terminal invitation notice
@@ -205,6 +216,22 @@ Feature: Accepting a Business Invitation
     When post-verification invitation routing completes
     Then the business registration flow should be displayed
     And the inactive invitation notice should not be displayed
+
+  @routing @positive
+  Scenario: Verified ordinary signup without a business sees the Add your business screen
+    Given an authenticated user has completed signup and personal identity verification
+    And the user has no platform access or accessible business
+    And the user has no matching invitation history
+    When post-verification routing completes
+    Then the Add your business screen should be displayed
+    And the terminal invitation notice should not be displayed
+    And an "Add your business" action should be available
+
+  @routing @positive
+  Scenario: Add your business opens business registration
+    Given the Add your business screen is displayed
+    When the user selects "Add your business"
+    Then the business registration flow should be displayed
 
   @accepting @routing @positive
   Scenario: Terminal invitation notice action opens business registration
