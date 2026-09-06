@@ -8,7 +8,7 @@ Feature: Sending a Business Invitation
     Given the user is logged in as a verified business owner
     And the user is on the "User Management" page
 
-  @sending @ui @positive
+  @sending @ui @validation
   Scenario: Invitation form shows only email and role fields
     When the user clicks "Invite user"
     Then the "Email address" field should be visible

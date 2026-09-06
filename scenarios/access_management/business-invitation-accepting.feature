@@ -61,51 +61,45 @@ Feature: Accepting a Business Invitation
     And the user should either have complete access or no access to that business
     And no partial Business User relationship should remain
 
-  @accepting @routing @negative
-  Scenario Outline: Terminal invitation notice appears after invitation history ends during onboarding
+  @accepting @routing @validation
+  Scenario Outline: Personally verified user without active access sees the Add your business screen
     Given the authenticated recipient has completed personal identity verification
     And the recipient has no accessible business destination
-    And the matching invitation became "<InvitationStatus>" before activation
+    And the recipient's invitation history is "<InvitationHistory>"
     When post-verification invitation routing completes
-    Then the notice "Your invitation is no longer active" should be displayed
-    And the notice should not name the business or sender
-    And an action to continue to business registration should be available
+    Then the "Add your business" screen should be displayed
+    And the screen should not name a business or sender
+    And the screen should not reveal an invitation outcome
+    And an "Add your business" action should be available
 
     Examples:
-      | InvitationStatus |
-      | Expired          |
-      | Revoked          |
+      | InvitationHistory |
+      | Absent            |
+      | Pending           |
+      | Expired           |
+      | Revoked           |
 
-  @accepting @routing @negative
-  Scenario: Recipient whose invitation is revoked after account creation sees the terminal notice
+  @accepting @routing @validation
+  Scenario: Recipient whose invitation is revoked after account creation sees the Add your business screen
     Given a pending invitation exists for "new.user@business.com"
     And the invited user has created an account through the invitation path
     And the invitation is revoked before personal identity verification completes
     When the invited user completes personal identity verification
     Then no Active membership should exist for the invited business
-    And the terminal invitation notice should be displayed
-    And the notice should not identify the business or sender
-    And an action to continue to business registration should be available
+    And the "Add your business" screen should be displayed
+    And the screen should not reveal that the invitation was revoked
 
   @accepting @routing @negative
-  Scenario: Pending invitation does not show the terminal invitation notice
-    Given the authenticated recipient has completed personal identity verification
-    And the recipient has no accessible business destination
-    And a matching invitation remains Pending
-    When post-verification invitation routing completes
-    Then the terminal invitation notice should not be displayed
-
-  @accepting @routing @negative
-  Scenario: Business routing takes precedence over the inactive invitation notice
+  Scenario: Business routing takes precedence over the Add your business screen
     Given at least one invitation activates for the user
     And another invitation for the user has expired or been withdrawn
     When the activation flow completes
     Then the user should be routed to an available business or business selection
-    And the inactive invitation notice should not be displayed
+    And the "Add your business" screen should not be displayed
 
   # ──────────────── Validation scenarios ────────────────
 
-  @accepting @activation @positive
+  @accepting @activation @validation
   Scenario: New invited user account creation does not activate access
     Given a pending invitation exists for "new.user@business.com"
     When the invited user creates an account through the business-linked path
@@ -114,14 +108,14 @@ Feature: Accepting a Business Invitation
     And business access should remain pending
     And the user should not be allowed to enter the invited business
 
-  @accepting @activation @positive
+  @accepting @activation @validation
   Scenario: Existing verified user is not asked to repeat identity verification
     Given the invited email belongs to a user with a verified identity
     When the user follows the invitation sign-in path
     Then the user should not be asked to complete identity verification again
     And the pending business access should be eligible for activation
 
-  @accepting @routing @positive
+  @accepting @routing @validation
   Scenario: Invitation link opens account creation for an unknown email
     Given no Qawafel user has email "new.user@business.com"
     When the recipient opens the invitation link
@@ -129,14 +123,14 @@ Feature: Accepting a Business Invitation
     And the invited email address should be carried into the flow
     And the recipient should not be asked to choose the destination
 
-  @accepting @routing @positive
+  @accepting @routing @validation
   Scenario: Invitation link opens sign-in for an existing email
     Given a Qawafel user exists with email "member@business.com"
     When the recipient opens the invitation link
     Then the sign-in flow should be displayed
     And the recipient should not be shown an account-creation flow first
 
-  @accepting @verification @positive
+  @accepting @verification @validation
   Scenario: Invited user sees the personal details verification step
     Given a new account has been created through the invitation path
     When the recipient continues the invitation flow
@@ -215,7 +209,7 @@ Feature: Accepting a Business Invitation
     And the user has no expired or withdrawn invitation for the account email
     When post-verification invitation routing completes
     Then the business registration flow should be displayed
-    And the inactive invitation notice should not be displayed
+    And no invitation-outcome notice should be displayed
 
   @routing @positive
   Scenario: Verified ordinary signup without a business sees the Add your business screen
@@ -224,20 +218,24 @@ Feature: Accepting a Business Invitation
     And the user has no matching invitation history
     When post-verification routing completes
     Then the Add your business screen should be displayed
-    And the terminal invitation notice should not be displayed
+    And no invitation-outcome notice should be displayed
     And an "Add your business" action should be available
+
+  @routing @validation
+  Scenario: Add your business screen guides an existing business participant to request an invitation
+    Given the Add your business screen is displayed
+    Then guidance to contact the business administrator and request an invitation should be displayed
+
+  @routing @validation
+  Scenario: Add your business screen provides language switching and sign-out
+    Given the Add your business screen is displayed
+    Then a language-switching control should be available
+    And a sign-out action should be available
 
   @routing @positive
   Scenario: Add your business opens business registration
     Given the Add your business screen is displayed
     When the user selects "Add your business"
-    Then the business registration flow should be displayed
-
-  @accepting @routing @positive
-  Scenario: Terminal invitation notice action opens business registration
-    Given the authenticated recipient has completed personal identity verification
-    And the terminal invitation notice is displayed
-    When the recipient selects the action to continue to business registration
     Then the business registration flow should be displayed
 
   @accepting @resume @positive

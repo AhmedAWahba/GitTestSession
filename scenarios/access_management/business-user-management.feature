@@ -136,7 +136,7 @@ Feature: Business User List and Access Management
 
   # ──────────────── Validation scenarios ────────────────
 
-  @listing @search @filter @positive @role-owner @role-admin
+  @listing @search @filter @validation @role-owner @role-admin
   Scenario: Each tab preserves its own search and filter choices
     Given the user has entered search text and selected filters in the "Members" tab
     And the user has entered different search text and selected different filters in the "Invitations" tab
@@ -145,13 +145,13 @@ Feature: Business User List and Access Management
     When the user returns to the "Invitations" tab
     Then the Invitations search text and filters should be unchanged
 
-  @listing @ui @positive @role-owner @role-admin
+  @listing @ui @validation @role-owner @role-admin
   Scenario: User Management opens the Invitations tab from a direct link
     When the user opens a direct link to the "Invitations" tab
     Then the "Invitations" tab should be selected
     And the "Members" tab should not be selected
 
-  @listing @ui @positive @role-owner @role-admin
+  @listing @ui @validation @role-owner @role-admin
   Scenario: Members entries show the required member details
     Given an active Member named "Alex User" has email "alex@business.com"
     When the user opens the "Members" tab
@@ -161,7 +161,7 @@ Feature: Business User List and Access Management
     And the member's status should be visible
     And the available actions should be visible
 
-  @listing @ui @positive @role-owner @role-admin
+  @listing @ui @validation @role-owner @role-admin
   Scenario: Invitations entries show the required invitation details
     Given a pending invitation exists for "new.user@business.com"
     And the invitation has an offered role, sender, last-sent date, and expiry date
