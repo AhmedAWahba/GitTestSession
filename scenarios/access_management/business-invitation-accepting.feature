@@ -61,6 +61,16 @@ Feature: Accepting a Business Invitation
     And the user should either have complete access or no access to that business
     And no partial Business User relationship should remain
 
+  @accepting @routing @negative
+  Scenario: Business routing takes precedence over the Add your business screen
+    Given at least one invitation activates for the user
+    And another invitation for the user has expired or been withdrawn
+    When the activation flow completes
+    Then the user should be routed to an available business or business selection
+    And the "Add your business" screen should not be displayed
+
+  # ──────────────── Validation scenarios ────────────────
+
   @accepting @routing @validation
   Scenario Outline: Personally verified user without active access sees the Add your business screen
     Given the authenticated recipient has completed personal identity verification
@@ -88,16 +98,6 @@ Feature: Accepting a Business Invitation
     Then no Active membership should exist for the invited business
     And the "Add your business" screen should be displayed
     And the screen should not reveal that the invitation was revoked
-
-  @accepting @routing @negative
-  Scenario: Business routing takes precedence over the Add your business screen
-    Given at least one invitation activates for the user
-    And another invitation for the user has expired or been withdrawn
-    When the activation flow completes
-    Then the user should be routed to an available business or business selection
-    And the "Add your business" screen should not be displayed
-
-  # ──────────────── Validation scenarios ────────────────
 
   @accepting @activation @validation
   Scenario: New invited user account creation does not activate access

@@ -8,14 +8,6 @@ Feature: Sending a Business Invitation
     Given the user is logged in as a verified business owner
     And the user is on the "User Management" page
 
-  @sending @ui @validation
-  Scenario: Invitation form shows only email and role fields
-    When the user clicks "Invite user"
-    Then the "Email address" field should be visible
-    And the role selector should be visible
-    And no name field should be visible
-    And no mobile number field should be visible
-
   @sending @authorization @negative
   Scenario: Member cannot access the invitation flow
     Given the user is logged in as a Business User:Member
@@ -147,6 +139,16 @@ Feature: Sending a Business Invitation
     When the invitation expiry is processed
     Then the invitation status should become "Expired"
     And the invitation should not be able to activate
+
+  # ──────────────── Validation scenarios ────────────────
+
+  @sending @ui @validation
+  Scenario: Invitation form shows only email and role fields
+    When the user clicks "Invite user"
+    Then the "Email address" field should be visible
+    And the role selector should be visible
+    And no name field should be visible
+    And no mobile number field should be visible
 
   @sending @positive
   Scenario: Invitation to an already verified user grants access immediately
