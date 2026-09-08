@@ -1,0 +1,9 @@
+﻿Invoke-RestMethod : {"status":429,"err":"Rate limit exceeded"}
+At line:1 char:360
++ ...  try { $img=Invoke-RestMethod -Uri $url -Headers @{ 'X-Figma-Token'=$ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:Htt 
+   pWebRequest) [Invoke-RestMethod], WebException
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShe 
+   ll.Commands.InvokeRestMethodCommand
+
