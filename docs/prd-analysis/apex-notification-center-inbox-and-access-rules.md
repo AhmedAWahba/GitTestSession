@@ -159,31 +159,18 @@ The Notification Center is a downstream consumer of nearly every other PRD in th
 - **Test types needed:** Functional, API/contract (notification retrieval + mark-as-read endpoints), Integration (cross-PRD notification triggers from Access Management, Payment Link, Invoices, Settings), E2E (trigger → catalog routing → inbox/email/SMS delivery), Regression (Notification Center touches nearly every other module), Accessibility (single-list semantics, unread announcement), Localization (Arabic/RTL inbox rendering, bilingual email), Security (cross-business isolation), Performance (60-day volume/retention job)
 - **Suggested test data:** accounts with 2+ businesses and differing roles per business (Owner in one, Member in another); notifications seeded at day 1, day 59, day 60, and day 61 relative to "now" for retention boundary testing; one notification with two recipients (e.g., Owner + Admin) to test independent read state; a payment-request notification in each of Payable/Paid/Expired/Cancelled states; a recently-removed business member to test NC-2.4
 - **Environment prerequisites:** access to (or export of) the Notification Event Catalog; ability to manipulate/seed notification `created_at` timestamps for retention testing; multi-tenant test businesses; email/SMS sandbox capture (e.g., Mailhog/test SMS gateway) to verify channel delivery and bilingual formatting, matching the MJML-templated email path and gateway-based SMS path confirmed in Linear ID-314 [NC-6]/ID-315 [NC-7]
-- **Reusable scenarios to extend:** none found in `scenarios/` — no existing Notification Center feature files exist; related-but-separate coverage exists in `scenarios/access_management/` (invitation/role-change emails) and could be cross-linked rather than duplicated
-- **New scenarios to author:**
-  - Inbox reachable for Owner, Admin, and Member
-  - Business-scoped inbox contents and switching without sign-out
-  - Independent unread counts per business
-  - Single continuous list with no tabs/categories/headings
-  - Newest-first ordering, stable after read
-  - Notification entry completeness (what/when/where-to-go-next)
-  - Payment-request notification reflects current standing (Payable/Paid/Expired/Cancelled)
-  - Read vs. unread visual and semantic distinction
-  - Mark one notification as read (via button and via opening the link)
-  - Opening the inbox does not change unread state
-  - Mark all as read clears count for current business only
-  - Read state is device-independent for the same person
-  - Read state does not propagate to a co-recipient of the same notification
-  - Unread badge accuracy and per-business divergence in main navigation
-  - 60-day retention removal regardless of read state, including boundary cases
-  - Underlying referenced record is unaffected by notification retention removal
-  - Empty-inbox explanatory state (new business, and Member business notifications)
-  - Own-account notifications reach the person regardless of role or selected business
-  - Access-ended person receives nothing further from that business
-  - Cross-business authorization: direct route/API access to another business's notifications is denied
-  - Single-list vs. "Unread/Earlier" grouping: explicit pass/fail scenario once Open Question #2 is resolved, since the current Linear ticket scope (NC-3) and the PRD (NC-1.4) disagree
-  - Payment-request expiry reminder fires at the confirmed threshold (once Open Question #3 resolves the 3-day vs. 1-day discrepancy between NC-5 and the prototype)
-  - All five account/role notifications named in NC-4 trigger correctly from their source transactions, once that list is confirmed against the catalog (Open Question #4)
+- **Reusable scenarios to extend:** none found in `scenarios/` at analysis time; related-but-separate coverage exists in `scenarios/access_management/` (invitation/role-change emails) and could be cross-linked rather than duplicated
+- **Scenarios authored:** broken down into 8 files under `scenarios/vendorApp/`, one per Linear `NC-` ticket, mirroring the Settings (SET-1/SET-11) breakdown pattern:
+  - `notifications-inbox-and-bell-test.feature` (NC-3, ID-311) — reachability, bell badge, ordering, read/unread state, mark as read/mark all as read, empty state, and the single-list-vs-"Unread/Earlier" conflict as an explicit `@known-conflict` scenario
+  - `notifications-multi-business-scoping-test.feature` (NC-1, ID-309) — per-business inbox isolation, independent unread counts, cross-device read state, non-propagation of read state to co-recipients, access-ended and cross-business-authorization negatives
+  - `notifications-payment-request-notifications-test.feature` (NC-2, ID-310) — status-chip accuracy across Payable/Paid/Expired/Cancelled, correct deep link, scope limited to payment-request events
+  - `notifications-account-and-role-triggers-test.feature` (NC-4, ID-312) — own-account notifications reaching every role, role-change email wording, Owner/Admin vs. Member business-notification receipt, plus an `@needs-clarification` outline for the still-unconfirmed "five account and role notifications"
+  - `notifications-payment-request-expiry-reminder-test.feature` (NC-5, ID-313) — an `@needs-clarification` outline covering both the 3-day (ticket) and 1-day (prototype) candidate thresholds, plus negatives for already-settled requests and duplicate reminders
+  - `notifications-email-delivery-test.feature` (NC-6, ID-314) — bilingual Arabic-above-English formatting across every known email template, exact role-change wording, and delivery to addresses without an existing account
+  - `notifications-sms-delivery-test.feature` (NC-7, ID-315) — security SMS always-on behavior, the single informational SMS type, and catalog-scope negatives
+  - `notifications-retention-and-data-integrity-test.feature` (NC-8, ID-316) — 60-day boundary purge (day 59/60/61), unread-count fall-through, underlying-record integrity, and the no-dismiss/no-delete rule
+
+  NC-2.5 (catalog is the sole reference) was intentionally **not** turned into its own executable scenario — it isn't independently verifiable through the UI/API without catalog access (Open Question #1), so it's tracked only as a comment/prerequisite rather than a scenario that could never be run.
 
 ## 13. Readiness Verdict
 **Verdict:** Conditionally ready — resolve open questions before test design finishes.
@@ -193,3 +180,4 @@ The Notification Center is a downstream consumer of nearly every other PRD in th
 - Confirmation of the read-state data model (per-recipient vs. shared) is required before authoring the multi-recipient scenarios implied by NC-1.11.
 - Multi-business and multi-role (Owner/Admin/Member) verification could not be completed against the live prototype in this session (browser interaction limits) and should be re-run before scenarios are finalized.
 - The Notifications project still has 3 tickets in **Discovery** (Analysis, TRD, task-approach discussion) running alongside the 8 in-development tickets; confirm with Product/Eng whether those must close first (Open Question #12).
+- The Gherkin scenarios have been broken down per `NC-` ticket into `scenarios/vendorApp/notifications-*-test.feature` (8 files, see §12). The `@known-conflict` and `@needs-clarification` tagged scenarios inside them must be resolved with Product/Engineering before they can be run to a pass/fail result.
