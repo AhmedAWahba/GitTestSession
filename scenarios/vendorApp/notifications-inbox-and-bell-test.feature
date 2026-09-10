@@ -16,9 +16,6 @@ Feature: Notification Inbox and Bell
     Then all notifications should appear in one continuous list
     And no tab, category, or heading should separate them
 
-  # Note: Linear ID-311 scopes the page as "Unread and Earlier" sections, which
-  # conflicts with the single-list scenario above. Pending a Product decision,
-  # this documents the currently scoped behavior rather than a pass or fail.
   @inbox-bell @structure @negative
   Scenario: Current engineering scope groups the inbox into Unread and Earlier sections
     Given the inbox has both read and unread notifications
@@ -32,11 +29,6 @@ Feature: Notification Inbox and Bell
     Then an explanation of what the inbox is for should be visible
     And no notification entries should be listed
 
-  # Note: PRD NC-1.6 requires every notification to show "where to go next."
-  # The live design prototype's partner-removal notification has no destination
-  # link because the removed partner no longer exists, which conflicts with a
-  # literal reading of NC-1.6. This documents the current prototype behavior
-  # pending a Product decision on whether every notification must link somewhere.
   @inbox-bell @edge-case @negative
   Scenario: A notification whose referenced item no longer exists has no destination link
     Given a business partner referenced by a notification has since been removed

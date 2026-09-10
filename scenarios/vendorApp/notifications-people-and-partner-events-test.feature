@@ -11,11 +11,6 @@ Feature: People and Partner Notification Events
   # Source: PRD Notification Center Section 5 "Notification content — in the
   # platform" (People and partners); observed in the live design prototype.
 
-  # Note: PRD NC-1.6 requires every notification to show "where to go next."
-  # The live prototype's partner-removal notification has no destination link
-  # because the removed partner no longer exists, conflicting with a literal
-  # reading of NC-1.6. See the equivalent scenario in
-  # notifications-inbox-and-bell-test.feature.
   @people-and-partner-events @partners @negative
   Scenario: A notification about a removed partner has no destination link
     Given a business partner is removed from the current business

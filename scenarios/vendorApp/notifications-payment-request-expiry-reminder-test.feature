@@ -29,11 +29,6 @@ Feature: Payment Request Expiry Reminder
 
   # ──────────────── Validation scenarios ────────────────
 
-  # Linear ID-313 scopes the reminder as firing three days before expiry, while
-  # the live design prototype's seeded sample notification instead reads
-  # "expires tomorrow" (about one day before). Only one of the two rows below
-  # should be correct once Product confirms the threshold against the
-  # Notification Event Catalog.
   @expiry-reminder @timing @validation
   Scenario Outline: Reminder fires at the confirmed threshold before expiry
     Given a payment request is "Payable" and expires in "<DaysRemaining>" day
