@@ -69,3 +69,15 @@ Feature: Account and Role Notification Triggers
       | Role  |
       | Owner |
       | Admin |
+
+  @account-role-triggers @membership @positive @smoke
+  Scenario: A notification is raised when a person joins the business
+    Given a new person joins the current business
+    Then a notification stating that person joined the business should be raised
+    And the notification should link to Users and roles
+
+  @account-role-triggers @membership @positive
+  Scenario: A notification is raised when a person no longer has access
+    Given an active member's access to the current business ends
+    Then a notification stating that person no longer has access should be raised
+    And the notification should link to Users and roles

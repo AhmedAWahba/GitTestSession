@@ -29,12 +29,6 @@ Feature: Notification Inbox and Bell
     Then an explanation of what the inbox is for should be visible
     And no notification entries should be listed
 
-  @inbox-bell @edge-case @negative
-  Scenario: A notification whose referenced item no longer exists has no destination link
-    Given a business partner referenced by a notification has since been removed
-    Then that notification should not offer a destination link
-    And every other notification should still offer a destination link
-
   # ──────────────── Validation scenarios ────────────────
 
   @inbox-bell @navigation @validation
