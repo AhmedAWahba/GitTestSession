@@ -8,7 +8,6 @@ Feature: Payment Request Notification Events
     Given the user is signed in as "Owner"
     And the user is working in a business with a payment request
 
-  # Source: Linear ID-310 [NC-2] Payment Event Notifier; PRD Notification Center NC-1.7.
 
   @payment-requests @scope @negative
   Scenario: A payment request notification is raised only from payment request events

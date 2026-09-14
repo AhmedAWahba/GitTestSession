@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Registration Mobile Number: Web vs Android</title>
+  <style>
+    body { margin: 0; background: #edf1f5; font-family: Arial, sans-serif; }
+    canvas { display: block; margin: 0 auto; }
+  </style>
+</head>
+<body>
+  <canvas id="comparison" width="1800" height="1180"></canvas>
+  <script>
+    const canvas = document.getElementById('comparison');
+    const context = canvas.getContext('2d');
+    const web = new Image();
+    const android = new Image();
+
+    function drawContain(image, panel) {
+      const scale = Math.min(panel.width / image.width, panel.height / image.height);
+      const width = image.width * scale;
+      const height = image.height * scale;
+      const x = panel.x + (panel.width - width) / 2;
+      const y = panel.y + (panel.height - height) / 2;
+      context.drawImage(image, x, y, width, height);
+      return { x, y, width, height };
+    }
+
+    function drawPanel(title, image, panel) {
+      context.fillStyle = '#ffffff';
+      context.fillRect(panel.x - 12, 112, panel.width + 24, 960);
+      context.fillStyle = '#111827';
+      context.font = '700 34px Arial';
+      context.fillText(title, panel.x, 108);
+      return drawContain(image, panel);
+    }
+
+    function render() {
+      context.fillStyle = '#edf1f5';
+      context.fillRect(0, 0, canvas.width, canvas.height);
+      context.fillStyle = '#111827';
+      context.font = '700 34px Arial';
+      context.fillText('Registration Flow Comparison - Mobile Number Presentation', 60, 48);
+      drawPanel('Web (UAT)', web, { x: 60, y: 150, width: 810, height: 900 });
+      const androidFrame = drawPanel('Android (APK)', android, { x: 930, y: 150, width: 810, height: 900 });
+
+      // One callout marks Android's masked mobile-number presentation.
+      const target = {
+        x: androidFrame.x + androidFrame.width * 0.05,
+        y: androidFrame.y + androidFrame.height * 0.29,
+        width: androidFrame.width * 0.90,
+        height: androidFrame.height * 0.06
+      };
+      context.strokeStyle = '#dc2626';
+      context.lineWidth = 8;
+      context.strokeRect(target.x, target.y, target.width, target.height);
+      context.fillStyle = '#dc2626';
+      context.font = '700 26px Arial';
+      context.fillText('1', target.x + 12, target.y + 31);
+      context.fillText('1. Web shows the entered local number; Android shows a masked number.', 60, 1125);
+    }
+
+    let loaded = 0;
+    [web, android].forEach((image) => {
+      image.onload = () => { loaded += 1; if (loaded === 2) render(); };
+    });
+    web.src = 'uat-mobile-verification.png';
+    android.src = 'apex-ui-android-mobile-verification.png';
+  </script>
+</body>
+</html>
