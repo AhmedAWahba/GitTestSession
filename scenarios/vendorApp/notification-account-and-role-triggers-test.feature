@@ -7,8 +7,6 @@ Feature: Account and Role Notification Triggers
   Background:
     Given the user is signed in
 
-  # Source: Linear ID-312 [NC-4] Account and Role Notification Triggers; PRD Notification Center NC-2.
-
   @account-role-triggers @role-based-access @negative @role-member
   Scenario: Member receives no business notifications
     Given the user's role is "Member"

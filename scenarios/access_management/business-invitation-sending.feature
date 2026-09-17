@@ -140,6 +140,46 @@ Feature: Sending a Business Invitation
     Then the invitation status should become "Expired"
     And the invitation should not be able to activate
 
+  # ── Domain & Asset Validation ──
+
+  @sending @validation @negative
+  Scenario Outline: Invitation is blocked when the email or role is invalid
+    When the user clicks "Invite user"
+    And the user enters "<email>" in the "Email address" field
+    And the user selects the "<role>" role
+    And the user clicks "Send invitation"
+    Then the invitation should not be created
+    And an inline validation error should be displayed
+
+    Examples:
+      | email              | role   | message              |
+      | invalid-email      | Member | invalid email format |
+      | owner@business.com | Admin  | own email address    |
+      | member@business.com|        | no role selected     |
+
+  @sending @validation @positive
+  Scenario Outline: Owner can invite recipients with various public and private email domains
+    When the user clicks "Invite user"
+    And the user enters "<email>" in the "Email address" field
+    And the user selects the "Member" role
+    And the user clicks "Send invitation"
+    Then the invitation should be recorded as "Pending"
+    And an invitation email should be sent to "<email>"
+
+    Examples:
+      | email                   |
+      | user.test@gmail.com     |
+      | partner@outlook.com     |
+      | member@yahoo.com        |
+      | finance@customdomain.sa |
+
+  @sending @email @validation
+  Scenario: Invitation email contains valid and renderable brand assets
+    Given a pending invitation is sent to "new.recipient@business.com"
+    When the invitation email is delivered to the recipient mailbox
+    Then the email header logo should be loaded from an accessible public URL
+    And the logo image should not return a broken asset or placeholder
+
   # ──────────────── Validation scenarios ────────────────
 
   @sending @ui @validation

@@ -116,6 +116,13 @@ Feature: Business User List and Access Management
     And the menu should not contain "Update role"
     And the menu should not contain "Withdraw invitation"
 
+  @listing @resilience @negative @role-owner @role-admin
+  Scenario: Keeping the User Management page open does not trigger false network disconnection alerts
+    Given the user is on the "Invitations" tab with an active internet connection
+    When the page remains open and idle for an extended duration
+    Then no false "We can't find the internet" error toast should be displayed
+    And the page should maintain or silently refresh its active connection
+
   @listing @role-change @negative @role-owner @role-admin
   Scenario: Cancelling an active member role change keeps the original role
     Given an active Member named "Alex User" is visible in the "Members" tab
@@ -173,6 +180,13 @@ Feature: Business User List and Access Management
     And the last-sent date should be visible
     And the expiry date should be visible
     And the available actions should be visible
+
+  @listing @ui @validation @role-owner @role-admin
+  Scenario: Sending an invitation adds the entry without unintentionally filtering the full list
+    Given the "Invitations" tab currently contains multiple invitations
+    When the user sends an invitation to "another.user@business.com"
+    Then the new invitation for "another.user@business.com" should appear in the "Invitations" tab
+    And previously existing invitations should remain visible in the list
 
   # ──────────────── Positive listing and navigation scenarios ────────────────
 

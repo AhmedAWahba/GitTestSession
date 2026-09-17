@@ -7,8 +7,6 @@ Feature: Notification Retention and Data Integrity
   Background:
     Given the user has notifications of different ages in the inbox
 
-  # Source: Linear ID-316 [NC-8] Notification Retention and Documentation; PRD Notification Center NC-1.13–NC-1.16.
-
   @retention @ui @negative
   Scenario: No dismiss or delete action is offered anywhere in the inbox
     Given the inbox has at least one notification
