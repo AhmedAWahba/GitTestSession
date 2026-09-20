@@ -1,4 +1,4 @@
-# [Web] - [User Management] - Multiple UI differences vs prototype design from Settings through Invitations tab
+# [Bug][Web] - [User Management] - Multiple UI differences vs prototype design from Settings through Invitations tab
 
 ## Summary
 
