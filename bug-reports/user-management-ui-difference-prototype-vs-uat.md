@@ -4,22 +4,6 @@
 
 Comparing the approved design prototype against the UAT build surfaces several UI differences across the User Management journey, starting at the Settings hub entry card and continuing through the Members and Invitations tabs (naming, table columns, filter/sort/pagination controls, and status badge coloring).
 
-## Environment
-
-- **Product:** Qawafel — Apex Web / Settings & User Management
-- **Prototype (design reference):** `https://apex-web-app-prototype.vercel.app`
-- **Environment under test:** UAT — `https://apex.qawafel.dev/business/pearl`
-- **Branch:** main
-- **Date/Time:** 2026-09-21
-- **Browser:** Chromium — **Device:** Desktop — **OS:** Windows 11
-
-## Steps to Reproduce
-
-1. Open the prototype at `/settings` and note the entry card for the Members/Invitations destination.
-2. Open UAT at `/business/pearl/settings` and compare the same entry card.
-3. Open the Members tab on both `/settings/users` (prototype) and `/business/pearl/settings/users` (UAT); compare the page heading, toolbar (search/filters), table headers, status badges, and pagination row.
-4. Open the Invitations tab on both (`?tab=invitations`) and compare the table columns, toolbar, and pagination row.
-
 ## Findings
 
 ### 1. Settings page — User Management entry card name
@@ -58,15 +42,11 @@ The same toolbar/table control gaps seen on the Members tab repeat on the Invita
 
 ![Invitations tab — filters and sorting gaps](../evidence/UI%20comparison%20of%20user%20management/invitations-missing-ui-elements-comparison.png)
 
-## Additional Context
+## Environment
 
-None.
-
-## Evidence
-
-- `evidence/UI comparison of user management/settings-card-naming-comparison.png` — Settings page card name difference
-- `evidence/UI comparison of user management/members-heading-naming-comparison.png` — Members tab page heading naming difference
-- `evidence/UI comparison of user management/members-missing-ui-elements-comparison.png` — Members tab filters/sorting/pagination gaps
-- `evidence/UI comparison of user management/status-badge-colors-comparison.png` — Members tab status badge color coding difference
-- `evidence/UI comparison of user management/invitations-columns-comparison.png` — Invitations tab table columns difference
-- `evidence/UI comparison of user management/invitations-missing-ui-elements-comparison.png` — Invitations tab filters/sorting gaps
+- **Product:** Qawafel — Apex Web / Settings & User Management
+- **Prototype (design reference):** `https://apex-web-app-prototype.vercel.app`
+- **Environment under test:** UAT — `https://apex.qawafel.dev/business/pearl`
+- **Branch:** main
+- **Date/Time:** 2026-09-21
+- **Browser:** Chromium — **Device:** Desktop — **OS:** Windows 11
