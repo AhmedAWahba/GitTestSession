@@ -1,0 +1,19 @@
+{
+  "viewport": { "width": 1440, "height": 900 },
+  "screens": [
+    {
+      "slug": "members",
+      "title": "User Management — Members tab",
+      "selector": "main",
+      "prototypeUrl": "https://apex-web-app-prototype.vercel.app/settings/users",
+      "uatUrl": "https://apex.qawafel.dev/business/pearl/settings/users"
+    },
+    {
+      "slug": "invitations",
+      "title": "User Management — Invitations tab",
+      "selector": "main",
+      "prototypeUrl": "https://apex-web-app-prototype.vercel.app/settings/users?tab=invitations",
+      "uatUrl": "https://apex.qawafel.dev/business/pearl/settings/users?tab=invitations"
+    }
+  ]
+}

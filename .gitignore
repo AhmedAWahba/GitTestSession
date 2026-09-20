@@ -2,3 +2,5 @@ node_modules/
 evidence/
 .playwright-cli/
 .vscode/
+ios-automation/.env
+ios-automation/output/

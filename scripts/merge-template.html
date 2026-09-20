@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Merge Render</title>
+<style>
+  html,body{margin:0;background:#f2f4f7;font-family:Arial,Helvetica,sans-serif;}
+  canvas{display:block;}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+  const params = new URLSearchParams(location.search);
+  const config = JSON.parse(decodeURIComponent(params.get('config')));
+  const leftImg = new Image();
+  const rightImg = new Image();
+  let loaded = 0;
+  function done() { loaded++; if (loaded === 2) render(); }
+  leftImg.onload = done; rightImg.onload = done;
+  leftImg.src = config.leftSrc;
+  rightImg.src = config.rightSrc;
+
+  function render() {
+    const pad = 28;
+    const gap = 36;
+    const titleH = 44;
+    const labelH = 30;
+    const captionLineH = 22;
+    const captionLines = config.captions.length;
+    const captionH = 18 + captionLines * captionLineH + 10;
+
+    const panelW = Math.max(leftImg.width, rightImg.width);
+    const panelH = Math.max(leftImg.height, rightImg.height);
+
+    const canvas = document.getElementById('c');
+    canvas.width = pad * 2 + panelW * 2 + gap;
+    canvas.height = pad * 2 + titleH + labelH + panelH + captionH;
+    const ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = '#f2f4f7';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = '#111827';
+    ctx.font = '700 22px Arial';
+    ctx.fillText(config.title, pad, pad + 24);
+
+    const leftX = pad;
+    const rightX = pad + panelW + gap;
+    const labelY = pad + titleH;
+    const imgY = labelY + labelH;
+
+    ctx.font = '700 15px Arial';
+    ctx.fillStyle = '#374151';
+    ctx.fillText(config.leftLabel, leftX, labelY + 20);
+    ctx.fillText(config.rightLabel, rightX, labelY + 20);
+
+    // panel backgrounds
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(leftX - 4, imgY - 4, panelW + 8, panelH + 8);
+    ctx.fillRect(rightX - 4, imgY - 4, panelW + 8, panelH + 8);
+    ctx.strokeStyle = '#d1d5db';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(leftX - 4, imgY - 4, panelW + 8, panelH + 8);
+    ctx.strokeRect(rightX - 4, imgY - 4, panelW + 8, panelH + 8);
+
+    ctx.drawImage(leftImg, leftX, imgY);
+    ctx.drawImage(rightImg, rightX, imgY);
+
+    // highlight boxes on the right (actual/UAT) panel only
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = '#dc2626';
+    ctx.font = '700 20px Arial';
+    config.boxes.forEach((b, i) => {
+      const x = rightX + b.x;
+      const y = imgY + b.y;
+      ctx.strokeRect(x, y, b.width, b.height);
+      ctx.fillStyle = '#dc2626';
+      const labelX = Math.max(rightX, x - 26);
+      ctx.fillText(String(i + 1), labelX, y + 18);
+    });
+
+    // caption block
+    let capY = imgY + panelH + 30;
+    ctx.font = '700 16px Arial';
+    ctx.fillStyle = '#dc2626';
+    config.captions.forEach((line) => {
+      ctx.fillText(line, pad, capY);
+      capY += captionLineH;
+    });
+
+    window.__renderDone = true;
+  }
+</script>
+</body>
+</html>
