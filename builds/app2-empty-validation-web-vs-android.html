@@ -1,0 +1,8 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Empty Validation Web vs Android</title><style>body{margin:0;background:#edf1f5;font-family:Arial,sans-serif}canvas{display:block;margin:auto}</style></head><body>
+<canvas id="c" width="1800" height="1180"></canvas><script>
+const c=document.getElementById('c'),x=c.getContext('2d'),web=new Image(),android=new Image();
+function fit(img,p){const s=Math.min(p.w/img.width,p.h/img.height),w=img.width*s,h=img.height*s,l=p.x+(p.w-w)/2,t=p.y+(p.h-h)/2;x.drawImage(img,l,t,w,h);return{x:l,y:t,w,h}}
+function panel(name,img,p){x.fillStyle='#fff';x.fillRect(p.x-12,112,p.w+24,960);x.fillStyle='#111827';x.font='700 34px Arial';x.fillText(name,p.x,108);return fit(img,p)}
+function draw(){x.fillStyle='#edf1f5';x.fillRect(0,0,c.width,c.height);x.fillStyle='#111827';x.font='700 34px Arial';x.fillText('Registration Validation - Empty Form Submit',60,48);panel('Web (UAT)',web,{x:60,y:150,w:810,h:900});const a=panel('Android (app2.apk)',android,{x:930,y:150,w:810,h:900});const r={x:a.x+a.w*.03,y:a.y+a.h*.30,w:a.w*.94,h:a.h*.12};x.strokeStyle='#dc2626';x.lineWidth=8;x.strokeRect(r.x,r.y,r.w,r.h);x.fillStyle='#dc2626';x.font='700 26px Arial';x.fillText('1',r.x+12,r.y+31);x.fillText('1. Empty submit: Android shows only an email error; Web shows no inline message.',60,1125)}
+let n=0;[web,android].forEach(i=>i.onload=()=>{if(++n===2)draw()});web.src='app2-uat-registration-empty.png';android.src='app2-empty-submit.png';
+</script></body></html>
