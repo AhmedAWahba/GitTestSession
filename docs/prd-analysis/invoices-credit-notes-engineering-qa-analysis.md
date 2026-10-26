@@ -123,3 +123,102 @@ Assessment terms: **Conflict** means the visible prototype says/does something i
 ## 7. Release Readiness Recommendation
 
 Do not use the current prototype as the sole acceptance oracle. Resolve the source-precedence decision and the P0 questions first. Before implementation sign-off, reconcile the debit-note scope, combined list, Action required/Resume paths, complete result summary, rejected-file download and approved limits/support route. Then map each BIL requirement and non-functional gate to executable tests; prototype screenshots or demo labels alone do not prove service-side enforcement.
+
+## 8. Lead Demo Runbook: End-to-End Invoice and Credit-Note Cycle
+
+**Prepared:** 2026-10-24. Allow 20-25 minutes for the main story and 10 minutes for selected edge cases. This is a proposed demo script, not a record of executed XML tests. The Engineering Billing PRD is still labelled Draft for Product review; use it as the requested baseline and explain unresolved decisions rather than inventing expected results.
+
+### 8.1 Opening Narrative and Scope
+
+Say: "APEX Billing records already-issued, already-cleared business documents. We import their XML, validate the document and its Business relationships, preserve the accepted facts and original files, and link credit notes to the invoices they correct. Accepted does not mean paid, independently verified, financed or posted to an accounting ledger."
+
+- Initial inputs are standard B2B SAR XML invoices (388), credit notes (381) and debit notes (383), one document per direct XML file; several files may be submitted together.
+- Do not demonstrate invoice creation, draft editing, signing, sending to ZATCA, collecting payments or refunds as part of this release. CSV is follow-up; connectors and PDF/scanned inputs are later.
+- Sales/purchase is the current Business's perspective on the seller/buyer stated in the file. A seller's import does not automatically create a buyer-side record or notification.
+- A credit note is issued and cleared outside APEX. Importing it records a separate commercial adjustment; it does not edit the invoice, allocate the credit across invoices, or derive an outstanding balance.
+
+### 8.2 Prepare Before the Meeting
+
+| Preparation | Required setup / check |
+|---|---|
+| People | Owner/Admin for importing and repair; Member for read-only demonstration; an access-removal/demotion scenario only in a controlled test environment. |
+| Businesses | Verified seller A and verified buyer B, distinct identities, with an active A-to-B partner relationship. To demonstrate buyer-side import, B also needs its own active B-to-A relationship; the reciprocal relationship alone is insufficient. |
+| Valid fixtures | Independently validated synthetic XML: DEMO-INV-001, DEMO-INV-002, DEMO-CN-001 referencing the first invoice, and DEMO-CN-002 referencing both invoices. Files need all required source, identity, address, line, tax, QR and issuing-system fields. A numeric illustration alone is not a valid XML fixture. |
+| Example amounts | DEMO-INV-001: 2 units at SAR 100, before tax 200, VAT 30, including tax/payable 230. DEMO-CN-001: 1 unit at SAR 100, before tax 100, VAT 15, including tax/payable 115. Dates must be non-future in Saudi time; the note must be on/after its invoice date. |
+| Edge fixtures | Compatible repeat, same reference with conflicting amount, wrong total, missing supply date, USD document, missing partner, missing referenced invoice, and unreadable XML. Use unique numbers for fresh attempts and existing numbers only when demonstrating duplicate/conflict behavior. |
+| Upload policy | Confirm actual limits, recovery deadline and environment reset policy before rehearsing. Previously observed prototype values of 50 files/1 MB are design values, not approved Engineering limits. |
+| Environment | Use test Businesses and synthetic documents, not customer tax files. Rehearse all imports and reset only through approved test-environment procedures; accepted Billing records are not deletable through the business UI. |
+
+### 8.3 Main Demo: Presenter Actions and Expected Outcomes
+
+| Step / time | What to do | What to explain / assert | Engineering reference |
+|---|---|---|---|
+| 1. Context (1 min) | Sign in as Owner/Admin and confirm current Business A. Open Billing. | All lists, results, files and actions belong to A. Accepted documents never move between Businesses because a different Business identifier is supplied in an upload. | BIL-01 |
+| 2. Browse (2 min) | Show document list, reference search, filters, empty/no-match distinction and pagination. Open a record, then return. | Target design is one list for invoice/CN/DN with type, perspective, partner and issue-date filters; returning keeps search/filter state. If the prototype separates Invoices and Credit Notes, call out the difference. | BIL-02 |
+| 3. Import sales invoices (2 min) | In test implementation, select DEMO-INV-001 and DEMO-INV-002, confirm prior clearance and submit. | The files were cleared externally; APEX records the declaration, not fresh ZATCA verification. Passing documents are accepted automatically, with no second approval after extraction. | BIL-03 |
+| 4. Follow processing (2 min) | Show per-file upload progress, document Processing state and results; leave and return while processing in a controlled test run. | Transfer completion is not document acceptance. Files progress independently; navigation does not cancel work. Show every document-result count, including zeroes, and Processing finished only when all file/document work has a result. | BIL-04/05 |
+| 5. Inspect invoice (2 min) | Open accepted DEMO-INV-001; show parties, original reference, dates, lines, tax breakdown, totals, optional fields, clearance disclaimer and original-file download. | Accepted facts remain source-stated even if Account profiles later change. Missing optional values stay unavailable. There are no edit/delete/replace actions and no payment or financing inference. | BIL-06/12/15 |
+| 6. Import sales credit note (2 min) | Import DEMO-CN-001 only after DEMO-INV-001 is accepted and visible. Open the accepted note. | The note has its own reference/date, reason, positive ordinary amounts and invoice reference. Its seller/buyer match the invoice. APEX records an externally issued note; this is not an in-app credit-note creation flow. | BIL-09 |
+| 7. Prove linkage (2 min) | Follow the note's invoice link; open the note from the invoice's related-notes list. Repeat with DEMO-CN-002 referencing both accepted invoices. | Invoice 001 remains SAR 230; CN 001 is separately shown at SAR 115. Do not call SAR 115 the new outstanding invoice balance. Multi-invoice CN 002 appears at its full amount under each invoice, never as a split allocation. | BIL-13/15 |
+| 8. Purchase perspective (3 min) | Switch to Business B using approved test accounts/context; independently import the same invoice and note into B's records, with its own partner relationship active. | B sees purchase invoice and purchase credit note with A as supplier. A's earlier import did not populate B's records. B's copy is not Duplicate merely because A imported it; duplicate checks are within the current Business. | BIL-01/02/07/09 |
+| 9. Safe repetition (2 min) | Re-import a valid compatible invoice, then a same-seller/same-reference document with conflicting facts. | Compatible repeat is Duplicate, links the existing record, adds the original file and changes no accepted fact. Conflicting input is Rejected; the existing invoice stays unchanged. | BIL-07/08 |
+| 10. Member and support (2 min) | Show Member list/detail/download access and blocked import route. Show capture-error support instructions. | Member cannot import/recover/cancel/resume. Reporting an APEX capture error differs from issuing a commercial credit note; it must acknowledge the report and provide follow-up without editing the record. | BIL-01/12/15 |
+
+### 8.4 Recovery Branches to Explain or Demonstrate
+
+| Branch | Trigger and expected cycle | Presenter checkpoint |
+|---|---|---|
+| Missing/inactive partner | Valid new document -> Action required -> Owner/Admin adds/reactivates the current Business's partner record -> explicitly Resume -> Processing -> revalidated result. | Repair alone does not resume; import never creates/activates a partner. Member asks Owner/Admin. A previously accepted compatible repeat may still be Duplicate after partner deactivation. |
+| Note imported before invoice | Valid note -> brief wait -> Action required listing missing references -> import missing invoices -> wait for accepted records -> explicitly Resume note -> Processing -> new result. | No automatic resume and no need to recreate valid note data. If the system cannot check references, keep Processing rather than claiming they are missing. |
+| Rejected source facts | Rejected attempt -> inspect all safe, field-specific reasons -> correct the source in its issuing process -> submit a new file as a new attempt. | Do not edit the rejected attempt or overwrite an accepted invoice. Preserve earlier attempt and original file. Correcting XML manually is not a production tax-document correction process. |
+| Interrupted upload | Pending transfer interrupted -> recover eligible transfer within fixed deadline, or cancel that file -> other files continue. | Do not reopen terminal cancelled/expired/failed transfers. A new attempt preserves import correlation but receives its own submission summary. |
+| APEX technical delay | Processing -> saved-submission delay explanation -> automatic or authorized/audited operator recovery -> same work continues -> result. | Never ask the user to change correct tax data or create a new partner solely to fix an infrastructure issue. Recovery must not create another accepted record. |
+
+### 8.5 Edge-Case Checklist for the Lead's Questions
+
+| Group | Case | Expected Engineering outcome |
+|---|---|---|
+| File vs document | Unreadable file with no identifiable supported document | File/source issue, not an invented rejected invoice; other files remain independent. |
+| Supported input | Simplified document, standalone prepayment invoice, USD currency, or source positively marked draft/rejected/uncleared | Not accepted; recognized invalid documents have appropriate rejection reasons. PDF/CSV/connectors are not advertised as initial-release inputs. |
+| Required facts | Missing supply date on invoice; no commercial lines; invalid quantity/net unit price; required total missing | Reject the whole document. Supply date may be absent on a credit/debit note. Positive quantity and non-negative price are required; zero price is not inherently invalid. |
+| Tax | Missing zero-rated/exempt/outside-scope reason/code; inconsistent VAT groups; contradictory QR total or issue time | Reject the complete document with safe, located reasons. APEX checks repeated facts but does not independently verify signatures or clearance. |
+| Arithmetic | Wrong line net, tax summary, allowance/charge total, payable or source rounding | Reject; do not drop a bad line or recalculate to hide differences. Use the PRD's component-rounding example: 10.00 minus 1.01 = 8.99, not 9.00. |
+| Optional values | Missing due date vs explicit zero amount vs supplied malformed optional fact | Absence remains unavailable and distinct from zero. Malformed supplied optional data rejects instead of being discarded. |
+| Prepayment | Positive deduction without complete supporting reference/tax/special-line details | Reject. Special prepayment lines do not count as commercial lines; referenced type-386 prepayment need not exist as an accepted Billing record. Negative payable is a source fact, not an automatic refund. |
+| Identity | Seller/buyer unresolved; current Business neither party; seller equals buyer; conflicting resolved identifiers | Reject identification/document issue; do not auto-create a Business. Similar names or group VAT alone are insufficient. |
+| Note links | Repeated invoice reference, different seller/buyer, or note date before any referenced invoice | Reject the complete note and link set. Same-day note/invoice date passes. No partially accepted links. |
+| Failure precedence | One referenced invoice missing and another has a known date/party contradiction | Reject because of the conclusive contradiction; do not leave the note merely Action required for the missing reference. |
+| Repeat identity | Same seller/number reused across type or year | Type/year do not create numbering ranges; conflicting type/date rejects. Different sellers may use the same number. |
+| Reference precision | INV-42 vs inv-42; 42 vs 042; INV 42 vs INV42 | Distinct references; trim outer whitespace only. Preserve letter case, punctuation, internal spaces and leading zeroes. |
+| Repeat optional facts | Accepted record has no due date; compatible later upload supplies one | May be Duplicate; accepted due date remains unavailable. Conflicting supplied hashes still reject. |
+| Concurrency | Two compatible identical submissions; repeated Resume; stale Action required page | At most one newly accepted record; repeated clicks do not repeat work; stale page cannot resume a later actionable result the user has not seen. |
+| Mixed submission | Five documents: two Accepted, one Duplicate, one Rejected, one Action required | Processing finished with all result counts, including zero Processing. Resume changes only the actionable document to Processing and removes finished until its new result arrives. |
+| Permission/isolation | Member opens import; Admin demoted while form open; other-Business record/file URL | No unauthorized mutation; enforce current access per request. Cross-Business reads use the same not-found response as unknown records, without names/amounts/file metadata. |
+| Record stability | Partner deactivated; party profile edited; duplicate re-upload; capture error reported | Accepted facts and links/files remain unchanged. Authorized support explains capture-error investigation and follows up; no silent replacement or automatic collection changes. |
+| Usability | Search has no matches; truly empty list; accepted detail temporarily unavailable; keyboard/RTL navigation | Distinct empty states, safe updating/refresh state, labeled inputs and non-color-only results; correct layout direction for supported languages. |
+
+### 8.6 Prototype Rehearsal Routes and Known Blockers
+
+These are seeded examples, not the proposed DEMO fixture records above. Their dates may change with the prototype. Amounts and IDs should be checked immediately before presenting. In this preparation pass on 2026-10-24, the Member import block and Owner sales-invoice route were reopened; other routes below were inspected in the earlier 2026-10-18 walkthrough and must be rehearsed again before the meeting.
+
+| Screen / illustration | Route | How to use it in the demo |
+|---|---|---|
+| Invoice browsing | https://apex-web-app-prototype.vercel.app/invoices | Show sales/purchase perspectives, search and date filter; explain the target unified-list/type/partner filter difference. |
+| Import entry | https://apex-web-app-prototype.vercel.app/invoices/register | Explain XML, limits, automatic acceptance and the clearance declaration. Check that Owner mode is active; do not upload production files. |
+| Sales invoice | https://apex-web-app-prototype.vercel.app/invoices/s-INV-2026-0184?demo=owner | Show detail, original file, related notes and no-balance wording. |
+| Multi-invoice sales credit note | https://apex-web-app-prototype.vercel.app/credit-notes/s-CN-2026-0033 | Follow both invoice references and reverse related-note lists. |
+| Purchase invoice/prepayment | https://apex-web-app-prototype.vercel.app/invoices/p-BD-87990?side=purchase | Explain stated total, prepaid deduction and payable; payable is not today's outstanding balance. |
+| Purchase credit note | https://apex-web-app-prototype.vercel.app/credit-notes/p-NF-CN-19?side=purchase | Show buyer/current Business perspective, supplier, reason and linked purchase invoice. |
+| Import history | https://apex-web-app-prototype.vercel.app/import-history | Show retained file attempts and outcomes; explain Added vs Engineering's Accepted terminology. |
+| Member restriction | https://apex-web-app-prototype.vercel.app/invoices/register?demo=member | Show the Owner/Admin-only message; this simulates UI role state, not proof of API authorization. |
+| Debit-note mismatch | https://apex-web-app-prototype.vercel.app/import-history/sub-seed-3-f12 | Engineering includes debit notes; prototype previously explicitly rejected them. Explain as design discrepancy, not intended product behavior. |
+
+Known differences from the inspected prototype: separate Invoice/Credit Note lists; absent document-type/partner filters; debit notes rejected; missing partner/invoice treated as Rejected with re-import rather than Action required/Resume; Added result terminology; incomplete canonical count/finished summary; no download on inspected rejected detail. Explain these as intended-versus-demonstrated differences. Missing visible acknowledgement for capture reports and static clearance-declaration wording are coverage/clarification items, not automatically proven backend failures.
+
+Opening upload demo cases can automatically submit synthetic fixtures. Rehearse those only with approved preview/test data and explain their side effects. When a required recovery state is absent from the prototype, use the Engineering flow description instead of claiming it was demonstrated. Server validation, concurrency, real disconnections, role changes, file safety, durability and tenant isolation need separate executable tests.
+
+### 8.7 Closing Script and Open Decisions
+
+Say: "The cycle is import, validate, record, inspect, and link. Each Business imports its own records independently. A credit note is a separate immutable adjustment document, not an invoice edit, payment or refund. Repairable dependencies use explicit Resume; invalid document facts require a new source-file attempt. Technical delay is not a business-data rejection."
+
+Keep these unresolved decisions separate from pass/fail claims: approved upload/parser/line limits and recovery deadlines; complete field-precision contract; any single/cumulative credit amount cap; earliest historical dates and due-date ordering; capture-report support route/acknowledgement; production retention/holds; and measured processing targets. The prototype cannot settle them merely by displaying an example.
